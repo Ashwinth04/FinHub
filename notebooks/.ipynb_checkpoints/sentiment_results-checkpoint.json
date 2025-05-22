@@ -1,0 +1,48 @@
+{
+  "ticker": "AAPL",
+  "time_period": "Last 1 week",
+  "source_wise_sentiment": {
+    "news": {
+      "positive": 0.38311688311688313,
+      "neutral": 0.4805194805194805,
+      "negative": 0.13636363636363635,
+      "total_mentions": 154
+    },
+    "press_release": {
+      "positive": 0.24444444444444444,
+      "neutral": 0.6444444444444445,
+      "negative": 0.1111111111111111,
+      "total_mentions": 45
+    },
+    "blog": {
+      "positive": 0.21428571428571427,
+      "neutral": 0.2857142857142857,
+      "negative": 0.5,
+      "total_mentions": 28
+    },
+    "reddit": {
+      "positive": 0.375,
+      "neutral": 0.5416666666666666,
+      "negative": 0.08333333333333333,
+      "total_mentions": 24
+    },
+    "forum": {
+      "positive": 0.058823529411764705,
+      "neutral": 0.7450980392156863,
+      "negative": 0.19607843137254902,
+      "total_mentions": 51
+    },
+    "twitter": {
+      "positive": 0.0,
+      "neutral": 1.0,
+      "negative": 0.0,
+      "total_mentions": 8
+    }
+  },
+  "overall_sentiment": {
+    "positive": 0.2838709677419355,
+    "neutral": 0.5483870967741935,
+    "negative": 0.16774193548387098,
+    "total_mentions": 310
+  }
+}

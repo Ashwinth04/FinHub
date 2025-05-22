@@ -1,0 +1,2189 @@
+{
+  "ticker": "AAPL",
+  "time_period": "Last 1 week",
+  "collected_at": "2025-05-15 12:53:52",
+  "grouped_mentions": {
+    "news": [
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Apple (AAPL) has announced significant accessibility features launching later this year across its ecosystem [3]. Key innovations include Accessibility Nutrition Labels on the App Store to provide detailed accessibility information before app downloads, a new Magnifier app for Mac to assist users with low vision, and Braille Access that transforms Apple devices into full-featured braille note takers [3]. The company is also introducing Accessibility Reader, a systemwide reading mode, and bringing Live Captions to Apple Watch [3]. Enhanced features for Apple Vision Pro include improved Zoom capabilities and Live Recognition for visually impaired users [3]. Additional updates include improvements to Background Sounds, Personal Voice, Vehicle Motion Cues, and expanded language support for various accessibility features [3].",
+        "published_date": "2025-05-13",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Gains on Relief from Chinese Import Tariffs",
+        "full_text": "Apple's March-quarter revenue rose 5% year over year to $95.4 billion, with iPhone revenue rising 2% to $46.8 billion [5]. March-quarter gross margin rose 50 basis points year over year to 47.1% [5]. June-quarter guidance calls for modest year-over-year revenue growth and sequential margin contraction [5].",
+        "published_date": "2025-05-12",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Chinese Retailers Offer Deep Discounts on Apple iPhones",
+        "full_text": "Apple's March-quarter revenue rose 5% year over year to $95.4 billion, with iPhone revenue rising 2% to $46.8 billion [5]. March-quarter gross margin rose 50 basis points year over year to 47.1% [5]. June-quarter guidance calls for modest year-over-year revenue growth and sequential margin contraction [5].",
+        "published_date": "2025-05-14",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "'Magnificent Seven' blows past a major threshold - but a few more marks must be crossed before tech is really back",
+        "full_text": "The 'Magnificent Seven' stocks, including Apple, have shown significant market-cap gains [5].",
+        "published_date": "2025-05-13",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple & Nike Bounce on China Tariff News: A Closer Look",
+        "full_text": "News article mentioning Apple and Nike's reaction to China tariff news [7].",
+        "published_date": "2025-05-14",
+        "source_name": "Zacks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Smartphone Shipments Surged in March as Apple (AAPL) and Others Avoided Tariffs",
+        "full_text": "News article discussing the surge in smartphone shipments in March, with Apple mentioned [7].",
+        "published_date": "2025-05-14",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple (AAPL) Plans to Add Eye-Scrolling Feature to Vision Pro Headset",
+        "full_text": "News article detailing Apple's plans to add an eye-scrolling feature to the Vision Pro headset [7].",
+        "published_date": "2025-05-14",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "“Chat Powered Shopping” Coming With New PayPal (NASDAQ:PAYPAL) / Perplexity Team-Up",
+        "full_text": "Article mentioning Apple in the context of chat-powered shopping and PayPal's new team-up [7].",
+        "published_date": "2025-05-14",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple readies Vision Pro feature allowing eye-scrolling, Bloomberg says",
+        "full_text": "News article about Apple's Vision Pro feature allowing eye-scrolling [7].",
+        "published_date": "2025-05-14",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "What is AI really giving back to tech investors? Here's the hard truth",
+        "full_text": "News article discussing the impact of AI on tech investors, with Apple mentioned [5].",
+        "published_date": "2025-05-14",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "The stock market is bouncing back. Here's a chance to fix your portfolio",
+        "full_text": "News article mentioning Apple in the context of the stock market's recovery [5].",
+        "published_date": "2025-05-13",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Amazon, Apple power 'Magnificent Seven' to more than $830 billion in market-cap gains",
+        "full_text": "News article highlighting how Amazon and Apple are driving market-cap gains for the 'Magnificent Seven' [5].",
+        "published_date": "2025-05-12",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Is This the End for Alphabet Stock?",
+        "full_text": "Alphabet (GOOG 3.67%) (GOOGL 3.64%) was slammed last week when a testimony from an Apple (AAPL -0.28%) executive stated that he expects traditional search engines to disappear and be replaced with artificial intelligence (AI)-powered search features [24].",
+        "published_date": "2025-05-14",
+        "source_name": "The Motley Fool"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Fund Update: NORTHERN TRUST CORP Just Disclosed New Holdings",
+        "full_text": "News about NORTHERN TRUST CORP disclosing new holdings in Apple [9].",
+        "published_date": "2025-05-15",
+        "source_name": "Nasdaq"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Fund Update: CALIFORNIA PUBLIC EMPLOYEES RETIREMENT SYSTEM Just Disclosed New Holdings",
+        "full_text": "News about CALIFORNIA PUBLIC EMPLOYEES RETIREMENT SYSTEM disclosing new holdings in Apple [9].",
+        "published_date": "2025-05-15",
+        "source_name": "Nasdaq"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Fund Update: WELLINGTON MANAGEMENT GROUP LLP Just Disclosed New Holdings",
+        "full_text": "News about WELLINGTON MANAGEMENT GROUP LLP disclosing new holdings in Apple [9].",
+        "published_date": "2025-05-15",
+        "source_name": "Nasdaq"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple brings insights, ratings, and reviews from expert sources to Apple Maps",
+        "full_text": "Apple is enhancing Apple Maps with insights, ratings, and reviews from expert sources [13].",
+        "published_date": "2025-05-14",
+        "source_name": "Apple Newsroom"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Universal Music Group and Apple Music announce Sound Therapy",
+        "full_text": "Universal Music Group and Apple Music are collaborating on Sound Therapy [13].",
+        "published_date": "2025-05-14",
+        "source_name": "Apple Newsroom"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Meet four of this year's Swift Student Challenge winners",
+        "full_text": "Apple highlights four winners of the 2025 Swift Student Challenge [13, 22].",
+        "published_date": "2025-05-08",
+        "source_name": "Apple Newsroom"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Arcade adds five new games in June, including UNO: Arcade Edition",
+        "full_text": "Apple Arcade is adding five new games in June, including UNO: Arcade Edition [13, 22].",
+        "published_date": "2025-05-06",
+        "source_name": "Apple Newsroom"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Inc. | History, Products, Headquarters, & Facts | Britannica Money",
+        "full_text": "Apple Inc. is an American multinational technology company that revolutionized the technology sector through its innovation of computer software, personal computers, mobile tablets, smartphones, and computer peripherals [5]. One of the most recognizable brands in the world, Apple created the first commercially successful personal computer and was also the first to bring the graphical user interface (GUI) into mass adoption [5]. Founded by Steve Jobs and Steve Wozniak in 1976, Apple set new benchmarks in product innovation, user-centric functionality, aesthetics and design, and multiproduct integration [1, 5].",
+        "published_date": "2025-05-12",
+        "source_name": "Britannica Money"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Chinese Retailers Offer Deep Discounts on Apple iPhones - Morningstar",
+        "full_text": "Chinese retailers are offering significant discounts on Apple iPhones [9]. This is happening ahead of the '618' shopping festival, with discounts reaching up to 2,530 yuan ($351) on iPhone 16 models via major Chinese e-commerce sites [9, 15]. This action comes amid a 9% drop in shipments [15].",
+        "published_date": "2025-05-14",
+        "source_name": "Morningstar"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Gains on Relief from Chinese Import Tariffs - Morningstar",
+        "full_text": "Apple stock is experiencing gains following some relief from Chinese import tariffs [9]. Investors are reacting positively to news suggesting a potential easing of trade tensions between the U.S. and China, which could benefit Apple's supply chain and sales in the region [9].",
+        "published_date": "2025-05-12",
+        "source_name": "Morningstar"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Smartphone Shipments Surged in March as Apple (AAPL) and Others Avoided Tariffs - Markets Insider",
+        "full_text": "Smartphone shipments experienced a surge in March, with Apple and other companies managing to avoid tariffs [10]. This increase in shipments reflects strong demand and effective supply chain management by these companies [10].",
+        "published_date": "2025-05-14",
+        "source_name": "Markets Insider"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple (AAPL) Plans to Add Eye-Scrolling Feature to Vision Pro Headset - Markets Insider",
+        "full_text": "Apple is planning to introduce an eye-scrolling feature to its Vision Pro headset [10]. This feature will enhance the user experience and provide a more intuitive way to navigate the virtual environment [10].",
+        "published_date": "2025-05-14",
+        "source_name": "Markets Insider"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Analyst Says Reddit (RDDT)'s AI Deals Are Just Beginning – How Big Could This Get?",
+        "full_text": "An analyst suggests that Reddit's AI deals are just beginning, implying significant growth potential [26, 28]. This perspective highlights the increasing importance of AI in Reddit's strategy and future prospects [26, 28].",
+        "published_date": null,
+        "source_name": "Google Finance"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "The trade war truce is a 'dream scenario' for tech stocks. Amazon, Apple, Nvidia and Tesla surge - Quartz",
+        "full_text": "A trade war truce between the U.S. and China is being viewed as a 'dream scenario' for tech stocks, leading to surges in companies like Amazon, Apple, Nvidia, and Tesla [29]. Apple (AAPL) stock helped lead the gains, rising almost 5% [29].",
+        "published_date": "2025-05-12",
+        "source_name": "Quartz"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple & Nike Bounce on China Tariff News: A Closer Look - Markets Insider",
+        "full_text": "Apple and Nike are reacting positively to news regarding China tariffs [10]. The potential easing of trade tensions is seen as beneficial for these companies, which have significant operations and sales in China [10].",
+        "published_date": "2025-05-14",
+        "source_name": "Markets Insider"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple's stock price increased by 1 % last week on the news",
+        "full_text": "Apple (AAPL) unveiled updates to its iPhone, AirPods and Apple Watch product lines on Wednesday, including the new Apple Watch Series 8 and iPhone 14 with satellite connectivity. Chief Executive Tim Cook kicked off the event, noting that all three products are “essential in our lives,” and work seamlessly together. The biggest surprise? No price hikes. The new iPhone 14 and iPhone 14 Plus start at $799 and $899, respectively, while the iPhone 14 Pro and iPhone 14 Pro Max start at $999 and $1,099. Apple's stock price increased by 1 % last week on the news [3].",
+        "published_date": "2025-05-09",
+        "source_name": "Galt & Taggart"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Price Quote - NASDAQ: AAPL | Morningstar",
+        "full_text": "Apple's March-quarter revenue rose 5% year over year to $95.4 billion, with iPhone revenue rising 2% to $46.8 billion. March-quarter gross margin rose 50 basis points year over year to 47.1%. June-quarter guidance calls for modest year-over-year revenue growth and sequential margin contraction [4]. Apple offers an expansive ecosystem of tightly integrated hardware, software, and services, which locks in customers and generates strong profitability [4].",
+        "published_date": "2025-05-14",
+        "source_name": "Morningstar"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Apple unveils powerful accessibility features coming later this year [4, 8, 9]. Apple® today announced new accessibility features coming later this year, including Accessibility Nutrition Labels, which will provide more detailed information for apps and games on the App Store®. Users who are blind or have low vision can explore, learn, and interact using the new Magnifier app for Mac®; take notes and perform calculations with the new Braille Access feature; and leverage the powerful camera system of Apple Vision Pro™ with new updates to...",
+        "published_date": "2025-05-13",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Chinese Retailers Offer Deep Discounts on Apple iPhones",
+        "full_text": "Chinese retailers are offering deep discounts on Apple iPhones [4]. Apple is offering discounts up to 2,530 yuan ($351) on iPhone 16 models via major Chinese e-commerce sites ahead of the '618' shopping festival, amid a 9% drop in shipments [12].",
+        "published_date": "2025-05-14",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Gains on Relief from Chinese Import Tariffs",
+        "full_text": "Apple Stock Gains on Relief from Chinese Import Tariffs [4].  U.S. Treasury Secretary Scott Bessent and his Chinese counterpart announced a mutual reduction in reciprocal tariffs for 90 days while both parties work to find a solution to the trade disagreement [27].",
+        "published_date": "2025-05-12",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Is This the End for Alphabet Stock?",
+        "full_text": "Alphabet (GOOG 3.67%) (GOOGL 3.64%) was slammed last week when a testimony from an Apple (AAPL -0.28%) executive stated that he expects traditional search engines to disappear and be replaced with artificial intelligence (AI)-powered search features [26].",
+        "published_date": "2025-05-14",
+        "source_name": "The Motley Fool"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple's Shareholder Meeting Becomes a Forum to Guide Investors | Deepwater",
+        "full_text": "This year's shareholder meeting had a scripted tone, offering no new business updates. Gone are the days of free-flowing Q&A sessions that once made headlines. This shift has transformed the meeting into a forum aimed at aligning investors with the company's vision [24]. Apple's focus remains unchanged: building the world's best devices and services while integrating AI into its core [24].",
+        "published_date": "2025-02-26",
+        "source_name": "Deepwater"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "After Earnings, Is Apple Stock a Buy, a Sell, or Fairly Valued?",
+        "full_text": "Apple AAPL released its fiscal second-quarter earnings report on May 1. Here's Morningstar's take on Apple's earnings and stock [30]. Apple's March-quarter revenue rose 5% year over year to $95.4 billion, with iPhone revenue rising 2% to $46.8 billion [4, 30].",
+        "published_date": "2025-05-12",
+        "source_name": "Morningstar"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Chinese Retailers Offer Deep Discounts on Apple iPhones",
+        "full_text": "Several Chinese retailers are offering significant discounts on Apple iPhones, with reductions of up to 2,530 yuan ($351) on iPhone 16 models [4, 9]. This move is occurring ahead of the '618' shopping festival, amidst a reported 9% drop in shipments [9]. The discounts reflect increased competition and efforts to maintain sales volume in the Chinese market [4].",
+        "published_date": "2025-05-14",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Gains on Relief from Chinese Import Tariffs",
+        "full_text": "Apple stock experienced gains following news of potential relief from Chinese import tariffs [4]. The easing of trade tensions between the U.S. and China has boosted investor sentiment, as Apple relies heavily on its manufacturing and sales in China. Any reduction in tariffs could significantly benefit Apple's profit margins and overall financial performance [4, 26].",
+        "published_date": "2025-05-12",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple & Nike Bounce on China Tariff News: A Closer Look.",
+        "full_text": " Relief from Chinese import tariffs may impact Apple and Nike. The easing of trade tensions between the U.S. and China has boosted investor sentiment, as Apple relies heavily on its manufacturing and sales in China [10].",
+        "published_date": "Unknown",
+        "source_name": "Zacks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Smartphone Shipments Surged in March as Apple (AAPL) and Others Avoided Tariffs",
+        "full_text": "Smartphone shipments surged in March as Apple and others avoided tariffs [10]. Apple reported a 42% growth in sell-in units in the US, contributing to a 51% rise in US smartphone inventories year-on-year, amid a 30% increase in overall US smartphone shipments [9].",
+        "published_date": "Unknown",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple (AAPL) Plans to Add Eye-Scrolling Feature to Vision Pro Headset",
+        "full_text": "Apple is planning to add an eye-scrolling feature to its Vision Pro Headset [10]. Bloomberg says Apple readies Vision Pro feature allowing eye-scrolling [10].",
+        "published_date": "Unknown",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Analysts forecasts for Apple stock",
+        "full_text": "The 99 analysts offering price forecasts for Apple have a median target of 234.21, with a high estimate of 325.00 and a low estimate of 158.00 [10]. The median estimate represents a 90.69 difference from the last price of 212.41 [10]. Apple stock has received a consensus rating of buy [10]. The average rating score is Aaa and is based on 78 buy ratings, 15 hold ratings, and 6 sell ratings [10].",
+        "published_date": "Unknown",
+        "source_name": "Markets Insider"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "AAPL stock has risen by 6.65% compared to the previous week",
+        "full_text": "AAPL stock has risen by 6.65% compared to the previous week, the month change is a 0.46% rise, over the last year Apple Inc has showed a 13.24% increase [9]. Apple Inc is going to release the next earnings report on Jul 23, 2025 [9]. Today Apple Inc has the market capitalization of ‪3.17 T‬, it has increased by 8.50% over the last week [9].",
+        "published_date": "Unknown",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple's stock price increased by 1 % last week on the news",
+        "full_text": "Apple (AAPL) unveiled updates to its iPhone, AirPods and Apple Watch product lines on Wednesday, including the new Apple Watch Series 8 and iPhone 14 with satellite connectivity. Chief Executive Tim Cook kicked off the event, noting that all three products are “essential in our lives,” and work seamlessly together. The biggest surprise? No price hikes. The new iPhone 14 and iPhone 14 Plus start at $799 and $899, respectively, while the iPhone 14 Pro and iPhone 14 Pro Max start at $999 and $1,099. Apple's stock price increased by 1 % last week on the news [8].",
+        "published_date": "2025-05-09",
+        "source_name": "Galt & Taggart"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Chinese Retailers Offer Deep Discounts on Apple iPhones",
+        "full_text": "Chinese retailers are offering deep discounts on Apple iPhones [9]. This is ahead of the '618' shopping festival, amid a 9% drop in shipments [16].",
+        "published_date": "2025-05-14",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "'Magnificent Seven' blows past a major threshold - but a few more marks must be crossed before tech is really back",
+        "full_text": "The 'Magnificent Seven' tech stocks, including Apple, have surpassed a major threshold, signaling a potential comeback for the tech industry [9].",
+        "published_date": "2025-05-13",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Amazon, Apple power 'Magnificent Seven' to more than $830 billion in market-cap gains",
+        "full_text": "Amazon and Apple are driving the 'Magnificent Seven' stocks to achieve over $830 billion in market capitalization gains [9].",
+        "published_date": "2025-05-12",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Gains on Relief from Chinese Import Tariffs",
+        "full_text": "Apple stock is experiencing gains due to easing concerns over Chinese import tariffs [9].",
+        "published_date": "2025-05-12",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Analyst Says Reddit (RDDT)'s AI Deals Are Just Beginning – How Big Could This Get?",
+        "full_text": "Analyst Says Reddit (RDDT)'s AI Deals Are Just Beginning – How Big Could This Get? [29, 31]",
+        "published_date": "2025-05-13",
+        "source_name": "Yahoo Finance"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Bite goes back into the Apple with a $200 billion market cap gain.",
+        "full_text": "A single-day 7% rally in a company of Apple's size, adding about $150 billion in market value, is the kind of move that tilts entire indexes [33].",
+        "published_date": "2025-05-12",
+        "source_name": "Quartz"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "The trade war truce is a 'dream scenario' for tech stocks. Amazon, Apple, Nvidia and Tesla surge",
+        "full_text": "The Magnificent 7 tech stocks rocketed back to the market-leading fore as the U.S. and China walked back the trade war. Apple (AAPL) stock helped lead the gains, rising almost 5% [33].",
+        "published_date": "2025-05-12",
+        "source_name": "Quartz"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Zacks 13h. Apple & Nike Bounce on China Tariff News: A Closer Look.",
+        "full_text": "Apple & Nike Bounce on China Tariff News: A Closer Look [10]",
+        "published_date": "2025-05-14",
+        "source_name": "Markets Insider"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Smartphone Shipments Surged in March as Apple (AAPL) and Others Avoided Tariffs.",
+        "full_text": "Smartphone Shipments Surged in March as Apple (AAPL) and Others Avoided Tariffs [10].",
+        "published_date": "2025-05-14",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple (AAPL) Plans to Add Eye-Scrolling Feature to Vision Pro Headset.",
+        "full_text": "Apple (AAPL) Plans to Add Eye-Scrolling Feature to Vision Pro Headset [10].",
+        "published_date": "2025-05-14",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple readies Vision Pro feature allowing eye-scrolling, Bloomberg says.",
+        "full_text": "Apple readies Vision Pro feature allowing eye-scrolling, Bloomberg says [10].",
+        "published_date": "2025-05-14",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Key facts today",
+        "full_text": "Foxconn, Apple's main manufacturer, has lowered its growth outlook from 'strong' to 'significant' due to supply chain issues and U.S. tariffs, affecting Apple's production stability [16]. Apple is offering discounts up to 2,530 yuan ($351) on iPhone 16 models via major Chinese e-commerce sites ahead of the '618' shopping festival, amid a 9% drop in shipments. In March 2025, Apple reported a 42% growth in sell-in units in the US, contributing to a 51% rise in US smartphone inventories year-on-year, amid a 30% increase in overall US smartphone shipments.",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Inc. Financial Performance and Strategic Updates",
+        "full_text": "Apple Inc. has reported its financial results for the first quarter of 2024, reflecting mixed performance. The company's revenue for March 2024 stood at $90.75 billion, marking a decline of 4.31% year-over-year. Despite this drop in revenue, Apple managed to achieve a net income of $23.64 billion, a slight decrease of 2.17% compared to the previous year [15]. Earnings per share (EPS) increased marginally by 0.66% to $1.53, showcasing Apple's resilience in maintaining profitability amidst declining sales. The company's operating expenses increased by 5.22% to $14.37 billion, highlighting ongoing investments in its operations and R&D.",
+        "published_date": "2024-12-05",
+        "source_name": "Mexem"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Is Apple Inc stock price growing?",
+        "full_text": "AAPL stock has risen by 6.65% compared to the previous week, the month change is a 0.46% rise, over the last year Apple Inc has showed a 13.24% increase [16].",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "What is AAPL stock forecast?",
+        "full_text": "We've gathered analysts' opinions on Apple Inc future price: according to them, AAPL price has a max estimate of 308.00 USD and a min estimate of 141.00 USD [16].",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "AAPL anyone holding buys? Feels like it struggling to go higher.",
+        "full_text": "AAPL anyone holding buys? Feels like it struggling to go higher [16].",
+        "published_date": "2025-05-12",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "What were Apple Inc earnings last quarter?",
+        "full_text": "AAPL earnings for the last quarter are 1.65 USD per share, whereas the estimation was 1.63 USD resulting in a 1.39% surprise. The estimated earnings for the next quarter are 1.42 USD per share [16].",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "What is Apple Inc revenue for the last quarter?",
+        "full_text": "Apple Inc revenue for the last quarter amounts to ‪95.36 B‬ USD, despite the estimated figure of ‪94.54 B‬ USD. In the next quarter, revenue is expected to reach ‪88.90 B‬ USD [16].",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Is This the End for Alphabet Stock?",
+        "full_text": "Latest news about Apple Inc. Common Stock (AAPL) [17]",
+        "published_date": "2025-05-13",
+        "source_name": "Nasdaq"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Earnings Date, Report, Conference Call, Forecasted Dates (AAPL)",
+        "full_text": "AAPL's next earnings date is UNCONFIRMED for Thursday 07/31/2025 After Market [25].",
+        "published_date": "2025-05-14",
+        "source_name": "Wall Street Horizon"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple threatening to pull Twitter from its app store, Elon Musk alleges",
+        "full_text": "The Trump reinstatement prompted a coalition of civil rights activists to say last week that they were urging Twitter's advertisers to issue statements about pulling their ads off the platform [26]. At a presentation for advertisers in May, some ad agencies and brands were already skeptical on concerns that Musk would scale back content moderation and security protection on ",
+        "published_date": "2022-11-28",
+        "source_name": "Radio-Canada.ca"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "LongPoint Seeks to List First Double Leveraged Single Stock ETFs.",
+        "full_text": "Press releases and related analysis for Apple Inc. (AAPL) [11]",
+        "published_date": "2025-05-05",
+        "source_name": "Seeking Alpha"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple speeds up move into financial services",
+        "full_text": "One of the latest week's biggest stories in finance is Apple's move into Buy now – pay later (BNPL) and lending services. This is the confirmation of rumours having circulated during the last couple of months, that Apple has been moving into cooperation with financial actors and increased their focus on financial services [28].",
+        "published_date": "2022-06-16",
+        "source_name": "IBS Intelligence"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Reddit (RDDT) Stock Price & News",
+        "full_text": "Analyst Says Reddit (RDDT)'s AI Deals Are Just Beginning – How Big Could This Get? [29]",
+        "published_date": "2025-05-13",
+        "source_name": "Google Finance"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Most Active Options Update: Apple Inc. and Twitter Inc",
+        "full_text": "The 20 stocks listed in the table below have attracted the highest total options volume during the past 10 trading days. Two names of notable interest are tech titans Apple Inc. (NASDAQ:AAPL) and Twitter Inc (NYSE:TWTR), which have both seen accelerated put volume in recent weeks [30].",
+        "published_date": "2015-07-09",
+        "source_name": "Schaeffer's Investment Research"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Reddit (RDDT) Stock Price & News",
+        "full_text": "Analyst Says Reddit (RDDT)'s AI Deals Are Just Beginning – How Big Could This Get? [31]",
+        "published_date": "2025-05-13",
+        "source_name": "Google Finance"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "5 Huge Tech Stocks Making News This Week: AAPL, TWTR, TSLA, GOOGL, AMZN",
+        "full_text": "Those are the two things you can expect this week, as investors are treated to a cornucopia of earnings reports by some of technology's biggest names, most of whom are in the middle of breathtaking runs, at pivotal crossroads or reeling from life's relentless uppercuts [24]. Apple went with a more shrouded approach to iPhone sales data, refusing to give up any first-weekend number for the iPhone 7, so Wednesday will be the first info we get straight from the horse's mouth.",
+        "published_date": "2016-10-24",
+        "source_name": "InvestorPlace"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Chinese Retailers Offer Deep Discounts on Apple iPhones",
+        "full_text": "Chinese retailers are offering deep discounts on Apple iPhones [5]. This is happening ahead of the '618' shopping festival, amid a 9% drop in shipments [15].",
+        "published_date": "2025-05-14",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Gains on Relief from Chinese Import Tariffs",
+        "full_text": "Apple stock is gaining due to relief from Chinese import tariffs [5]. The U.S. Treasury Secretary and his Chinese counterpart announced a mutual reduction in reciprocal tariffs for 90 days while both parties work to find a solution to the trade disagreement [25].",
+        "published_date": "2025-05-12",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "What is AI really giving back to tech investors? Here's the hard truth",
+        "full_text": "An Apple executive believes AI will replace standard search engines shortly [28]. Apple is building the world's best devices and services while integrating AI into its core [24].",
+        "published_date": "2025-05-14",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Smartphone Shipments Surged in March as Apple (AAPL) and Others Avoided Tariffs",
+        "full_text": "Smartphone shipments surged in March as Apple and others avoided tariffs [7]. In March 2025, Apple reported a 42% growth in sell-in units in the US, contributing to a 51% rise in US smartphone inventories year-on-year, amid a 30% increase in overall US smartphone shipments [15].",
+        "published_date": "2025-05-14",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple readies Vision Pro feature allowing eye-scrolling, Bloomberg says",
+        "full_text": "Apple plans to add an eye-scrolling feature to Vision Pro Headset [7].",
+        "published_date": "2025-05-14",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple's stock price increased by 1 % last week on the news",
+        "full_text": "Apple (AAPL) unveiled updates to its iPhone, AirPods and Apple Watch product lines on Wednesday, including the new Apple Watch Series 8 and iPhone 14 with satellite connectivity. Chief Executive Tim Cook kicked off the event, noting that all three products are “essential in our lives,” and work seamlessly together. The biggest surprise? No price hikes. The new iPhone 14 and iPhone 14 Plus start at $799 and $899, respectively, while the iPhone 14 Pro and iPhone 14 Pro Max start at $999 and $1,099. Apple's stock price increased by 1 % last week on the news [7].",
+        "published_date": "2025-05-09",
+        "source_name": "Galt & Taggart"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Chinese Retailers Offer Deep Discounts on Apple iPhones",
+        "full_text": "Chinese Retailers Offer Deep Discounts on Apple iPhones. Global News Select May 14, 2025 2:22am.",
+        "published_date": "2025-05-14",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "'Magnificent Seven' blows past a major threshold - but a few more marks must be crossed before tech is really back",
+        "full_text": "'Magnificent Seven' blows past a major threshold - but a few more marks must be crossed before tech is really back. MarketWatch May 13, 2025 11:34am.",
+        "published_date": "2025-05-13",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Apple unveils powerful accessibility features coming later this year. Business Wire May 13, 2025 5:00am",
+        "published_date": "2025-05-13",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "These 10 tech stocks could benefit most from softening U.S.-China tariffs",
+        "full_text": "These 10 tech stocks could benefit most from softening U.S.-China tariffs. MarketWatch May 12, 2025 4:05pm.",
+        "published_date": "2025-05-12",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Amazon, Apple power 'Magnificent Seven' to more than $830 billion in market-cap gains",
+        "full_text": "Amazon, Apple power 'Magnificent Seven' to more than $830 billion in market-cap gains. MarketWatch May 12, 2025 1:28pm.",
+        "published_date": "2025-05-12",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Gains on Relief from Chinese Import Tariffs",
+        "full_text": "Apple Stock Gains on Relief from Chinese Import Tariffs. Global News Select May 12, 2025 9:08am.",
+        "published_date": "2025-05-12",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Why Did Apple (AAPL) Stock Fall 3% After Q2 Earnings?",
+        "full_text": "Apple (AAPL) shares fell as much as 3% after the tech giant reported mixed fiscal second-quarter results. Apple beat Wall Street's expectations regarding earnings and revenue. The company reported adjusted earnings of $1.65 per share, above estimates of $1.63 per share, while revenue stood at $95.36 billion, above estimates of $94.75 billion. However, Apple's crucial Services division came in slightly below analyst forecasts at $26.65 billion versus the anticipated $26.70 billion.",
+        "published_date": "2025-05-02",
+        "source_name": "TIKR.com"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Is This the End for Alphabet Stock?",
+        "full_text": "Alphabet (GOOG 3.67%) (GOOGL 3.64%) was slammed last week when a testimony from an Apple (AAPL -0.28%) executive stated that he expects traditional search engines to disappear and be replaced with artificial intelligence (AI)-powered search features. This news caused Alphabet's stock to tumble 7%. In the first quarter, 56% of Alphabet's revenue came from the Google search engine, so this is clearly a huge part of its business. If Google search is replaced by AI, could that be the end of Alphabet's stock as investors know it?",
+        "published_date": "2025-05-14",
+        "source_name": "The Motley Fool"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "AAPL Factor-Based Stock Analysis - Warren Buffett",
+        "full_text": "Below is Validea's guru fundamental report for APPLE INC (AAPL). Of the 22 guru strategies we follow, AAPL rates highest using our Patient Investor model based on the published strategy of Warren Buffett. This strategy seeks out firms with long-term, predictable profitability and low debt that trade at reasonable valuations.",
+        "published_date": "2025-05-14",
+        "source_name": "Nasdaq"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Why Apple Stock Should Be A Winner This Week",
+        "published_date": "2022-09-16",
+        "full_text": "Apple stock has outperformed the S&P 500 in the past 5 trading days (and past 3 months, for that matter). To credit are several Wall Street reports that the iPhone 14 cycle is already showing early signs of strength. WIll AAPL continue to outperform the market?",
+        "source_name": "TheStreet"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "After Earnings, Is Apple Stock a Buy, a Sell, or Fairly Valued?",
+        "published_date": "2025-05-12",
+        "full_text": "Apple released its fiscal second-quarter earnings report on May 1. Apple's March-quarter revenue rose 5% year over year to $95.4 billion, with iPhone revenue rising 2% to $46.8 billion. Gross margin rose 50 basis points year over year to 47.1%. June-quarter guidance calls for modest year-over-year revenue growth and sequential margin contraction.",
+        "source_name": "Morningstar"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Why Tesla Stock Jumped Today Even as Sales Continue to Plunge",
+        "published_date": "2025-05-13",
+        "full_text": "Shareholders in Tesla (NASDAQ: TSLA) received more troubling news today. Not only did sales drop in the important China market in April, its business there has reportedly continued to decline this month. Yet shares jumped today. Tesla stock was 5.5% higher as of 2:58 p.m. ET. That reaction may have been due to CEO Elon Musk's visit to Saudi Arabia along with President Donald Trump and other U.S. business leaders. It also might be related to momentum carrying over from an easing trade dispute between the U.S. and China after progress over the weekend.",
+        "source_name": "Nasdaq"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "What is AI really giving back to tech investors? Here's the hard truth",
+        "full_text": "News regarding AAPL and AI",
+        "published_date": "2025-05-14",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Chinese Retailers Offer Deep Discounts on Apple iPhones",
+        "full_text": "Chinese Retailers Offer Deep Discounts on Apple iPhones. Global News Select May 14, 2025 2:22am.",
+        "published_date": "2025-05-14",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "'Magnificent Seven' blows past a major threshold - but a few more marks must be crossed before tech is really back",
+        "full_text": "‘Magnificent Seven' blows past a major threshold - but a few more marks must be crossed before tech is really back. MarketWatch May 13, 2025 11:34am.",
+        "published_date": "2025-05-13",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "The stock market is bouncing back. Here's a chance to fix your portfolio",
+        "full_text": "The stock market is bouncing back.",
+        "published_date": "2025-05-13",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Apple unveils powerful accessibility features coming later this year.",
+        "published_date": "2025-05-13",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "These 10 tech stocks could benefit most from softening U.S.-China tariffs",
+        "full_text": "These 10 tech stocks could benefit most from softening U.S.-China tariffs.",
+        "published_date": "2025-05-12",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Amazon, Apple power 'Magnificent Seven' to more than $830 billion in market-cap gains",
+        "full_text": "Amazon, Apple power 'Magnificent Seven' to more than $830 billion in market-cap gains.",
+        "published_date": "2025-05-12",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Gains on Relief from Chinese Import Tariffs",
+        "full_text": "Apple Stock Gains on Relief from Chinese Import Tariffs.",
+        "published_date": "2025-05-12",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "20 Billion Reasons Why Apple Stock Could Be Headed For a Crash",
+        "full_text": "20 Billion Reasons Why Apple Stock Could Be Headed For a Crash",
+        "published_date": "Unknown",
+        "source_name": "Markets"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Nasdaq Rally: My 3 Favorite Stocks to Buy Now",
+        "full_text": "Nasdaq Rally: My 3 Favorite Stocks to Buy Now",
+        "published_date": "Unknown",
+        "source_name": "Markets"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "2 Top Tech Stocks That Could Make You a Millionaire",
+        "full_text": "2 Top Tech Stocks That Could Make You a Millionaire",
+        "published_date": "Unknown",
+        "source_name": "Markets"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Warren Buffett Said Apple CEO Tim Cook Has Made Berkshire Hathaway More Money Than He Has: Was He Right?",
+        "full_text": "Warren Buffett Said Apple CEO Tim Cook Has Made Berkshire Hathaway More Money Than He Has: Was He Right?",
+        "published_date": "Unknown",
+        "source_name": "Markets"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Fund Update: NORTHERN TRUST CORP Just Disclosed New Holdings",
+        "full_text": "Fund Update: NORTHERN TRUST CORP Just Disclosed New Holdings.",
+        "published_date": "Unknown",
+        "source_name": "Stocks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Fund Update: CALIFORNIA PUBLIC EMPLOYEES RETIREMENT SYSTEM Just Disclosed New Holdings",
+        "full_text": "Fund Update: CALIFORNIA PUBLIC EMPLOYEES RETIREMENT SYSTEM Just Disclosed New Holdings.",
+        "published_date": "Unknown",
+        "source_name": "Stocks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Fund Update: WELLINGTON MANAGEMENT GROUP LLP Just Disclosed New Holdings",
+        "full_text": "Fund Update: WELLINGTON MANAGEMENT GROUP LLP Just Disclosed New Holdings.",
+        "published_date": "Unknown",
+        "source_name": "Stocks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple stock sinks beneath 200-day moving average as Trump raises Canadian tariffs",
+        "full_text": "Apple (AAPL) stock is following the Dow Jones Industrial Average (DJIA) lower on Tuesday after United States (US) President Donald Trump added an additional 25% tariff to imports of Canadian steel and aluminum.",
+        "published_date": "2025-03-11",
+        "source_name": "FXStreet"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Markets News, June 10, 2024: S&P 500, Nasdaq Hit Records; Apple Slides After AI Demo",
+        "full_text": "U.S. stocks ticked higher on Monday as investors awaited inflation data and the Federal Reserve's outlook for interest rates, both due Wednesday. The Nasdaq Composite rose 0.4% to close at a record high, while the S&P 500 gained 0.3%, also hitting a record. The Dow Jones Industrial Average inched up 0.2%. Apple's (AAPL) shares fell nearly 2% after it kicked off its Worldwide Developers Conference (WWDC) with a demo of Apple Intelligence, the tech giant's highly anticipated custom AI system. Nvidia (NVDA) ticked up on its first day of split-adjusted trading after its 10-for-1 stock split last Friday.",
+        "published_date": "2024-06-10",
+        "source_name": "Markets Insider"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Prediction: This Stock Will Be the Biggest Winner of the U.S.-China Trade Deal",
+        "full_text": "The U.S.-China trade agreement news and its potential positive impact on Apple (AAPL).",
+        "published_date": "2025-05-15",
+        "source_name": "The Motley Fool"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Fund Update: Forum Financial Management, LP opened a $70.3M position in $AAPL stock",
+        "full_text": "Forum Financial Management, LP has opened a new $70.3M position in $AAPL, per a new SEC 13F filing.",
+        "published_date": "2025-05-02",
+        "source_name": "Markets Insider"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Nvidia Just Rejoined Apple and Microsoft in the $3 Trillion Club. Could It Become the First $4 Trillion Stock by 2026?",
+        "full_text": "Nvidia Just Rejoined Apple and Microsoft in the $3 Trillion Club. Could It Become the First $4 Trillion Stock by 2026?",
+        "published_date": "2025-05-15",
+        "source_name": "The Motley Fool"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Trump says he doesn't want Apple building products in India: 'I had a little problem with Tim Cook'",
+        "full_text": "Trump says he doesn't want Apple building products in India: 'I had a little problem with Tim Cook'",
+        "published_date": "2025-05-15",
+        "source_name": "CNBC"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Smartphone Shipments Surged in March as Apple (AAPL) and Others Avoided Tariffs",
+        "full_text": "Smartphone Shipments Surged in March as Apple (AAPL) and Others Avoided Tariffs.",
+        "published_date": "Unknown",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple (AAPL) Plans to Add Eye-Scrolling Feature to Vision Pro Headset",
+        "full_text": "Apple (AAPL) Plans to Add Eye-Scrolling Feature to Vision Pro Headset.",
+        "published_date": "Unknown",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple readies Vision Pro feature allowing eye-scrolling, Bloomberg says",
+        "full_text": "Apple readies Vision Pro feature allowing eye-scrolling, Bloomberg says.",
+        "published_date": "Unknown",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "5 Stocks to Buy in May and Hold for the Long Term",
+        "full_text": "Discussion about Apple (AAPL) and its stock performance following its earnings report and warnings about tariff costs.",
+        "published_date": "2025-05-05",
+        "source_name": "Morningstar"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Gains on Relief from Chinese Import Tariffs",
+        "full_text": "News article discussing how Apple stock is reacting to relief from Chinese import tariffs.",
+        "published_date": "2025-05-12",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Tesla is the top trending stock on social media, with twice as much mentions as Nvidia and 4x more than Apple",
+        "full_text": "According to AltIndex analysis, Tesla (TSLA) was the top trending stock on social media last week, with more than 20,500 mentions in 24 hours, far more than any other stock on this list.  The tech giant Apple ranked fifth with over 5,600 mentions in 24 hours, four times less than the world's most valuable car producer.",
+        "published_date": "Unknown",
+        "source_name": "FOCUS ON Business"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock: Fiscal Q2 Earnings Live Blog For Investors - TheStreet",
+        "full_text": "Live coverage of Apple's fiscal Q2 earnings report, including expert analysis and real-time updates.",
+        "published_date": "2022-04-28",
+        "source_name": "TheStreet"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "The stock market is bouncing back. Here's a chance to fix your portfolio.",
+        "full_text": "The stock market is bouncing back. Here's a chance to fix your portfolio.",
+        "published_date": "2025-05-13",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "What is AI really giving back to tech investors? Here's the hard truth.",
+        "full_text": "What is AI really giving back to tech investors? Here's the hard truth.",
+        "published_date": "2025-05-14",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Gains on Relief from Chinese Import Tariffs.",
+        "full_text": "Apple Stock Gains on Relief from Chinese Import Tariffs.",
+        "published_date": "2025-05-12",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Smartphone Shipments Surged in March as Apple (AAPL) and Others Avoided Tariffs.",
+        "full_text": "Smartphone Shipments Surged in March as Apple (AAPL) and Others Avoided Tariffs.",
+        "published_date": "Unknown",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple (AAPL) Plans to Add Eye-Scrolling Feature to Vision Pro Headset.",
+        "full_text": "Apple (AAPL) Plans to Add Eye-Scrolling Feature to Vision Pro Headset.",
+        "published_date": "Unknown",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Analysts Forecasts for Apple stock",
+        "full_text": "The 99 analysts offering price forecasts for Apple have a median target of 234.21, with a high estimate of 325.00 and a low estimate of 158.00.",
+        "published_date": "Unknown",
+        "source_name": "Markets Insider"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock: Tariff Concerns and Production Shifts",
+        "full_text": "Apple stock slipped after reporting good earnings, but warning about tariff costs in the next quarter. They are moving production of the iPhone to India away from China",
+        "published_date": "2025-05-05",
+        "source_name": "Morningstar"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Chinese Retailers Offer Deep Discounts on Apple iPhones",
+        "full_text": "Chinese retailers are offering deep discounts on Apple iPhones [9]. These discounts, reaching up to 2,530 yuan ($351) on iPhone 16 models, are available via major Chinese e-commerce sites ahead of the '618' shopping festival [13]. This promotional activity occurs amidst a 9% drop in shipments [13].",
+        "published_date": "2025-05-14",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "'Magnificent Seven' blows past a major threshold - but a few more marks must be crossed before tech is really back",
+        "full_text": "The 'Magnificent Seven' tech stocks, including Apple, have surpassed a significant threshold, signaling a potential resurgence in the tech sector [9].",
+        "published_date": "2025-05-13",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Amazon, Apple power 'Magnificent Seven' to more than $830 billion in market-cap gains",
+        "full_text": "Amazon and Apple are driving the 'Magnificent Seven' tech stocks, contributing to a combined market capitalization gain of over $830 billion [9].",
+        "published_date": "2025-05-12",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Gains on Relief from Chinese Import Tariffs",
+        "full_text": "Apple stock is experiencing gains due to easing concerns regarding Chinese import tariffs [9].",
+        "published_date": "2025-05-12",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Smartphone Shipments Surged in March as Apple (AAPL) and Others Avoided Tariffs",
+        "full_text": "Smartphone shipments experienced a surge in March, with Apple (AAPL) and other companies successfully navigating tariff-related challenges [10].",
+        "published_date": "Unknown",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple (AAPL) Plans to Add Eye-Scrolling Feature to Vision Pro Headset",
+        "full_text": "Apple (AAPL) is reportedly planning to introduce an eye-scrolling feature to its Vision Pro headset, enhancing user experience and accessibility [10].",
+        "published_date": "Unknown",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple readies Vision Pro feature allowing eye-scrolling, Bloomberg says",
+        "full_text": "According to Bloomberg, Apple is preparing a feature for the Vision Pro that will enable eye-scrolling functionality [10].",
+        "published_date": "Unknown",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "What is AI really giving back to tech investors? Here's the hard truth.",
+        "full_text": "An article discusses the realities of AI's returns for tech investors, potentially including Apple [9].",
+        "published_date": "2025-05-14",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "These 10 tech stocks could benefit most from softening U.S.-China tariffs.",
+        "full_text": "An article identifies 10 tech stocks, potentially including Apple, that could benefit from easing U.S.-China tariffs [9].",
+        "published_date": "2025-05-12",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Zacks 13h. Apple & Nike Bounce on China Tariff News: A Closer Look.",
+        "full_text": "An article analyzes the impact of China tariff news on Apple and Nike [10].",
+        "published_date": "Unknown",
+        "source_name": "Zacks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "LongPoint Seeks to List First Double Leveraged Single Stock ETFs.",
+        "full_text": "LongPoint Seeks to List First Double Leveraged Single Stock ETFs [11].",
+        "published_date": "Unknown",
+        "source_name": "Newsfile"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "The Latest: Trump signs executive order that gives drugmakers 30-day deadline to lower costs.",
+        "full_text": "The Latest: Trump signs executive order that gives drugmakers 30-day deadline to lower costs [11].",
+        "published_date": "Unknown",
+        "source_name": "Associated Press"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple & Nike Bounce on China Tariff News: A Closer Look.",
+        "full_text": "Apple & Nike Bounce on China Tariff News: A Closer Look [10].",
+        "published_date": "Unknown",
+        "source_name": "TipRanks"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year.",
+        "full_text": "Apple unveils powerful accessibility features coming later this year [11].",
+        "published_date": "Unknown",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple reports second quarter results.",
+        "full_text": "Apple reports second quarter results [11].",
+        "published_date": "Unknown",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Court sides with Fortnite maker Epic as Apple sanctioned for defying order in App Store case.",
+        "full_text": "Court sides with Fortnite maker Epic as Apple sanctioned for defying order in App Store case [11].",
+        "published_date": "Unknown",
+        "source_name": "Associated Press"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple posts stronger-than-expected Q2 results, says majority of US iPhones sold will come from India.",
+        "full_text": "Apple posts stronger-than-expected Q2 results, says majority of US iPhones sold will come from India [11].",
+        "published_date": "Unknown",
+        "source_name": "Associated Press"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "How Trump's tariffs could make your iPhone cost $3,500",
+        "full_text": "How Trump's tariffs could make your iPhone cost $3,500 [32].",
+        "published_date": "Unknown",
+        "source_name": "Quartz"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple confirms March 7 event, probably a new iPad",
+        "full_text": "Apple confirms March 7 event, probably a new iPad [25].",
+        "published_date": "Unknown",
+        "source_name": "GeekWire"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "What is AI really giving back to tech investors? Here's the hard truth",
+        "full_text": "An article in MarketWatch discussed the impact of AI on tech investors, and Apple was mentioned in passing [4]. The article broadly covers the current state and future prospects of AI technologies and their impact on the stock market. It suggests a cautious approach to AI investments, advising investors to look beyond the hype and consider the real returns. Apple's ventures into AI, like the 'Apple Intelligence' demo at the Worldwide Developers Conference (WWDC), are part of this landscape, though the article does not focus specifically on Apple's AI strategies [4, 23].",
+        "published_date": "2025-05-14",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Chinese Retailers Offer Deep Discounts on Apple iPhones",
+        "full_text": "Global News Select reported that Chinese retailers are offering significant discounts on Apple iPhones [4]. This is occurring ahead of the '618' festival, and after a notable drop in iPhone shipments in China. The discounts are intended to boost sales in a competitive market where Apple faces strong competition from local brands. These discounts reflect a broader strategy to maintain market share amidst fluctuating demand and evolving consumer preferences in the Chinese market [4].",
+        "published_date": "2025-05-14",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "'Magnificent Seven' blows past a major threshold - but a few more marks must be crossed before tech is really back",
+        "full_text": "MarketWatch noted that the 'Magnificent Seven' companies, including Apple, have surpassed a significant threshold, signaling a potential tech resurgence [4]. However, the report suggests that several more milestones need to be achieved before a full recovery can be confirmed. Apple's performance, along with other tech giants, is crucial in driving this recovery, and its stock trends are closely monitored as an indicator of overall market health. The collective market capitalization gains of these companies, including Apple, reflect renewed investor confidence and positive market momentum [4].",
+        "published_date": "2025-05-13",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "The stock market is bouncing back. Here's a chance to fix your portfolio",
+        "full_text": "MarketWatch published an article suggesting ways to adjust portfolios as the stock market recovers, and Apple is mentioned as part of the broader market analysis [4]. The advice centers around rebalancing portfolios to capitalize on growth sectors while mitigating risks. Apple, as a major player in the tech sector, is often considered in such portfolio adjustments, reflecting its significance in investment strategies [4].",
+        "published_date": "2025-05-13",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Business Wire reported on Apple's unveiling of new accessibility features scheduled for release later in the year [1, 4]. These features aim to enhance the user experience for individuals with disabilities, showcasing Apple's commitment to inclusivity. The announcement was made in advance of the Worldwide Developers Conference (WWDC), highlighting Apple's ongoing innovation in software and hardware accessibility [1, 13].",
+        "published_date": "2025-05-13",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "These 10 tech stocks could benefit most from softening U.S.-China tariffs",
+        "full_text": "MarketWatch discussed the tech stocks that stand to gain from easing trade tensions between the U.S. and China, and Apple is included in the list [4]. The analysis points out that reduced tariffs could lower production costs and increase profitability for these companies. Apple, with its extensive manufacturing operations in China, is particularly sensitive to tariff changes, making it a key beneficiary of any softening in trade policies [4, 26].",
+        "published_date": "2025-05-12",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Amazon, Apple power 'Magnificent Seven' to more than $830 billion in market-cap gains",
+        "full_text": "MarketWatch reported that Amazon and Apple are driving significant market capitalization gains among the 'Magnificent Seven' companies [4]. This growth underscores the continued dominance of these tech giants in the stock market. Apple's strong performance, along with Amazon's, has contributed substantially to the overall market recovery and investor confidence. The report highlights the financial strength and market influence of these leading tech firms [4].",
+        "published_date": "2025-05-12",
+        "source_name": "MarketWatch"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Apple Stock Gains on Relief from Chinese Import Tariffs",
+        "full_text": "Global News Select reported on the positive impact of easing Chinese import tariffs on Apple's stock [4]. The reduction in tariffs is expected to alleviate some of the cost pressures on Apple's manufacturing operations, boosting investor confidence. This development is seen as a positive catalyst for Apple, potentially leading to improved financial performance and stock valuation [4, 26].",
+        "published_date": "2025-05-12",
+        "source_name": "Global News Select"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "After Earnings, Is Apple Stock a Buy, a Sell, or Fairly Valued?",
+        "full_text": "According to Morningstar, Apple's March-quarter revenue increased by 5% year over year to $95.4 billion, with iPhone revenue increasing by 2% to $46.8 billion [4, 30]. The gross margin rose 50 basis points year over year to 47.1%. The guidance for the June quarter anticipates modest year-over-year revenue growth and sequential margin contraction. Morningstar maintains a fair value estimate of $200 for Apple, viewing the shares as fairly valued [30].",
+        "published_date": "2025-05-12",
+        "source_name": "Morningstar"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "5 Stocks to Buy in May and Hold for the Long Term",
+        "full_text": "Morningstar reported that Apple's stock slipped after reporting good earnings, but warning about tariff costs in the next quarter [14]. According to Morningstar analyst, Apple stock is not particularly attractive at this point, and they didn't change their fair value estimate [14]. They maintain their base case that Apple will keep exemptions on its cellphone business. However, there is a significant downside risk if they don't [14].",
+        "published_date": "2025-05-05",
+        "source_name": "Morningstar"
+      },
+      {
+        "source_type": "news",
+        "title_or_excerpt": "Fund Update: Forum Financial Management, LP opened a $70.3M position in $AAPL stock",
+        "full_text": "According to Quiver Quantitative, Forum Financial Management, LP opened a new $70.3M position in $AAPL, per a new SEC 13F filing [25]. Also, 2,082 institutional investors added shares of $AAPL stock to their portfolio, and 2,929 decreased their positions in their most recent quarter [25]. Wall Street analysts have issued reports on $AAPL in the last several months. We have seen 13 firms issue buy ratings on the stock, and 4 firms issue sell ratings [25].",
+        "published_date": "2025-05-02",
+        "source_name": "Quiver Quantitative"
+      }
+    ],
+    "press_release": [
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Apple (AAPL) has announced significant accessibility features launching later this year across its ecosystem [3, 10, 13]. Key innovations include Accessibility Nutrition Labels on the App Store to provide detailed accessibility information before app downloads, a new Magnifier app for Mac to assist users with low vision, and Braille Access that transforms Apple devices into full-featured braille note takers [3]. The company is also introducing Accessibility Reader, a systemwide reading mode, and bringing Live Captions to Apple Watch [3]. Enhanced features for Apple Vision Pro include improved Zoom capabilities and Live Recognition for visually impaired users [3]. Additional updates include improvements to Background Sounds, Personal Voice, Vehicle Motion Cues, and expanded language support for various accessibility features [3].",
+        "published_date": "2025-05-13",
+        "source_name": "Apple Newsroom"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple reports second quarter results",
+        "full_text": "Apple (AAPL) reported strong Q2 2025 financial results with revenue reaching $95.4 billion, up 5% year-over-year, and EPS of $1.65, an 8% increase [3]. Services revenue hit an all-time high at $26.6 billion, showing significant growth [3]. The company's product revenue grew to $68.7 billion, with iPhone sales at $46.8 billion [3]. Apple's board declared a 4% increase in cash dividend to $0.26 per share and authorized a new $100 billion share repurchase program [3]. The company generated $24 billion in operating cash flow and returned $29 billion to shareholders [3]. Apple's installed base reached new all-time highs across all product categories and geographic segments, demonstrating strong customer loyalty [3].",
+        "published_date": "2025-05-01",
+        "source_name": "Apple Newsroom"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple unveils new Mac Studio, the most powerful Mac ever, featuring M4 Max and new M3 Ultra",
+        "full_text": "Apple has unveiled the new Mac Studio, its most powerful Mac to date, featuring the M4 Max and M3 Ultra chips [2, 3]. The chip combines two M3 Max dies using UltraFusion technology, integrating 184 billion transistors [3]. Key specifications include a 32-core CPU (24 performance cores and 8 efficiency cores), delivering up to 1.5x performance of M2 Ultra and 1.8x of M1 Ultra [3]. The 80-core GPU offers up to 2x faster performance than M2 Ultra and 2.6x faster than M1 Ultra [3].",
+        "published_date": "2025-03-05",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple's Worldwide Developers Conference returns the week of June 9",
+        "full_text": "Apple (AAPL) has announced its annual Worldwide Developers Conference (WWDC25) will be held from June 9 to 13, 2025 [2, 3]. The conference will be available to developers worldwide and will showcase the latest advancements in iOS, iPadOS, macOS, watchOS, tvOS, and visionOS [3]. The event will feature keynote addresses, session videos, and opportunities for developers to connect with Apple engineers and other developers [3].",
+        "published_date": "2025-03-25",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple introduces the 2025 Pride Collection",
+        "full_text": "The new Apple Watch Pride Edition Sport Band, watch face, and iPhone and iPad wallpaper celebrate the strength and beauty of LGBTQ+ communities [13, 22].",
+        "published_date": "2025-05-05",
+        "source_name": "Apple Newsroom"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year - Nasdaq",
+        "full_text": "Apple Inc. (AAPL) is developing new accessibility features to be released later this year [6, 11]. These features aim to improve the user experience for people with disabilities. ",
+        "published_date": "2025-05-13",
+        "source_name": "Nasdaq"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple reports second quarter results - Business Wire",
+        "full_text": "Apple Inc. (AAPL) has released its financial results for the second quarter [6, 7, 11]. The report details the company's performance in various segments and provides insights into its financial health [6, 7, 11].",
+        "published_date": "2025-05-01",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple introduces the 2025 Pride Collection - Apple",
+        "full_text": "Apple has launched its 2025 Pride Collection, which includes a new Apple Watch Pride Edition Sport Band, a matching watch face, and iPhone and iPad wallpapers [18]. This collection celebrates the strength and beauty of LGBTQ+ communities [18].",
+        "published_date": "2025-05-05",
+        "source_name": "Apple"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple unveils new Mac Studio, the most powerful Mac ever, featuring M4 Max and new M3 Ultra",
+        "full_text": "Apple has announced the new Mac Studio, powered by the M4 Max and M3 Ultra chips [6, 7]. Apple's Worldwide Developers Conference returns the week of June 9 [6, 7].",
+        "published_date": null,
+        "source_name": "Nasdaq"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Hagens Berman: Apple Hit with Class-Action Lawsuit for App Store Injunction Violation by Same Law Firm That Secured $100M iOS Developer Win",
+        "full_text": "Apple is facing a class-action lawsuit alleging violation of an App Store injunction [7]. The lawsuit is being brought by the same law firm that previously secured a $100 million win for iOS developers [7].",
+        "published_date": "2025-05-05",
+        "source_name": "Market Chameleon"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple reports second quarter results",
+        "full_text": "Apple® today announced financial results for its fiscal 2025 second quarter ended March 29, 2025. The Company posted quarterly revenue of $95.4 billion, up 5 percent year over year, and quarterly diluted earnings per share of $1.65, up 8 percent year over year [23]. “Today Apple is reporting strong quarterly results, including double-digit growth in Services,” said Tim Cook, Apple's CEO.  We were happy to welcome iPhone 16e to our lineup, and to introduce powerful...",
+        "published_date": "2025-05-01",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple appeals $570 million antitrust fine, says EU blew off compliance collaboration",
+        "full_text": "In an appeal of a $570 million fine for violation of antitrust law, Apple says it had no idea how to comply, because the EU repeatedly ignored calls for feedback [29].  Despite the White House saying it won't tolerate the EU fining Apple, and the EU saying it won't be bullied, Apple has been fined $570 million for alleged non-compliance with the Digital Markets Act (DMA) [29]. Now Apple is appealing against the fine, and according to Politico, the company is pushing back against the EU's entire process [29].",
+        "published_date": "2025-05-08",
+        "source_name": "9to5Mac"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Apple has announced new accessibility features coming later this year, demonstrating its ongoing commitment to inclusivity [12]. These features aim to support users with disabilities, enhancing their experience across Apple devices. The announcement aligns with Apple's broader efforts to make technology accessible to everyone [1].",
+        "published_date": "2025-05-13",
+        "source_name": "Apple Newsroom"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple reports second quarter results",
+        "full_text": "Apple reported its second-quarter results, with revenue rising 5% year-over-year to $95.4 billion [1, 4]. iPhone revenue increased by 2% to $46.8 billion [4]. The company's gross margin for the quarter rose 50 basis points year-over-year to 47.1% [4]. Apple's guidance for the June quarter anticipates modest year-over-year revenue growth alongside a sequential margin contraction [4].",
+        "published_date": "2025-05-01",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple introduces the new MacBook Air with the M4 chip and a sky blue color",
+        "full_text": "Apple introduces the new MacBook Air with the soaring performance of the M4 chip, a gorgeous new sky blue color, and a lower starting price of $999 [18].",
+        "published_date": "2025-03-05",
+        "source_name": "FT.com"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Fund Update: Forum Financial Management, LP opened a $70.3M position in $AAPL stock",
+        "full_text": "Forum Financial Management, LP has opened a new $70.3M position in $AAPL, per a new SEC 13F filing [25]. This disclosure reflects the funds' holdings for the 03-31-2025 report period [25]. VANGUARD GROUP INC added 49,168,843 shares (+3.7%) to their portfolio in Q4 2024, for an estimated $12,312,861,664 [25]. LEGAL & GENERAL GROUP PLC removed 44,187,491 shares (-28.5%) from their portfolio in Q4 2024, for an estimated $11,065,431,496 [25]. BANK OF AMERICA CORP /DE/ added 37,892,238 shares (+46.8%) to their portfolio in Q4 2024, for an estimated $9,488,974,239 [25].",
+        "published_date": "2025-05-02",
+        "source_name": "Unknown"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Apple® today announced new accessibility features coming later this year, including Accessibility Nutrition Labels, which will provide more detailed information for apps and games on the App Store®. Users who are blind or have low vision can explore, learn, and interact using the new Magnifier app for Mac®; take notes and perform calculations with the new Braille Access feature; and leverage the powerful camera system of Apple Vision Pro™ with new updates",
+        "published_date": "2025-05-14",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple reports second quarter results",
+        "full_text": "Apple® today announced financial results for its fiscal 2025 second quarter ended March 29, 2025. The Company posted quarterly revenue of $95.4 billion, up 5 percent year over year, and quarterly diluted earnings per share of $1.65, up 8 percent year over year [27]. “Today Apple is reporting strong quarterly results, including double-digit growth in Services,” said Tim Cook, Apple's CEO. “We were happy to welcome iPhone 16e to our lineup, and to introduce powerful...",
+        "published_date": "2025-05-01",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple's Worldwide Developers Conference returns the week of June 9",
+        "full_text": "Apple® today announced it will host its annual Worldwide Developers Conference (WWDC) online from June 9 to 13, 2025. Developers and students will also have the opportunity to celebrate in person at a special event on June 10 at Apple Park® [27].",
+        "published_date": "2025-05-01",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Apple® today announced new accessibility features coming later this year, including Accessibility Nutrition Labels, which will provide more detailed information for apps and games on the App Store®. Users who are blind or have low vision can explore, learn, and interact using the new Magnifier app for Mac®; take notes and perform calculations with the new Braille Access feature; and leverage the powerful camera system of Apple Vision Pro™ with new updates to Apple Vision Pro support [6, 11, 14].",
+        "published_date": "2025-05-13",
+        "source_name": "Nasdaq"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Hagens Berman: Apple Hit with Class-Action Lawsuit for App Store Injunction Violation by Same Law Firm That Secured $100M iOS Developer Win",
+        "full_text": "Apple Hit with Class-Action Lawsuit for App Store Injunction Violation by Same Law Firm That Secured $100M iOS Developer Win [7]",
+        "published_date": "2025-05-05",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "INVESTIGATION ALERT (NASDAQ: AAPL): DiCello Levitt LLP Is Investigating Investor Claims Against Apple, Inc. and Encourages AAPL Investors with Losses to Contact the Firm",
+        "full_text": "INVESTIGATION ALERT (NASDAQ: AAPL): DiCello Levitt LLP Is Investigating Investor Claims Against Apple, Inc. and Encourages AAPL Investors with Losses to Contact the Firm [7]",
+        "published_date": "2025-04-24",
+        "source_name": "Globe Newswire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Apple announced new accessibility features coming later this year, including Accessibility Nutrition Labels, which will provide more detailed information for apps and games on the App Store. Users who are blind or have low vision can explore, learn, and interact using the new Magnifier app for Mac; take notes and perform calculations with the new Braille Access feature; and leverage the powerful camera system of Apple Vision Pro with new updates [1, 23].",
+        "published_date": "2025-05-13",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple reports second quarter results",
+        "full_text": "Apple announced financial results for its fiscal 2025 second quarter ended March 29, 2025. The Company posted quarterly revenue of $95.4 billion, up 5 percent year over year, and quarterly diluted earnings per share of $1.65, up 8 percent year over year. Tim Cook, Apple's CEO, stated that Apple is reporting strong quarterly results, including double-digit growth in Services and welcomed iPhone 16e to their lineup [1, 23].",
+        "published_date": "2025-05-01",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple's Worldwide Developers Conference returns the week of June 9",
+        "full_text": "Apple will host its annual Worldwide Developers Conference (WWDC) online from June 9 to 13, 2025. Developers and students will also have the opportunity to celebrate in person at a special event at Apple Park on June 10 [1, 23].",
+        "published_date": "2025-05-02",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Hagens Berman: Apple Hit with Class-Action Lawsuit for App Store Injunction Violation by Same Law Firm That Secured $100M iOS Developer Win",
+        "full_text": "Hagens Berman: Apple Hit with Class-Action Lawsuit for App Store Injunction Violation by Same Law Firm That Secured $100M iOS Developer Win Business Wire 1:48 PM.",
+        "published_date": "2025-05-05",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Apple unveils powerful accessibility features coming later this year. CUPERTINO, Calif.--(BUSINESS WIRE)--Apple® today announced new accessibility features coming later this year, including Accessibility Nutrition Labels, which will provide more detailed information for apps and games on the App Store®. Users who are blind or have low vision can explore, learn, and interact using the new Magnifier app for Mac®; take notes and perform calculations with the new Braille Access feature; and leverage the powerful camera system of Apple Vision Pro™ with new updates to...",
+        "published_date": "2025-05-15",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple reports second quarter results",
+        "full_text": "Apple reports second quarter results Business Wire 4:30 PM.",
+        "published_date": "2025-05-01",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "INVESTIGATION ALERT (NASDAQ: AAPL): DiCello Levitt LLP Is Investigating Investor Claims Against Apple, Inc. and Encourages AAPL Investors with Losses to Contact the Firm",
+        "full_text": "INVESTIGATION ALERT (NASDAQ: AAPL): DiCello Levitt LLP Is Investigating Investor Claims Against Apple, Inc. and Encourages AAPL Investors with Losses to Contact the Firm Globe Newswire 4:23 PM.",
+        "published_date": "2025-04-24",
+        "source_name": "Globe Newswire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple-WWDC25-",
+        "published_date": "2025-01-30",
+        "full_text": "Apple unveils powerful accessibility features coming later this year. CUPERTINO, Calif.--(BUSINESS WIRE)--Apple® today announced new accessibility features coming later this year, including Accessibility Nutrition Labels, which will provide more detailed information for apps and games on the App Store®. Users who are blind or have low vision can explore, learn, and interact using the new Magnifier app for Mac®; take notes and perform calculations with the new Braille Access feature; and leverage the powerful camera system of Apple Vision Pro™ with new updates to... Apple reports second quarter results. CUPERTINO, Calif.--(BUSINESS WIRE)--Apple® today announced financial results for its fiscal 2025 second quarter ended March 29, 2025. The Company posted quarterly revenue of $95.4 billion, up 5 percent year over year, and quarterly diluted earnings per share of $1.65, up 8 percent year over year. “Today Apple is reporting strong quarterly results, including double-digit growth in Services,” said Tim Cook, Apple's CEO. “We were happy to welcome iPhone 16e to our lineup, and to introduce powerful... Apple's Worldwide Developers Conference returns the week of June 9. CUPERTINO, Calif.--(BUSINESS WIRE)--Apple® today announced it will host its annual Worldwide Developers Conference (WWDC) online from June 9 to 13, 2025. Developers and students will also have the opportunity to celebrate in person during a special event at Apple Park on June 9. Available for free to all developers, WWDC25 will spotlight the latest advancements in Apple software. As part of Apple's ongoing commitment to supporting developers, the conference will provide them with unique access...",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Hagens Berman: Apple Hit with Class-Action Lawsuit for App Store Injunction Violation by Same Law Firm That Secured $100M iOS Developer Win",
+        "full_text": "Hagens Berman: Apple Hit with Class-Action Lawsuit for App Store Injunction Violation by Same Law Firm That Secured $100M iOS Developer Win Business Wire 1:48 PM.",
+        "published_date": "2025-05-05",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple reports second quarter results",
+        "full_text": "Apple reports second quarter results Business Wire 4:30 PM.",
+        "published_date": "2025-05-01",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "INVESTIGATION ALERT (NASDAQ: AAPL): DiCello Levitt LLP Is Investigating Investor Claims Against Apple, Inc. and Encourages AAPL Investors with Losses to Contact the Firm",
+        "full_text": "INVESTIGATION ALERT (NASDAQ: AAPL): DiCello Levitt LLP Is Investigating Investor Claims Against Apple, Inc. and Encourages AAPL Investors with Losses to Contact the Firm Globe Newswire 4:23 PM.",
+        "published_date": "2025-04-24",
+        "source_name": "Globe Newswire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple Introduces the 2025 Pride Collection",
+        "full_text": "Apple introduces the 2025 Pride Collection. The new Apple Watch Pride Edition Sport Band, watch face, and iPhone and iPad wallpaper celebrate the strength and beauty of LGBTQ+ communities. ",
+        "published_date": "2025-05-05",
+        "source_name": "Apple"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple Arcade Adds Five New Games in June, Including UNO: Arcade Edition",
+        "full_text": "Apple Arcade adds five new games in June, including UNO: Arcade Edition. May 6, 2025. Apple Arcade welcomes five new games and exciting updates for hit games on the service next month, with no ads or in-app purchases. Read more.",
+        "published_date": "2025-05-06",
+        "source_name": "Apple"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Meet Four of this Year's Swift Student Challenge Winners",
+        "full_text": "Meet four of this year's Swift Student Challenge winners. May 8, 2025. Meet Taiki Hamamoto, Marina Lee, Luciana Ortiz Nolasco, and Nahom Worku, four winners of Apple's 2025 Swift Student Challenge. Read more.",
+        "published_date": "2025-05-08",
+        "source_name": "Apple"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Mentions of AAPL in Press Releases",
+        "full_text": "Mentions of AAPL in Press Releases in the last week",
+        "published_date": "Unknown",
+        "source_name": "Press Release"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple Hospitality REIT Reports Results of Operations for First Quarter 2025",
+        "full_text": "Apple Hospitality REIT Reports Results of Operations for First Quarter 2025",
+        "published_date": "2025-05-01",
+        "source_name": "Apple Hospitality REIT"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple Hospitality REIT Announces Monthly Distribution",
+        "full_text": "Apple Hospitality REIT Announces Monthly Distribution",
+        "published_date": "2025-04-17",
+        "source_name": "Apple Hospitality REIT"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple Hospitality REIT Recognizes Top Performers with Apple Awards",
+        "full_text": "Apple Hospitality REIT Recognizes Top Performers with Apple Awards",
+        "published_date": "2025-03-28",
+        "source_name": "Apple Hospitality REIT"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Apple has announced new accessibility features that will be available later this year [6, 9, 11]. These features include Accessibility Nutrition Labels, which will provide detailed information for apps and games on the App Store. New updates to the Magnifier app for Mac, Braille Access, and the camera system of Apple Vision Pro are also in the works [27].",
+        "published_date": "2025-05-13",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple reports second quarter results",
+        "full_text": "Apple Inc. announced its financial results for the fiscal 2025 second quarter ended March 29, 2025 [6, 27]. The company reported quarterly revenue of $95.4 billion, a 5% increase year-over-year, and quarterly diluted earnings per share of $1.65, an 8% increase year-over-year [27]. Tim Cook, Apple's CEO, stated that Apple is reporting strong quarterly results, including double-digit growth in Services [27].",
+        "published_date": "2025-05-01",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple unveils new Mac Studio, the most powerful Mac ever, featuring M4 Max and new M3 Ultra",
+        "full_text": "Apple has introduced the new Mac Studio, equipped with the M4 Max and the new M3 Ultra, touting it as the most powerful Mac to date [6, 7].",
+        "published_date": "Unknown",
+        "source_name": "Business Wire"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple unveils powerful accessibility features coming later this year",
+        "full_text": "Apple announced new accessibility features coming later this year. These features are designed to support users with disabilities and will be available across various Apple devices. The announcement underscores Apple's commitment to inclusivity and improving the user experience for everyone [1, 13].",
+        "published_date": "2025-05-13",
+        "source_name": "Apple Newsroom"
+      },
+      {
+        "source_type": "press_release",
+        "title_or_excerpt": "Apple reports second quarter results",
+        "full_text": "Apple reported its second-quarter results, revealing financial performance metrics and strategic updates [1]. The report included details on revenue, earnings per share, and segment performance, providing insights into Apple's financial health and growth trajectory. This press release offers a comprehensive overview of Apple's recent financial achievements and future outlook [1, 7].",
+        "published_date": "2025-05-01",
+        "source_name": "Apple Press Release"
+      }
+    ],
+    "blog": [
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "The Zacks Analyst Blog Highlights Apple, Affirm, Compass and CyberArk",
+        "full_text": "Apple's second-quarter fiscal 2025 results, to be reported on May 1, are expected to reflect stiff competition for iPhone in China [4]. However, will continued strong growth in the Services business offset this headwind [4]? iPhone sales are likely to have suffered from stiff competition in China from Chinese vendors, including Huawei and Xiaomi [4]. A delay in the launch of Apple Intelligence to a major part of Apple's installed base, including Mainland China, has been a concern [4]. Although Apple's business primarily revolves around its flagship iPhone, the Services portfolio has emerged as the company's new cash cow [4]. For the Services segment, Apple expects a low double-digit growth rate on a year-over-year basis in the to-be-reported quarter [4]. The Zacks Consensus Estimate for fiscal second-quarter iPhone net sales is pegged at $46.45 billion, suggesting 1.1% year-over-year growth [4]. The consensus mark for Services is currently pegged at $26.76 billion, suggesting 12.1% growth on a year-over-year basis [4].",
+        "published_date": "2025-05-01",
+        "source_name": "Zacks.com"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Mega-Cap Reports for Q1, Plus Outlooks: Global Week Ahead",
+        "full_text": "Apple, Microsoft, Amazon and Meta Platforms deliver quarterly results in the coming week, which will also feature some big economic indicators [16]. After two years of massive gains, these stocks and the rest of the \"Magnificent Seven\" mega-cap companies are off to a rough start in 2025, weighing on equity markets [16]. Over one-fifth of the S&P 500 have reported results and overall earnings are expected to have grown 8.4% in the first quarter [16].",
+        "published_date": "2025-04-29",
+        "source_name": "Zacks.com"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Apple unveils new Mac Studio, the most powerful Mac ever, featuring M4 Max and new M3 Ultra - Market Chameleon",
+        "full_text": "Apple has introduced a new Mac Studio, which they are touting as the most powerful Mac ever [6, 7]. This new model features the M4 Max and the new M3 Ultra processors [6, 7].",
+        "published_date": "2025-03-05",
+        "source_name": "Market Chameleon"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Apple's Winning Twitter Strategy",
+        "full_text": "Apple effectively utilized Twitter advertising strategies to promote and dominate their #AppleEvent [19]. Instead of spreading their efforts across multiple platforms, they concentrated their paid social efforts on Twitter [19]. Apple purchased a promoted trend, a custom placement, and promoted tweets in 12 different languages [19].",
+        "published_date": null,
+        "source_name": "GFM|CenterTable"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Blog | Apple & Associates",
+        "full_text": "Stocks pushed higher last week, spurred by the White House's reassuring comments that progress was being made with trade talks. The Standard & Poor's 500 Index gained 4.59 percent, while the Nasdaq Composite Index picked up 6.73...",
+        "published_date": "2025-05-09",
+        "source_name": "Apple & Associates"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Weekly Market Insights | Investors React to Tariff News",
+        "full_text": "Stocks moved lower last week as investors swung from exuberance to disappointment on news over tariffs and inflation [8]. The Standard & Poor's 500 Index fell 1.53 percent, while the Nasdaq Composite Index retreated 2.59 percent [8]. The Dow Jones Industrial Average rose 0.95 percent, while the Standard & Poor's 500 Index lost 0.98 [8].",
+        "published_date": "Unknown",
+        "source_name": "Apple & Associates"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Weekly Market Insights | Investors React to Tariff News",
+        "full_text": "Stocks moved lower last week as investors swung from exuberance to disappointment on news over tariffs and inflation. The Standard & Poor's 500 Index fell 1.53 percent, while the Nasdaq Composite Index retreated 2.59 percent. The Dow...",
+        "published_date": "2025-05-09",
+        "source_name": "Apple & Associates"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Weekly Market Insights | Tariff Talk Returns, Volatility Close Behind",
+        "full_text": "Stocks were mixed last week as investor concerns over inflation and trade policy combined to produce another volatile trading week. The Dow Jones Industrial Average rose 0.95 percent, while the Standard & Poor's 500 Index lost 0.98...",
+        "published_date": "2025-05-09",
+        "source_name": "Apple & Associates"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "AAPL WWDC — Daily Updates Archive",
+        "full_text": "Above Avalon members receive the full Above Avalon experience throughout the week. The cornerstone of Above Avalon membership is access to Neil's exclusive daily updates about Apple [34]. There is a specific forum channel for members to share AAPL stock and options trading strategies. Neil moderates and participates in the forum. The forum is run through Slack and can be accessed here.",
+        "published_date": "2025-05-14",
+        "source_name": "Above Avalon"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Apple's stock price increased by 1 % last week on the news",
+        "full_text": "Apple unveiled updates to its iPhone, AirPods and Apple Watch product lines on Wednesday, including the new Apple Watch Series 8 and iPhone 14 with satellite connectivity. Chief Executive Tim Cook kicked off the event, noting that all three products are “essential in our lives,” and work seamlessly together. The new iPhone 14 and iPhone 14 Plus start at $799 and $899, respectively, while the iPhone 14 Pro and iPhone 14 Pro Max start at $999 and $1,099. Apple's stock price increased by 1 % last week on the news [4].",
+        "published_date": "2025-09-16",
+        "source_name": "Galt & Taggart"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "AAPL LOOKING BULLISH 14TH MAY 2025",
+        "full_text": "Aapl is looking good to go long at current price as every demand is being respected and price is looking to go deeper into tbe supply zone.",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "An AAPL (quick) turnover trade - long at 196.25",
+        "full_text": "There's nothing particularly pretty about AAPL's 2025 chart. It's in a solid downtrend since the start of the year, losing 24%+ this year. However, a recent higher high and higher low since the April 8th low, and support from the April 21 pullback low close by gives me a little hope that a quick snapback is potentially in store. Potentially grabbing the upcoming dividend is just a bonus. 4 down days is typically a good contrarian indicator as well, though its run of 8 consecutive up days just prior to this tell me there may be more room to run lower. But AAPL is AAPL and when someone comes up with a legit challenger to them, I'll worry about this trade.",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Apple Stock: Fiscal Q2 Earnings Live Blog For Investors",
+        "full_text": "Live coverage of Apple's fiscal Q2 earnings report, including expert analysis and real-time updates.",
+        "published_date": "2022-04-28",
+        "source_name": "TheStreet"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Apple Shares (AAPL) Drop Below $200",
+        "full_text": "Today AAPL stock price is below the psychological $200 mark, over 7% lower than last week's high. Investors were concerned about weaker-than-expected services revenue and disappointing sales in China.",
+        "published_date": "2025-05-06",
+        "source_name": "FXOpen UK"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "£10,000 invested in Apple shares last week is now worth…",
+        "full_text": "Apple shares have fallen sharply, driven by escalating tariffs imposed by the Trump administration. £10,000 invested a week ago would be worth just £8,200 today. The tech giant's stock dropped over 7% on 4 April alone, closing just above $188, its lowest level since May 2024.",
+        "published_date": "2025-04-08",
+        "source_name": "The Motley Fool UK"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Top 10 Reddit Stocks Last Week: The Buzz and Market Reactions",
+        "full_text": "Analysis of trending stocks on Reddit, including sentiment and price movements. Mentions Apple (AAPL) as one of the discussed stocks.",
+        "published_date": "Unknown",
+        "source_name": "AltIndex"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Mentions of AAPL on Blogs",
+        "full_text": "Mentions of AAPL on Blogs in the last week",
+        "published_date": "Unknown",
+        "source_name": "Blog"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "The trade war truce is a 'dream scenario' for tech stocks. Amazon, Apple, Nvidia and Tesla surge",
+        "full_text": "The U.S. and China's trade truce is a 'dream scenario' for tech stocks, with Amazon, Apple, Nvidia, and Tesla experiencing surges. Apple (AAPL) stock helped lead the gains, rising almost 5% [32]. A single-day 7% rally in a company of Apple's size, adding about $150 billion in market value, is the kind of move that tilts entire indexes [32]. Apple alone makes up about 8.5% of the Nasdaq 100 and 7% of the S&P 500, meaning its surge doesn't just lift tech — it helps carry the entire market [32].",
+        "published_date": "2025-05-12",
+        "source_name": "Quartz"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Lack of updates and new models sees Apple Watch sales decline",
+        "full_text": "A lack of significant updates and new models has led to a decline in Apple Watch sales [14].",
+        "published_date": "Unknown",
+        "source_name": "AppleInsider"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Apple's 2025 Pride Collection features a unique Apple Watch Sport Band",
+        "full_text": "Apple's 2025 Pride Collection includes a special Apple Watch Sport Band [14].",
+        "published_date": "Unknown",
+        "source_name": "AppleInsider"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Apple turns to AI for battery management in iOS 19",
+        "full_text": "Apple may use AI to manage battery life in iOS 19 [14].",
+        "published_date": "Unknown",
+        "source_name": "AppleInsider"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Elon Musk Says Apple Is 'Fully' Advertising on Twitter Again",
+        "full_text": "Elon Musk said Apple has “fully resumed” advertising on Twitter, further de-escalating a brewing war between the two tech giants [12]. Musk made the comments during a Twitter Spaces conversation on Saturday, adding that Apple is the largest advertiser on the social media network [12].",
+        "published_date": "Unknown",
+        "source_name": "NDTV Profit"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Apple (AAPL) Earnings Preview: Can the Stock Rebound?",
+        "full_text": "Apple (AAPL) is yet another Magnificent Seven stock that will report earnings this week, and the implied stock price range is relatively low. Maybe that's because Apple plans to move the manufacturing of iPhones sold in the United States from China to India by the end of 2026. That will help alleviate the current Chinese tariff pressure cooker situation we're witnessing right now. With that said, earnings estimates are significantly lower than last quarter, and Apple has not missed earnings-per-share (EPS) or revenue estimates in over a year. On May 1 after the market closes, Apple is expected to report earnings per share of $1.62 on $94.19 billion in revenue [24].",
+        "published_date": "2025-04-29",
+        "source_name": "tastylive"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Apple threatening to pull Twitter from its app store, Elon Musk alleges",
+        "full_text": "Apple threatening to pull Twitter from its app store, Elon Musk alleges [26].",
+        "published_date": "Unknown",
+        "source_name": "Radio-Canada.ca"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Weekly Market Insights | Tariff Talk Returns, Volatility Close Behind",
+        "full_text": "Apple & Associates noted that stocks were mixed last week due to investor concerns over inflation and trade policy, resulting in a volatile trading week [8]. The Dow Jones Industrial Average increased by 0.95%, while the Standard & Poor’s 500 Index decreased by 0.98%. This blog post provides a general overview of market trends, with Apple being indirectly affected by broader economic factors [8].",
+        "published_date": "2025-05-15",
+        "source_name": "Apple & Associates"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Weekly Market Insights: Short Week Strong for Stocks",
+        "full_text": "Apple & Associates reported that investor enthusiasm for stocks remained strong last week, supported by declining bond yields in a holiday-abbreviated trading week [8]. The Dow Jones Industrial Average increased by 1.27%, while the Standard & Poor’s 500 gained 1.00%. This broader market analysis indirectly relates to Apple as it reflects overall investor sentiment [8].",
+        "published_date": "2025-05-15",
+        "source_name": "Apple & Associates"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Weekly Market Insights: Stocks Retreat Despite Solid Earnings",
+        "full_text": "Apple & Associates noted that rising bond yields and uncertainty over the Fed's rate-hike cycle dragged markets lower last week despite solid corporate earnings results [8]. The Dow Jones Industrial Average sank 1.61%, while the... This broader market analysis indirectly relates to Apple as it reflects overall investor sentiment [8].",
+        "published_date": "2025-05-15",
+        "source_name": "Apple & Associates"
+      },
+      {
+        "source_type": "blog",
+        "title_or_excerpt": "Weekly Market Insights | Investors React to Tariff News",
+        "full_text": "Apple & Associates reported that stocks moved lower last week as investors reacted to news about tariffs and inflation [8]. The Standard & Poor's 500 Index fell 1.53 percent, while the Nasdaq Composite Index retreated 2.59 percent. This macro-level analysis indirectly affects Apple, particularly given its supply chain and international trade considerations [8].",
+        "published_date": "2025-05-15",
+        "source_name": "Apple & Associates"
+      }
+    ],
+    "reddit": [
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "AAPL latest update for May 13th, 2025 (Bullish)",
+        "full_text": "Upvote if ya bought the Dip on AAPL [19]. congrats if you held because we're up [19].",
+        "published_date": "2025-05-13",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Mag 7 Including AAPL",
+        "full_text": "I think stay patient, and await for further news [19]. (Keep buying the dip for longterm investors) [19] It's been a great ride however I'm OUT at this point....",
+        "published_date": "2025-05-09",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Trending Stocks on Reddit",
+        "full_text": "Apple (AAPL) was mentioned 43 times on Reddit in the past 24 hours [14].",
+        "published_date": "2025-05-15",
+        "source_name": "Ape Wisdom"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "AAPL latest update for May 13th, 2025 (Bullish)",
+        "full_text": "An analysis of Apple's recent earnings and stock performance suggests a bullish outlook [17]. Positive indicators include strong services gross margins, growth in key markets like Japan and the Americas, and robust performance of iPad and Mac [17]. Despite challenges in China, the overall sentiment remains optimistic [17].",
+        "published_date": "2025-05-13",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Technical analysis",
+        "full_text": "Users on Reddit are engaging in technical analysis of Apple's stock [17]. Discussions include potential future performance based on various market factors [17].",
+        "published_date": null,
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "r/AAPL - Reddit",
+        "full_text": "AAPL latest update for May 13th, 2025 (Bullish) [17]. Upvote if ya bought the Dip on AAPL. congrats if you held because we're up [17]. Mag 7 Including AAPL. I think stay patient, and await for further news. (Keep buying the dip for longterm investors) ... It's been a great ride however I'm OUT at this point.... Edit: I found this article on EU apps for the new fee structure. The EU only makes up about 7% of App store revenue, but this article shows that $400k monthly revenue apps come out worse with the new terms [17].",
+        "published_date": "2025-05-09",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "AAPL - Discussion on Current Market Position",
+        "full_text": "Recent Reddit discussions show mixed sentiment regarding Apple's stock [17]. Some users are buying the dip, while others are staying patient, awaiting further news [17]. There's also discussion around the impact of new EU app store fee structures on Apple's revenue, particularly for apps with significant monthly revenue [17].",
+        "published_date": "2025-05-13",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Technical analysis",
+        "full_text": "Discussion on Reddit about technical analysis of AAPL stock. Includes sentiment about the stock and potential future performance [21].",
+        "published_date": "2025-05-09",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "AAPL latest update for May 13th, 2025 (Bullish)",
+        "full_text": "Upvote if ya bought the Dip on AAPL. congrats if you held because we're up [21].",
+        "published_date": "2025-05-13",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Mag 7 Including AAPL",
+        "full_text": "I think stay patient, and await for further news. (Keep buying the dip for longterm investors) [21]",
+        "published_date": "2025-05-13",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Upvote if you are a Shareholder of AAPL",
+        "full_text": "We are anticipating move to the upside [21].",
+        "published_date": "2025-05-13",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "RDDT stock has risen by 14.63% compared to the previous week",
+        "full_text": "RDDT stock has risen by 14.63% compared to the previous week, the month change is a 18.51% rise, over the last year Reddit has showed a 100.29% increase [35]. What is RDDT stock forecast? We've gathered analysts' opinions on Reddit future price: according to them, RDDT price has a max estimate of 244.00 USD and a min estimate of 75.00 USD.",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "AAPL latest update for May 13th, 2025 (Bullish)",
+        "full_text": "Upvote if ya bought the Dip on AAPL. congrats if you held because we're up [19].",
+        "published_date": "2025-05-13",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "AAPL latest update for May 13th, 2025 (Bullish)",
+        "full_text": "Upvote if ya bought the Dip on AAPL. congrats if you held because we're up.",
+        "published_date": "2025-05-13",
+        "source_name": "r/AAPL"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Apple Earnings Ananlysis",
+        "full_text": "- Services Gross Margins: 75.7% - A record.\n- Services growth 11.6% y/y, good , but a little less than hoped for, but partially due to FX headwinds y/y.\n- Japan keeps growing 15%+ y/y.\n- Americas up 8% y/y as Americas has been lower single digit growth in recent Quarters.\n- iPad and Mac continue strong growth.\n- Cook stated that able to import most US supply from India and Vietnam in next quarter.\n- Cook indicated only $900 million tariff hit, so about 1% of revenue, 2% of earnings, and $0.05 of EPS.\n- China still negative growth, but flat y/y on constant currency basis. Acceleration from prior Quarter.",
+        "published_date": "Unknown",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Do you think GenAI is affecting the ad business?",
+        "full_text": "Some time ago I saw ppl talking about how the whole online marketing space is changing (like SEO, keywords, and all that), because with AI, people aren't using Google the way they used to. And now I found this tweet. So it really makes me wonder if that's true. What are your thoughts on this?",
+        "published_date": "Unknown",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Mag 7 Including AAPL",
+        "full_text": "I think stay patient, and await for further news. (Keep buying the dip for longterm investors)",
+        "published_date": "Unknown",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "The most talked about stocks on Reddit last week",
+        "full_text": "The top 10 most-discussed stocks on Reddit last week. Apple (AAPL). Mentions: 1,172 (+34.9%). Stock Price Performance: -3.5%.",
+        "published_date": "Unknown",
+        "source_name": "r/Wallstreetbetsnew"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Mentions of AAPL on Reddit",
+        "full_text": "Mentions of AAPL on Reddit in the last week",
+        "published_date": "Unknown",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "AAPL latest update for May 13th, 2025 (Bullish)",
+        "full_text": "A Reddit user provided a bullish update on AAPL for May 13th, 2025 [18].",
+        "published_date": "2025-05-13",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Upvote if ya bought the Dip on AAPL.",
+        "full_text": "A Reddit user asked others to upvote if they bought AAPL stock during a dip, congratulating those who held [18].",
+        "published_date": "Unknown",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Will Apple's AI push finally reignite its stock momentum?",
+        "full_text": "A Reddit user questioned whether Apple's push into AI will revitalize its stock momentum [18].",
+        "published_date": "Unknown",
+        "source_name": "Reddit"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "The most talked about stocks on Reddit last week",
+        "full_text": "A post on r/Wallstreetbetsnew highlighted the most discussed stocks on Reddit last week, with Apple (AAPL) receiving 1,172 mentions, a 34.9% increase [2]. The stock's performance for the week was -3.5%. This indicates significant, though potentially negative, attention from the Reddit community [2].",
+        "published_date": "2025-05-15",
+        "source_name": "r/Wallstreetbetsnew"
+      },
+      {
+        "source_type": "reddit",
+        "title_or_excerpt": "Trending Stocks on Reddit",
+        "full_text": "Ape Wisdom reported that Apple (AAPL) was among the trending stocks on Reddit in the past 24 hours, with 43 mentions [11]. This indicates a moderate level of interest from the Reddit community, though not as high as other stocks listed [11, 12].",
+        "published_date": "2025-05-15",
+        "source_name": "Ape Wisdom"
+      }
+    ],
+    "forum": [
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "APPLE Cours Action AAPL, Cotation Bourse NASDAQ",
+        "full_text": "Latest messages on the APPLE COMPUTER INC forum discuss dividend payments, potential candidates for CEO, and market analysis [8].",
+        "published_date": "2025-05-15",
+        "source_name": "Boursorama"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL anyone holding buys? Feels like it struggling to go higher",
+        "full_text": "Discussion on TradingView indicates mixed sentiment among investors regarding AAPL [15]. Some investors are questioning whether to hold or buy, while others discuss selling options [15].",
+        "published_date": null,
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "All my Eggs in one basket (AAPL) - Money Mustache Forum",
+        "full_text": "AAPL is super liquid and has a robust options market, so this should be easy to implement [22]. Just think of yourself as an AAPL executive who ...",
+        "published_date": "2019-08-12",
+        "source_name": "Money Mustache Forum"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "APPLE Cours Action AAPL, Cotation Bourse NASDAQ - Boursorama",
+        "full_text": "Derniers messages sur le forum APPLE COMPUTER INC [7].  Avec le 27 décembre qui tombe un vendredi, J-3 devrait tomber ce j ... Pour info dividende reçu hier 13 février sur Trade Republic. Probablement encore une semaine à attendre pour que Bourso le verse… comme d'hab 🙄​. ... Qui pour prendre le poste de DG après… Personnellement - si Luca Maestri ne quitte pas AAPL d'ici 3 ou 4 mois ... je parirais sur lui ! Luca Maestri is Apple's vice president of Corporate Services, reporting to CEO Tim Cook. In this ro ...",
+        "published_date": "2025-05-15",
+        "source_name": "Boursorama"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL - Stock Technical Analysis and Discussion",
+        "full_text": "Various discussions and opinions are circulating regarding Apple's stock [5]. Some forum members anticipate a pullback near $215, while others are taking long positions based on bullish signals from various analysis platforms. Technical analysis suggests that the stock is building energy for a potential move to $220, contingent on overall index performance [5].",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL anyone holding buys? Feels like it struggling to go higher.",
+        "full_text": "Discussion on TradingView Minds forum about Apple Inc. stock [19]. Users are discussing whether to buy or hold AAPL stock, with some feeling it is struggling to go higher.",
+        "published_date": "2025-05-13",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL building energy for 220",
+        "full_text": "AAPL building energy for 220, if we do have a pull back on index weakness, the buy zone is 202, next week could be the one, apple has been underperforming, we may see some profit taking and rotation into this some time soon [19].",
+        "published_date": "2025-05-08",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL I see a pullback coming near $215, if not before!!",
+        "full_text": "AAPL I see a pullback coming near $215, if not before!! [19]",
+        "published_date": "2025-05-08",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL I want to see another test of low to 200 to completely the triple coil, that would build enough energy for breaking 220 and on to 240.",
+        "full_text": "AAPL I want to see another test of low to 200 to completely the triple coil, that would build enough energy for breaking 220 and on to 240 [19].",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL is this gonna push at the end of the day or drop like a rock?",
+        "full_text": "AAPL is this gonna push at the end of the day or drop like a rock? [19]",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "I'm going long on Apple ( AAPL) since Osis.co's analysis is showing bullish signals.",
+        "full_text": "I'm going long on Apple ( AAPL) since Osis.co's analysis is showing bullish signals [19].",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL I want to see another test of low to 200 to completely the triple coil, that would build enough energy for breaking 220 and on to 240.",
+        "full_text": "AAPL I want to see another test of low to 200 to completely the triple coil, that would build enough energy for breaking 220 and on to 240. [19]",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL is this gonna push at the end of the day or drop like a rock?",
+        "full_text": "AAPL is this gonna push at the end of the day or drop like a rock? [19]",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "I'm going long on Apple ( AAPL) since Osis.co's analysis is showing bullish signals.",
+        "full_text": "I'm going long on Apple ( AAPL) since Osis.co's analysis is showing bullish signals. [19]",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "Tariffs are coming back! Donald Trump just said so. SELL NOW!",
+        "full_text": "Tariffs are coming back! Donald Trump just said so. SELL NOW! [22]",
+        "published_date": "2025-05-09",
+        "source_name": "Investing.com"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "Hi back after a long time Can anybody advise me if I can buy Apple Stock at these levels.",
+        "full_text": "Hi back after a long time Can anybody advise me if I can buy Apple Stock at these levels. [22]",
+        "published_date": "2025-05-09",
+        "source_name": "Investing.com"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "Less than 1% is not crashing unless you are maximum leveraged with otm calls expiring in 2 days. Such an irrational comment.",
+        "full_text": "Less than 1% is not crashing unless you are maximum leveraged with otm calls expiring in 2 days. Such an irrational comment. [22]",
+        "published_date": "2025-05-09",
+        "source_name": "Investing.com"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "Great time to buy leap calls. Once tariff dust settles, this should outperform the MAG7",
+        "full_text": "Great time to buy leap calls. Once tariff dust settles, this should outperform the MAG7. [22]",
+        "published_date": "2025-05-13",
+        "source_name": "Investing.com"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "What a day?! So my thoughts from last week match up with what happened today!",
+        "full_text": "What a day?! So my thoughts from last week match up with what happened today! And my picks of $NVDA (+0.52 [32]",
+        "published_date": "2025-05-14",
+        "source_name": "GetQuin"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL anyone holding buys? Feels like it struggling to go higher",
+        "full_text": "A forum user is questioning if anyone is holding buys for AAPL, as it feels like it's struggling to go higher. Another user stated that they sold their 215 calls letting my 220 for 5/23 run still [15].",
+        "published_date": "2025-05-13",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL anyone holding buys?",
+        "full_text": "AAPL anyone holding buys? Feels like it struggling to go higher.",
+        "published_date": "2025-05-13",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL sold my 215 calls letting my 220 for 5/23 run still.",
+        "full_text": "AAPL sold my 215 calls letting my 220 for 5/23 run still.",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL Looks like it will explode higher this coming week, may be short lived through I think at least 207.5-220.",
+        "full_text": "AAPL Looks like it will explode higher this coming week, may be short lived through I think at least 207.5-220.",
+        "published_date": "2025-05-11",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL I want to see another test of low to 200 to completely the triple coil, that would build enough energy for breaking 220 and on to 240",
+        "full_text": "AAPL I want to see another test of low to 200 to completely the triple coil, that would build enough energy for breaking 220 and on to 240. ",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL is this gonna push at the end of the day or drop like a rock?",
+        "full_text": "AAPL is this gonna push at the end of the day or drop like a rock?",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "I'm going long on Apple ( AAPL) since Osis.co's analysis is showing bullish signals.",
+        "full_text": "I'm going long on Apple ( AAPL) since Osis.co's analysis is showing bullish signals.",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL I see a pullback coming near $215, if not before!!",
+        "full_text": "AAPL I see a pullback coming near $215, if not before!!",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "Mentions of AAPL on Forums",
+        "full_text": "Mentions of AAPL on Forums in the last week",
+        "published_date": "Unknown",
+        "source_name": "Forum"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL anyone holding buys? Feels like it struggling to go higher.",
+        "full_text": "AAPL anyone holding buys? Feels like it struggling to go higher.",
+        "published_date": "Unknown",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL sold my 215 calls letting my 220 for 5/23 run still.",
+        "full_text": "AAPL sold my 215 calls letting my 220 for 5/23 run still.",
+        "published_date": "Unknown",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL Looks like it will explode higher this coming week, may be short lived through I think at least 207.5-220.",
+        "full_text": "AAPL Looks like it will explode higher this coming week, may be short lived through I think at least 207.5-220.",
+        "published_date": "Unknown",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL: Pullback Coming Near $215",
+        "full_text": "AAPL I see a pullback coming near $215, if not before!!",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL anyone holding buys? Feels like it struggling to go higher.",
+        "full_text": "A forum user questions whether to continue holding AAPL stock, noting its struggle to increase in value [13].",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL sold my 215 calls letting my 220 for 5/23 run still.",
+        "full_text": "A forum user mentions selling their 215 call options and holding their 220 call options for AAPL expiring on May 23 [13].",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL Looks like it will explode higher this coming week, may be short lived through I think at least 207.5-220.",
+        "full_text": "A forum user speculates that AAPL stock will increase significantly this week, potentially reaching between $207.5 and $220 [13].",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL I want to see another test of low to 200 to completely the triple coil, that would build enough energy for breaking 220 and on to 240.",
+        "full_text": "A forum user anticipates a drop to $200 before a potential surge past $220 and towards $240 [16].",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL is this gonna push at the end of the day or drop like a rock?",
+        "full_text": "A forum user questions whether AAPL stock will rise or fall by the end of the day [16].",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "I'm going long on Apple ( AAPL) since Osis.co's analysis is showing bullish signals.",
+        "full_text": "A forum user is taking a long position on AAPL stock based on bullish signals from Osis.co's analysis [16].",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL I see a pullback coming near $215, if not before!!",
+        "full_text": "A forum user predicts a pullback in AAPL stock near $215, possibly sooner [16].",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "Tariffs are coming back! Donald Trump just said so. SELL NOW!",
+        "full_text": "A user on Investing.com's AAPL forum urges selling due to Donald Trump's statement about tariffs [19].",
+        "published_date": "Unknown",
+        "source_name": "Investing.com"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "Can anybody advise me if I can buy Apple Stock at these levels.",
+        "full_text": "A user on Investing.com's AAPL forum asks for advice on whether to buy Apple stock at current levels [19].",
+        "published_date": "Unknown",
+        "source_name": "Investing.com"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "Buy leap calls JAN2027 $225 strike. Currently a touch above $40. Hold them until new leap calls for JAN2028 come out. Close them out. Buy new leap calls for JAN2028 that are 10% out of the money at that time. Do this every year like clockwork and get wealthy.",
+        "full_text": "A user on Investing.com's AAPL forum advises buying LEAP calls for January 2027 with a $225 strike price, holding them until new calls for January 2028 are available, and then repeating the process annually [19].",
+        "published_date": "Unknown",
+        "source_name": "Investing.com"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "crashing",
+        "full_text": "A user on Investing.com's AAPL forum claims the stock is crashing [19].",
+        "published_date": "Unknown",
+        "source_name": "Investing.com"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "Hope you are joking. Might get a bit of short term volatility for day traders that scalp, but forward looking market will push this to ATH in next 3 months. Once trade deal with China is formally announced and the impact on AAPL is minimal, AAPL will have huge institutional buying.",
+        "full_text": "A user on Investing.com's AAPL forum expresses optimism, predicting a push to all-time highs within the next 3 months, especially after a trade deal with China is announced [19].",
+        "published_date": "Unknown",
+        "source_name": "Investing.com"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "Great time to buy leap calls. Once tariff dust settles, this should outperform the MAG7. Bought some leap calls Jan2027 $225strike. Paid $40. Current share price $210.77. Today is May 13 2025.",
+        "full_text": "A user on Investing.com's AAPL forum suggests buying LEAP calls, anticipating outperformance after tariff concerns subside. The user bought January 2027 $225 strike calls for $40 each [19].",
+        "published_date": "2025-05-13",
+        "source_name": "Investing.com"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "216 by the end of the week.",
+        "full_text": "A user on Investing.com's AAPL forum predicts a price of $216 by the end of the week [19].",
+        "published_date": "Unknown",
+        "source_name": "Investing.com"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL Do something . _.",
+        "full_text": "A user on TradingView's AAPL forum posts a short message indicating the stock needs to make a move [16].",
+        "published_date": "Unknown",
+        "source_name": "TradingView Minds"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL I want to see another test of low to 200 to completely the triple coil, that would build enough energy for breaking 220 and on to 240",
+        "full_text": "A user on TradingView's Apple Inc. stock forum expressed a desire to see another test of the low at 200 to complete a triple coil pattern, suggesting this would build enough energy for the stock to break through 220 and reach 240 [6]. This comment reflects technical analysis and speculative trading strategies based on chart patterns and market momentum. Other users also shared their opinions, with some anticipating a pullback near $215 and others expressing bullish sentiment based on Osis.co's analysis [6].",
+        "published_date": "2025-05-15",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL is this gonna push at the end of the day or drop like a rock?",
+        "full_text": "On the TradingView forum, a user inquired whether Apple's stock would push higher by the end of the day or decline sharply [6]. This question captures the uncertainty and short-term speculation prevalent in stock trading discussions. Other forum participants shared their perspectives, contributing to a diverse range of opinions and predictions about Apple's stock movement [6].",
+        "published_date": "2025-05-15",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "I'm going long on Apple ( AAPL) since Osis.co's analysis is showing bullish signals.",
+        "full_text": "A user on the TradingView forum stated they are taking a long position on Apple stock due to bullish signals from Osis.co's analysis [6]. This indicates reliance on external analytical tools and reports for investment decisions. Other forum members contributed to the discussion, expressing various viewpoints on Apple's potential stock performance [6].",
+        "published_date": "2025-05-15",
+        "source_name": "TradingView"
+      },
+      {
+        "source_type": "forum",
+        "title_or_excerpt": "AAPL I see a pullback coming near $215, if not before!!",
+        "full_text": "A participant in the TradingView forum commented that they foresee a pullback in Apple's stock price near $215, possibly even sooner [6]. This reflects a bearish outlook based on their analysis of market conditions. The forum discussion included diverse opinions and predictions from various users [6].",
+        "published_date": "2025-05-14",
+        "source_name": "TradingView"
+      }
+    ],
+    "twitter": [
+      {
+        "source_type": "twitter",
+        "title_or_excerpt": "Apple (AAPL) Twitter Mentions Statistics 2025",
+        "full_text": "Apple was mentioned an estimated 4,546 times in various tweets yesterday [21]. In the last 30 days, Apple has been mentioned around 7,188 times per day [21]. Apple overperforms all of its industry peers when it comes to Twitter Mentions, having more Twitter Mentions than any of its peers [21].",
+        "published_date": "2025-05-15",
+        "source_name": "AltIndex"
+      },
+      {
+        "source_type": "twitter",
+        "title_or_excerpt": "Apple (AAPL) Twitter Mentions Statistics 2025 - AltIndex",
+        "full_text": "Apple was mentioned an estimated 4,546 times in various tweets yesterday. In the last 30 days, Apple has been mentioned around 7,188 times per day [15]. By monitoring Twitter mentions for Apple, investors gain real-time insights into public sentiment towards the company, its products, and its industry [15].",
+        "published_date": "2025-05-15",
+        "source_name": "AltIndex"
+      },
+      {
+        "source_type": "twitter",
+        "title_or_excerpt": "Apple was mentioned an estimated 4,546 times in various tweets yesterday",
+        "full_text": "Apple was mentioned an estimated 4,546 times in various tweets yesterday [19]. In the last 30 days, Apple has been mentioned around 7,188 times per day [19]. Apple overperforms all of its industry peers when it comes to Twitter Mentions, having more Twitter Mentions than any of its peers [19].",
+        "published_date": "Unknown",
+        "source_name": "AltIndex"
+      },
+      {
+        "source_type": "twitter",
+        "title_or_excerpt": "Apple's Winning Twitter Strategy",
+        "full_text": "During this month's Apple Event, when Apple announced new product releases for the world to drool over, Twitter felt more like a farmers market than a social media platform. What did catch my attention was Apple's use of Twitter advertising strategies to promote and ultimately own their #AppleEvent [23].",
+        "published_date": "2025-05-09",
+        "source_name": "GFM|CenterTable"
+      },
+      {
+        "source_type": "twitter",
+        "title_or_excerpt": "Apple (AAPL) Twitter Mentions Statistics 2025",
+        "full_text": "Apple was mentioned an estimated 4,546 times in various tweets yesterday. In the last 30 days, Apple has been mentioned around 7,188 times per day. Apple overperforms all of its industry peers when it comes to Twitter Mentions, having more Twitter Mentions than any of its peers [17].",
+        "published_date": "2025-05-15",
+        "source_name": "AltIndex"
+      },
+      {
+        "source_type": "twitter",
+        "title_or_excerpt": "Apple was mentioned an estimated 4,546 times in various tweets yesterday. In the last 30 days, Apple has been mentioned around 7,188 times per day.",
+        "full_text": "How often is Apple mentioned on Twitter? Apple was mentioned an estimated 4,546 times in various tweets yesterday. In the last 30 days, Apple has been mentioned around 7,188 times per day. Analyzing Twitter Mentions, how is Apple performing compared to its industry peers? Apple overperforms all of its industry peers when it comes to Twitter Mentions, having more Twitter Mentions than any of its peers. Why is it important to track Twitter mentions for Apple? By monitoring Twitter mentions",
+        "published_date": "2025-05-15",
+        "source_name": "AltIndex"
+      },
+      {
+        "source_type": "twitter",
+        "title_or_excerpt": "Mentions of AAPL on Twitter",
+        "full_text": "Mentions of AAPL on Twitter in the last week",
+        "published_date": "Unknown",
+        "source_name": "Twitter"
+      },
+      {
+        "source_type": "twitter",
+        "title_or_excerpt": "Apple (AAPL) Twitter Mentions Statistics 2025",
+        "full_text": "AltIndex estimates that Apple was mentioned approximately 4,546 times in various tweets yesterday [20]. Over the past 30 days, Apple has been mentioned around 7,188 times per day. Apple outperforms its industry peers in Twitter mentions, indicating significant public interest [20]. Tracking these mentions provides real-time insights into public sentiment, which can be valuable for investors [20].",
+        "published_date": "2025-05-15",
+        "source_name": "AltIndex"
+      }
+    ]
+  }
+}
