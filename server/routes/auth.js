@@ -10,36 +10,34 @@ router.post('/register', async (req, res) => {
   try {
     const { name, email, password } = req.body;
     
+    // Validate input
+    if (!name || !email || !password) {
+      return res.status(400).json({ message: 'All fields are required' });
+    }
+    
+    if (password.length < 6) {
+      return res.status(400).json({ message: 'Password must be at least 6 characters' });
+    }
+    
     // Check if user already exists
-    let user = await User.findOne({ email });
-    if (user) {
+    const existingUser = await User.findByEmail(email);
+    if (existingUser) {
       return res.status(400).json({ message: 'User already exists' });
     }
     
     // Create new user
-    user = new User({
-      name,
-      email,
-      password
-    });
-    
-    // Save user
-    await user.save();
+    const user = await User.create(name, email, password);
     
     // Generate JWT
     const token = jwt.sign(
-      { id: user._id },
+      { id: user.id },
       process.env.JWT_SECRET || 'default_jwt_secret',
       { expiresIn: '7d' }
     );
     
     res.status(201).json({
       token,
-      user: {
-        id: user._id,
-        name: user.name,
-        email: user.email
-      }
+      user
     });
   } catch (err) {
     console.error('Registration error:', err);
@@ -52,8 +50,13 @@ router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
     
+    // Validate input
+    if (!email || !password) {
+      return res.status(400).json({ message: 'Email and password are required' });
+    }
+    
     // Check if user exists
-    const user = await User.findOne({ email });
+    const user = await User.findByEmail(email);
     if (!user) {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
@@ -66,18 +69,14 @@ router.post('/login', async (req, res) => {
     
     // Generate JWT
     const token = jwt.sign(
-      { id: user._id },
+      { id: user.id },
       process.env.JWT_SECRET || 'default_jwt_secret',
       { expiresIn: '7d' }
     );
     
     res.json({
       token,
-      user: {
-        id: user._id,
-        name: user.name,
-        email: user.email
-      }
+      user: user.toJSON()
     });
   } catch (err) {
     console.error('Login error:', err);
@@ -88,7 +87,7 @@ router.post('/login', async (req, res) => {
 // Get current user
 router.get('/me', authenticate, async (req, res) => {
   try {
-    res.json(req.user);
+    res.json(req.user.toJSON());
   } catch (err) {
     console.error('Get user error:', err);
     res.status(500).json({ message: 'Server error' });

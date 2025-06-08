@@ -1,8 +1,9 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
+import { initializeDatabase } from './database/database.js';
+import authRoutes from './routes/auth.js';
 import portfolioRoutes from './routes/portfolio.js';
 import optimizationRoutes from './routes/optimization.js';
 import riskRoutes from './routes/risk.js';
@@ -21,15 +22,18 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
-// Database Connection with better error handling
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('Connected to MongoDB'))
+// Initialize database
+initializeDatabase()
+  .then(() => {
+    console.log('Database initialized successfully');
+  })
   .catch(err => {
-    console.error('MongoDB connection error:', err);
+    console.error('Database initialization error:', err);
     process.exit(1);
   });
 
 // Routes
+app.use('/api/auth', authRoutes);
 app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/optimization', optimizationRoutes);
 app.use('/api/risk', riskRoutes);

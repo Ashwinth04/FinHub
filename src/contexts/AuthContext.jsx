@@ -25,7 +25,7 @@ export function AuthProvider({ children }) {
 
   const checkUserStatus = async () => {
     try {
-      const response = await axios.get('/api/auth/me');
+      const response = await axios.get('http://localhost:5000/api/auth/me');
       setCurrentUser(response.data);
       setLoading(false);
     } catch (err) {
@@ -38,7 +38,7 @@ export function AuthProvider({ children }) {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post('/api/auth/login', { email, password });
+      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
       const { token, user } = response.data;
       
       localStorage.setItem('auth_token', token);
@@ -54,7 +54,7 @@ export function AuthProvider({ children }) {
 
   const register = async (name, email, password) => {
     try {
-      const response = await axios.post('/api/auth/register', { name, email, password });
+      const response = await axios.post('http://localhost:5000/api/auth/register', { name, email, password });
       const { token, user } = response.data;
       
       localStorage.setItem('auth_token', token);

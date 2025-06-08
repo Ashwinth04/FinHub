@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../../contexts/ThemeContext';
-import { FiHome, FiBriefcase, FiTrendingUp, FiActivity, FiMessageCircle, FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi';
+import { useAuth } from '../../contexts/AuthContext';
+import { FiHome, FiBriefcase, FiTrendingUp, FiActivity, FiMessageCircle, FiMenu, FiX, FiMoon, FiSun, FiLogOut, FiUser } from 'react-icons/fi';
 
 export default function AppLayout({ children }) {
   const { theme, toggleTheme } = useTheme();
+  const { currentUser, logout } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   
@@ -18,6 +20,10 @@ export default function AppLayout({ children }) {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleLogout = () => {
+    logout();
   };
 
   return (
@@ -50,12 +56,25 @@ export default function AppLayout({ children }) {
                 })}
               </div>
             </div>
-            <div className="hidden sm:ml-6 sm:flex sm:items-center">
+            <div className="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-full text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 dark:focus:ring-offset-neutral-800"
               >
                 {theme === 'dark' ? <FiSun className="h-5 w-5" /> : <FiMoon className="h-5 w-5" />}
+              </button>
+              
+              <div className="flex items-center space-x-2">
+                <FiUser className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />
+                <span className="text-sm text-neutral-700 dark:text-neutral-300">{currentUser?.name}</span>
+              </div>
+              
+              <button
+                onClick={handleLogout}
+                className="p-2 rounded-full text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 dark:focus:ring-offset-neutral-800"
+                title="Logout"
+              >
+                <FiLogOut className="h-5 w-5" />
               </button>
             </div>
             <div className="-mr-2 flex items-center sm:hidden">
@@ -97,6 +116,21 @@ export default function AppLayout({ children }) {
                   </Link>
                 );
               })}
+            </div>
+            <div className="pt-4 pb-3 border-t border-neutral-200 dark:border-neutral-700">
+              <div className="flex items-center px-4">
+                <FiUser className="h-5 w-5 text-neutral-500 dark:text-neutral-400 mr-2" />
+                <span className="text-base font-medium text-neutral-800 dark:text-neutral-200">{currentUser?.name}</span>
+              </div>
+              <div className="mt-3 space-y-1">
+                <button
+                  onClick={handleLogout}
+                  className="flex items-center w-full px-4 py-2 text-base font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700"
+                >
+                  <FiLogOut className="mr-3 h-5 w-5" />
+                  Sign out
+                </button>
+              </div>
             </div>
           </div>
         )}
