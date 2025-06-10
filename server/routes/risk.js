@@ -1,6 +1,8 @@
 import express from 'express';
 import { authenticate } from '../middleware/auth.js';
 import Portfolio from '../models/Portfolio.js';
+import RiskMetrics from '../models/RiskMetrics.js';
+import Asset from '../models/Asset.js';
 
 const router = express.Router();
 
@@ -10,37 +12,32 @@ router.use(authenticate);
 // Calculate risk metrics for a portfolio
 router.get('/:portfolioId/metrics', async (req, res) => {
   try {
-    // Find the portfolio
-    const portfolio = await Portfolio.findOne({
-      _id: req.params.portfolioId,
-      user: req.user._id
-    });
+    const portfolio = await Portfolio.findById(req.params.portfolioId);
     
-    if (!portfolio) {
+    if (!portfolio || portfolio.user_id !== req.user.id) {
       return res.status(404).json({ message: 'Portfolio not found' });
     }
+
+    // Check if we have cached risk metrics
+    let riskMetrics = await RiskMetrics.findByPortfolioId(portfolio.id);
     
-    // Generate mock historical data
-    const historicalData = generateMockHistoricalData(portfolio.assets);
+    if (!riskMetrics) {
+      // Calculate new risk metrics
+      const assets = await portfolio.getAssets();
+      const calculatedMetrics = await calculateRiskMetrics(assets, portfolio);
+      
+      riskMetrics = await RiskMetrics.createOrUpdate(portfolio.id, calculatedMetrics);
+    }
+
+    // Calculate correlation matrix
+    const correlationMatrix = await calculateCorrelationMatrix(portfolio.id);
     
-    // Calculate metrics
-    const volatility = calculateVolatility(historicalData);
-    const sharpeRatio = calculateSharpeRatio(historicalData);
-    const maxDrawdown = calculateMaxDrawdown(historicalData);
-    const valueAtRisk = calculateValueAtRisk(historicalData, portfolio);
-    
-    // Calculate correlation matrix between assets
-    const correlationMatrix = calculateCorrelationMatrix(historicalData);
-    
-    res.json({
-      volatility,
-      sharpeRatio,
-      maxDrawdown,
-      valueAtRisk,
-      correlationMatrix,
-      beta: 1.15, // Mocked beta value
-      alpha: 0.28  // Mocked alpha value
-    });
+    const result = {
+      ...riskMetrics.toJSON(),
+      correlationMatrix
+    };
+
+    res.json(result);
   } catch (err) {
     console.error('Risk metrics calculation error:', err);
     res.status(500).json({ message: 'Server error' });
@@ -52,24 +49,20 @@ router.post('/:portfolioId/monte-carlo', async (req, res) => {
   try {
     const { simulations, years, confidenceLevel } = req.body;
     
-    // Find the portfolio
-    const portfolio = await Portfolio.findOne({
-      _id: req.params.portfolioId,
-      user: req.user._id
-    });
+    const portfolio = await Portfolio.findById(req.params.portfolioId);
     
-    if (!portfolio) {
+    if (!portfolio || portfolio.user_id !== req.user.id) {
       return res.status(404).json({ message: 'Portfolio not found' });
     }
-    
-    // Run Monte Carlo simulation
+
+    const currentValue = await portfolio.getCurrentValue();
     const results = runMonteCarloSimulation(
-      portfolio,
+      currentValue,
       simulations || 1000,
       years || 10,
       confidenceLevel || 0.95
     );
-    
+
     res.json(results);
   } catch (err) {
     console.error('Monte Carlo simulation error:', err);
@@ -77,390 +70,232 @@ router.post('/:portfolioId/monte-carlo', async (req, res) => {
   }
 });
 
-// Generate mock historical data for assets
-function generateMockHistoricalData(assets) {
-  const data = {
-    dates: [],
-    assetValues: {},
-    portfolioValues: []
+// Helper function to calculate risk metrics
+async function calculateRiskMetrics(assets, portfolio) {
+  // Generate mock historical data for calculation
+  const historicalData = generateMockHistoricalData(assets);
+  
+  const volatility = calculateVolatility(historicalData);
+  const sharpeRatio = calculateSharpeRatio(historicalData);
+  const maxDrawdown = calculateMaxDrawdown(historicalData);
+  const currentValue = await portfolio.getCurrentValue();
+  const valueAtRisk = calculateValueAtRisk(historicalData, currentValue);
+  
+  return {
+    volatility_daily: volatility.daily,
+    volatility_annualized: volatility.annualized,
+    sharpe_ratio_daily: sharpeRatio.daily,
+    sharpe_ratio_annualized: sharpeRatio.annualized,
+    max_drawdown: maxDrawdown.maxDrawdown,
+    max_drawdown_start_date: maxDrawdown.startDate,
+    max_drawdown_end_date: maxDrawdown.endDate,
+    max_drawdown_duration_days: maxDrawdown.durationDays,
+    var_95: valueAtRisk.var95,
+    var_99: valueAtRisk.var99,
+    var_95_percent: valueAtRisk.var95Percent,
+    var_99_percent: valueAtRisk.var99Percent,
+    beta: 1.15, // Mock value
+    alpha: 0.28  // Mock value
   };
+}
+
+// Helper function to calculate correlation matrix
+async function calculateCorrelationMatrix(portfolio_id) {
+  const assets = await Asset.findByPortfolioId(portfolio_id);
   
-  // Generate dates for the past year (daily)
-  const startDate = new Date();
-  startDate.setFullYear(startDate.getFullYear() - 1);
-  
-  for (let i = 0; i < 365; i++) {
-    const date = new Date(startDate);
-    date.setDate(date.getDate() + i);
-    data.dates.push(date.toISOString().split('T')[0]);
+  // Generate mock correlation data
+  const correlationData = [];
+  for (let i = 0; i < assets.length; i++) {
+    const row = [];
+    for (let j = 0; j < assets.length; j++) {
+      if (i === j) {
+        row.push(1.0);
+      } else {
+        // Generate mock correlation based on asset types
+        const correlation = generateMockCorrelation(assets[i], assets[j]);
+        row.push(correlation);
+      }
+    }
+    correlationData.push(row);
   }
   
-  // Generate mock values for each asset
-  assets.forEach(asset => {
-    const values = [];
-    let currentValue = asset.purchasePrice;
-    
-    // Set volatility based on asset type
-    let volatility;
-    switch (asset.type) {
-      case 'stock':
-        volatility = 0.015;
-        break;
-      case 'bond':
-        volatility = 0.005;
-        break;
-      case 'crypto':
-        volatility = 0.04;
-        break;
-      case 'reit':
-        volatility = 0.02;
-        break;
-      default:
-        volatility = 0.01;
-    }
-    
-    // Generate daily values with random walk
-    for (let i = 0; i < 365; i++) {
-      const change = currentValue * (Math.random() * 2 - 1) * volatility;
-      currentValue += change;
-      
-      if (currentValue < 0) currentValue = 0.01; // Prevent negative values
-      
-      values.push(currentValue);
-    }
-    
-    data.assetValues[asset._id] = values;
-  });
+  return {
+    assets: assets.map(a => ({ id: a.id, symbol: a.symbol, name: a.name })),
+    data: correlationData
+  };
+}
+
+// Mock functions (simplified versions of the original complex calculations)
+function generateMockHistoricalData(assets) {
+  const data = { portfolioValues: [] };
   
-  // Calculate portfolio values
   for (let i = 0; i < 365; i++) {
     let portfolioValue = 0;
-    
     assets.forEach(asset => {
-      portfolioValue += data.assetValues[asset._id][i] * asset.quantity;
+      const volatility = getAssetVolatility(asset.type);
+      const change = (Math.random() * 2 - 1) * volatility;
+      const price = asset.purchase_price * (1 + change);
+      portfolioValue += asset.quantity * price;
     });
-    
     data.portfolioValues.push(portfolioValue);
   }
   
   return data;
 }
 
-// Calculate volatility (standard deviation of returns)
+function getAssetVolatility(type) {
+  switch (type) {
+    case 'stock': return 0.015;
+    case 'bond': return 0.005;
+    case 'crypto': return 0.04;
+    case 'reit': return 0.02;
+    default: return 0.01;
+  }
+}
+
 function calculateVolatility(historicalData) {
   const returns = calculateDailyReturns(historicalData.portfolioValues);
-  
-  // Calculate standard deviation
   const mean = returns.reduce((sum, val) => sum + val, 0) / returns.length;
-  const squaredDiffs = returns.map(val => Math.pow(val - mean, 2));
-  const variance = squaredDiffs.reduce((sum, val) => sum + val, 0) / returns.length;
+  const variance = returns.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / returns.length;
   const stdDev = Math.sqrt(variance);
-  
-  // Convert to annualized volatility
-  const annualizedVolatility = stdDev * Math.sqrt(252); // Assuming 252 trading days
   
   return {
     daily: stdDev,
-    annualized: annualizedVolatility
+    annualized: stdDev * Math.sqrt(252)
   };
 }
 
-// Calculate Sharpe ratio
 function calculateSharpeRatio(historicalData) {
   const returns = calculateDailyReturns(historicalData.portfolioValues);
-  
-  // Calculate average return
   const avgReturn = returns.reduce((sum, val) => sum + val, 0) / returns.length;
+  const stdDev = Math.sqrt(returns.reduce((sum, val) => sum + Math.pow(val - avgReturn, 2), 0) / returns.length);
+  const riskFreeRate = 0.035 / 252;
   
-  // Calculate standard deviation
-  const squaredDiffs = returns.map(val => Math.pow(val - avgReturn, 2));
-  const variance = squaredDiffs.reduce((sum, val) => sum + val, 0) / returns.length;
-  const stdDev = Math.sqrt(variance);
-  
-  // Assume risk-free rate
-  const riskFreeRate = 0.035 / 252; // Approximate daily rate from 3.5% annual
-  
-  // Calculate Sharpe ratio
   const dailySharpe = (avgReturn - riskFreeRate) / stdDev;
-  
-  // Annualize
-  const annualizedSharpe = dailySharpe * Math.sqrt(252);
   
   return {
     daily: dailySharpe,
-    annualized: annualizedSharpe
+    annualized: dailySharpe * Math.sqrt(252)
   };
 }
 
-// Calculate maximum drawdown
 function calculateMaxDrawdown(historicalData) {
   const values = historicalData.portfolioValues;
-  
   let maxValue = values[0];
   let maxDrawdown = 0;
   let drawdownStart = 0;
   let drawdownEnd = 0;
-  let currentDrawdownStart = 0;
   
   for (let i = 1; i < values.length; i++) {
     if (values[i] > maxValue) {
       maxValue = values[i];
-      currentDrawdownStart = i;
+      drawdownStart = i;
     }
     
     const drawdown = (maxValue - values[i]) / maxValue;
-    
     if (drawdown > maxDrawdown) {
       maxDrawdown = drawdown;
-      drawdownStart = currentDrawdownStart;
       drawdownEnd = i;
     }
   }
   
+  const startDate = new Date();
+  startDate.setDate(startDate.getDate() - (365 - drawdownStart));
+  const endDate = new Date();
+  endDate.setDate(endDate.getDate() - (365 - drawdownEnd));
+  
   return {
-    maxDrawdown: maxDrawdown,
-    startDate: historicalData.dates[drawdownStart],
-    endDate: historicalData.dates[drawdownEnd],
+    maxDrawdown,
+    startDate: startDate.toISOString().split('T')[0],
+    endDate: endDate.toISOString().split('T')[0],
     durationDays: drawdownEnd - drawdownStart
   };
 }
 
-// Calculate Value at Risk (VaR)
-function calculateValueAtRisk(historicalData, portfolio) {
+function calculateValueAtRisk(historicalData, portfolioValue) {
   const returns = calculateDailyReturns(historicalData.portfolioValues);
-  
-  // Sort returns in ascending order
   returns.sort((a, b) => a - b);
   
-  // Calculate VaR at different confidence levels
-  const portfolioValue = portfolio.assets.reduce(
-    (total, asset) => total + asset.currentPrice * asset.quantity, 
-    0
-  );
-  
-  // Calculate VaR at 95% and 99% confidence levels
   const var95Index = Math.floor(returns.length * 0.05);
   const var99Index = Math.floor(returns.length * 0.01);
   
-  const var95 = -returns[var95Index] * portfolioValue;
-  const var99 = -returns[var99Index] * portfolioValue;
-  
   return {
-    portfolioValue,
-    var95,
-    var99,
+    var95: -returns[var95Index] * portfolioValue,
+    var99: -returns[var99Index] * portfolioValue,
     var95Percent: -returns[var95Index] * 100,
     var99Percent: -returns[var99Index] * 100
   };
 }
 
-// Calculate correlation matrix between assets
-function calculateCorrelationMatrix(historicalData) {
-  const assetIds = Object.keys(historicalData.assetValues);
-  const correlationMatrix = {};
-  
-  // Calculate returns for each asset
-  const assetReturns = {};
-  
-  assetIds.forEach(id => {
-    assetReturns[id] = calculateDailyReturns(historicalData.assetValues[id]);
-  });
-  
-  // Calculate correlation between each pair of assets
-  assetIds.forEach(id1 => {
-    correlationMatrix[id1] = {};
-    
-    assetIds.forEach(id2 => {
-      const correlation = calculateCorrelation(
-        assetReturns[id1],
-        assetReturns[id2]
-      );
-      
-      correlationMatrix[id1][id2] = correlation;
-    });
-  });
-  
-  return correlationMatrix;
-}
-
-// Calculate correlation between two series
-function calculateCorrelation(series1, series2) {
-  const n = Math.min(series1.length, series2.length);
-  
-  // Calculate means
-  const mean1 = series1.reduce((sum, val) => sum + val, 0) / n;
-  const mean2 = series2.reduce((sum, val) => sum + val, 0) / n;
-  
-  // Calculate covariance and variances
-  let covariance = 0;
-  let variance1 = 0;
-  let variance2 = 0;
-  
-  for (let i = 0; i < n; i++) {
-    const diff1 = series1[i] - mean1;
-    const diff2 = series2[i] - mean2;
-    
-    covariance += diff1 * diff2;
-    variance1 += diff1 * diff1;
-    variance2 += diff2 * diff2;
-  }
-  
-  covariance /= n;
-  variance1 /= n;
-  variance2 /= n;
-  
-  // Calculate correlation
-  const correlation = covariance / (Math.sqrt(variance1) * Math.sqrt(variance2));
-  
-  return correlation;
-}
-
-// Calculate daily returns from prices
 function calculateDailyReturns(prices) {
   const returns = [];
-  
   for (let i = 1; i < prices.length; i++) {
     returns.push((prices[i] - prices[i-1]) / prices[i-1]);
   }
-  
   return returns;
 }
 
-// Run Monte Carlo simulation
-function runMonteCarloSimulation(portfolio, simulations, years, confidenceLevel) {
-  // Calculate initial portfolio value
-  const initialValue = portfolio.assets.reduce(
-    (total, asset) => total + asset.currentPrice * asset.quantity,
-    0
-  );
-  
-  // Set up result structure
-  const results = {
-    initialValue,
-    simulations: [],
-    statistics: {}
-  };
-  
-  // Generate return assumptions for each asset
-  const assetAssumptions = portfolio.assets.map(asset => {
-    // Set mean return based on asset type
-    let meanReturn;
-    switch (asset.type) {
-      case 'stock':
-        meanReturn = 0.08;
-        break;
-      case 'bond':
-        meanReturn = 0.04;
-        break;
-      case 'crypto':
-        meanReturn = 0.12;
-        break;
-      case 'reit':
-        meanReturn = 0.06;
-        break;
-      default:
-        meanReturn = 0.05;
-    }
-    
-    // Set volatility based on asset type
-    let volatility;
-    switch (asset.type) {
-      case 'stock':
-        volatility = 0.18;
-        break;
-      case 'bond':
-        volatility = 0.05;
-        break;
-      case 'crypto':
-        volatility = 0.60;
-        break;
-      case 'reit':
-        volatility = 0.15;
-        break;
-      default:
-        volatility = 0.10;
-    }
-    
-    return {
-      id: asset._id,
-      symbol: asset.symbol,
-      weight: (asset.currentPrice * asset.quantity) / initialValue,
-      meanReturn,
-      volatility
-    };
-  });
-  
-  // Calculate portfolio-level assumptions (simplified)
-  const portfolioMeanReturn = assetAssumptions.reduce(
-    (sum, asset) => sum + asset.meanReturn * asset.weight,
-    0
-  );
-  
-  // Simplified calculation - in reality would use correlation matrix
-  const portfolioVolatility = Math.sqrt(
-    assetAssumptions.reduce(
-      (sum, asset) => sum + Math.pow(asset.volatility * asset.weight, 2),
-      0
-    )
-  );
-  
-  // Run simulations
+function generateMockCorrelation(asset1, asset2) {
+  // Same asset type = higher correlation
+  if (asset1.type === asset2.type) {
+    return 0.6 + Math.random() * 0.3;
+  }
+  // Different types = lower correlation
+  return Math.random() * 0.4 - 0.2;
+}
+
+function runMonteCarloSimulation(initialValue, simulations, years, confidenceLevel) {
   const finalValues = [];
-  const timeSteps = years * 12; // Monthly steps
+  const timeSteps = years * 12;
+  const monthlyReturn = 0.08 / 12;
+  const monthlyVolatility = 0.16 / Math.sqrt(12);
   
-  for (let sim = 0; sim < simulations; sim++) {
-    const pathValues = [initialValue];
+  // Generate 5 sample paths for visualization
+  const samplePaths = [];
+  for (let i = 0; i < 5; i++) {
+    const path = [initialValue];
     let currentValue = initialValue;
     
     for (let t = 0; t < timeSteps; t++) {
-      // Generate random return from normal distribution
-      const randomReturn = generateNormalRandom(portfolioMeanReturn / 12, portfolioVolatility / Math.sqrt(12));
-      
-      // Update value
+      const randomReturn = monthlyReturn + ((Math.random() * 2) - 1) * monthlyVolatility;
       currentValue = currentValue * (1 + randomReturn);
-      pathValues.push(currentValue);
+      path.push(currentValue);
     }
     
-    results.simulations.push({
-      id: sim,
-      path: pathValues,
-      finalValue: currentValue
-    });
-    
+    samplePaths.push({ id: i, path });
     finalValues.push(currentValue);
   }
   
-  // Calculate statistics
+  // Generate additional final values for statistics
+  for (let i = 5; i < simulations; i++) {
+    let value = initialValue;
+    for (let t = 0; t < timeSteps; t++) {
+      const randomReturn = monthlyReturn + ((Math.random() * 2) - 1) * monthlyVolatility;
+      value = value * (1 + randomReturn);
+    }
+    finalValues.push(value);
+  }
+  
   finalValues.sort((a, b) => a - b);
   
-  // Calculate confidence intervals
   const lowerIndex = Math.floor(simulations * (1 - confidenceLevel) / 2);
   const upperIndex = Math.floor(simulations * (1 + confidenceLevel) / 2);
   
-  results.statistics = {
-    median: finalValues[Math.floor(simulations / 2)],
-    mean: finalValues.reduce((sum, val) => sum + val, 0) / simulations,
-    min: finalValues[0],
-    max: finalValues[simulations - 1],
-    confidenceInterval: {
-      level: confidenceLevel,
-      lower: finalValues[lowerIndex],
-      upper: finalValues[upperIndex]
+  return {
+    initialValue,
+    simulationPaths: samplePaths,
+    statistics: {
+      median: finalValues[Math.floor(simulations / 2)],
+      mean: finalValues.reduce((sum, val) => sum + val, 0) / simulations,
+      min: finalValues[0],
+      max: finalValues[simulations - 1],
+      confidenceInterval: {
+        level: confidenceLevel,
+        lower: finalValues[lowerIndex],
+        upper: finalValues[upperIndex]
+      }
     }
   };
-  
-  return results;
-}
-
-// Helper function to generate random numbers from normal distribution
-function generateNormalRandom(mean, stdDev) {
-  // Box-Muller transform
-  const u1 = Math.random();
-  const u2 = Math.random();
-  
-  const z0 = Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(2.0 * Math.PI * u2);
-  
-  return z0 * stdDev + mean;
 }
 
 export default router;

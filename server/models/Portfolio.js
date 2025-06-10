@@ -1,119 +1,188 @@
-// import mongoose from 'mongoose';
+import { dbGet, dbRun, dbAll } from '../database/database.js';
 
-// const AssetSchema = new mongoose.Schema({
-//   name: {
-//     type: String,
-//     required: true,
-//     trim: true
-//   },
-//   symbol: {
-//     type: String,
-//     required: true,
-//     trim: true
-//   },
-//   type: {
-//     type: String,
-//     required: true,
-//     enum: ['stock', 'bond', 'crypto', 'reit', 'cash', 'commodity']
-//   },
-//   quantity: {
-//     type: Number,
-//     required: true,
-//     min: 0
-//   },
-//   purchasePrice: {
-//     type: Number,
-//     required: true,
-//     min: 0
-//   },
-//   purchaseDate: {
-//     type: Date,
-//     required: true
-//   },
-//   currentPrice: {
-//     type: Number,
-//     default: 0
-//   },
-//   lastUpdated: {
-//     type: Date,
-//     default: Date.now
-//   }
-// });
+export class Portfolio {
+  constructor(id, user_id, name, description, is_default, created_at, updated_at) {
+    this.id = id;
+    this.user_id = user_id;
+    this.name = name;
+    this.description = description;
+    this.is_default = is_default;
+    this.created_at = created_at;
+    this.updated_at = updated_at;
+  }
 
-// const PortfolioSchema = new mongoose.Schema({
-//   user: {
-//     type: mongoose.Schema.Types.ObjectId,
-//     ref: 'User',
-//     required: true
-//   },
-//   name: {
-//     type: String,
-//     required: true,
-//     trim: true
-//   },
-//   description: {
-//     type: String,
-//     trim: true
-//   },
-//   assets: [AssetSchema],
-//   createdAt: {
-//     type: Date,
-//     default: Date.now
-//   },
-//   isDefault: {
-//     type: Boolean,
-//     default: false
-//   }
-// });
+  // Create a new portfolio
+  static async create(user_id, name, description, is_default = false) {
+    try {
+      // If this portfolio is marked as default, unset default on all other portfolios
+      if (is_default) {
+        await dbRun('UPDATE portfolios SET is_default = 0 WHERE user_id = ?', [user_id]);
+      }
 
-// // Virtual for calculating current portfolio value
-// PortfolioSchema.virtual('currentValue').get(function() {
-//   return this.assets.reduce((total, asset) => {
-//     return total + (asset.currentPrice * asset.quantity);
-//   }, 0);
-// });
+      const result = await dbRun(
+        'INSERT INTO portfolios (user_id, name, description, is_default) VALUES (?, ?, ?, ?)',
+        [user_id, name, description, is_default ? 1 : 0]
+      );
 
-// // Virtual for calculating initial investment
-// PortfolioSchema.virtual('initialInvestment').get(function() {
-//   return this.assets.reduce((total, asset) => {
-//     return total + (asset.purchasePrice * asset.quantity);
-//   }, 0);
-// });
+      return await Portfolio.findById(result.id);
+    } catch (error) {
+      throw error;
+    }
+  }
 
-// // Virtual for calculating return
-// PortfolioSchema.virtual('return').get(function() {
-//   const initial = this.initialInvestment;
-//   if (initial === 0) return 0;
-  
-//   return ((this.currentValue - initial) / initial) * 100;
-// });
+  // Find portfolio by ID
+  static async findById(id) {
+    try {
+      const portfolio = await dbGet('SELECT * FROM portfolios WHERE id = ?', [id]);
+      return portfolio ? new Portfolio(
+        portfolio.id,
+        portfolio.user_id,
+        portfolio.name,
+        portfolio.description,
+        portfolio.is_default,
+        portfolio.created_at,
+        portfolio.updated_at
+      ) : null;
+    } catch (error) {
+      throw error;
+    }
+  }
 
-// // Method to calculate asset allocation by type
-// PortfolioSchema.methods.calculateAllocation = function() {
-//   const totalValue = this.currentValue;
-//   if (totalValue === 0) return {};
-  
-//   const allocation = {};
-  
-//   this.assets.forEach(asset => {
-//     const assetValue = asset.currentPrice * asset.quantity;
-//     const assetType = asset.type.charAt(0).toUpperCase() + asset.type.slice(1);
-    
-//     if (allocation[assetType]) {
-//       allocation[assetType] += (assetValue / totalValue) * 100;
-//     } else {
-//       allocation[assetType] = (assetValue / totalValue) * 100;
-//     }
-//   });
-  
-//   // Round to 2 decimal places
-//   Object.keys(allocation).forEach(key => {
-//     allocation[key] = parseFloat(allocation[key].toFixed(2));
-//   });
-  
-//   return allocation;
-// };
+  // Find portfolios by user ID
+  static async findByUserId(user_id) {
+    try {
+      const portfolios = await dbAll('SELECT * FROM portfolios WHERE user_id = ? ORDER BY created_at DESC', [user_id]);
+      return portfolios.map(p => new Portfolio(
+        p.id,
+        p.user_id,
+        p.name,
+        p.description,
+        p.is_default,
+        p.created_at,
+        p.updated_at
+      ));
+    } catch (error) {
+      throw error;
+    }
+  }
 
-// const Portfolio = mongoose.model('Portfolio', PortfolioSchema);
+  // Update portfolio
+  async update(name, description, is_default) {
+    try {
+      // If this portfolio is being marked as default, unset default on all other portfolios
+      if (is_default && !this.is_default) {
+        await dbRun('UPDATE portfolios SET is_default = 0 WHERE user_id = ? AND id != ?', [this.user_id, this.id]);
+      }
 
-// export default Portfolio;
+      await dbRun(
+        'UPDATE portfolios SET name = ?, description = ?, is_default = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
+        [name, description, is_default ? 1 : 0, this.id]
+      );
+
+      this.name = name;
+      this.description = description;
+      this.is_default = is_default;
+      this.updated_at = new Date().toISOString();
+
+      return this;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  // Delete portfolio
+  async delete() {
+    try {
+      await dbRun('DELETE FROM portfolios WHERE id = ?', [this.id]);
+      return true;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  // Get portfolio assets
+  async getAssets() {
+    try {
+      const assets = await dbAll('SELECT * FROM assets WHERE portfolio_id = ? ORDER BY created_at DESC', [this.id]);
+      return assets;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  // Get portfolio value
+  async getCurrentValue() {
+    try {
+      const assets = await this.getAssets();
+      let totalValue = 0;
+
+      for (const asset of assets) {
+        // Get latest price for the asset
+        const latestPrice = await dbGet(
+          'SELECT price FROM asset_prices WHERE asset_id = ? ORDER BY price_date DESC LIMIT 1',
+          [asset.id]
+        );
+        
+        const currentPrice = latestPrice ? latestPrice.price : asset.purchase_price;
+        totalValue += asset.quantity * currentPrice;
+      }
+
+      return totalValue;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  // Calculate asset allocation
+  async calculateAllocation() {
+    try {
+      const assets = await this.getAssets();
+      const totalValue = await this.getCurrentValue();
+      
+      if (totalValue === 0) return {};
+
+      const allocation = {};
+
+      for (const asset of assets) {
+        const latestPrice = await dbGet(
+          'SELECT price FROM asset_prices WHERE asset_id = ? ORDER BY price_date DESC LIMIT 1',
+          [asset.id]
+        );
+        
+        const currentPrice = latestPrice ? latestPrice.price : asset.purchase_price;
+        const assetValue = asset.quantity * currentPrice;
+        const assetType = asset.type.charAt(0).toUpperCase() + asset.type.slice(1);
+
+        if (allocation[assetType]) {
+          allocation[assetType] += (assetValue / totalValue) * 100;
+        } else {
+          allocation[assetType] = (assetValue / totalValue) * 100;
+        }
+      }
+
+      // Round to 2 decimal places
+      Object.keys(allocation).forEach(key => {
+        allocation[key] = parseFloat(allocation[key].toFixed(2));
+      });
+
+      return allocation;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  // Return portfolio data without sensitive information
+  toJSON() {
+    return {
+      id: this.id,
+      user_id: this.user_id,
+      name: this.name,
+      description: this.description,
+      is_default: this.is_default,
+      created_at: this.created_at,
+      updated_at: this.updated_at
+    };
+  }
+}
+
+export default Portfolio;
