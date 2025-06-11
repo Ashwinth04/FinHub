@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { FiX, FiCalendar } from 'react-icons/fi';
 
-export default function PortfolioAddForm({ onCancel }) {
+export default function PortfolioAddForm({ onCancel, onSubmit }) {
   const [formData, setFormData] = useState({
     name: '',
     symbol: '',
     type: 'stock',
     quantity: '',
-    purchasePrice: '',
-    purchaseDate: new Date().toISOString().split('T')[0]
+    purchase_price: '',
+    purchase_date: new Date().toISOString().split('T')[0]
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const assetTypes = [
     { value: 'stock', label: 'Stock' },
@@ -25,12 +27,21 @@ export default function PortfolioAddForm({ onCancel }) {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // In a real app, you would save this to your backend
-    console.log('Submitting new asset:', formData);
-    // Clear form and close
-    onCancel();
+    setIsSubmitting(true);
+    
+    try {
+      await onSubmit({
+        ...formData,
+        quantity: parseFloat(formData.quantity),
+        purchase_price: parseFloat(formData.purchase_price)
+      });
+    } catch (err) {
+      console.error('Failed to add asset:', err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
@@ -116,7 +127,7 @@ export default function PortfolioAddForm({ onCancel }) {
           </div>
           
           <div>
-            <label htmlFor="purchasePrice" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+            <label htmlFor="purchase_price" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
               Purchase Price
             </label>
             <div className="relative">
@@ -125,9 +136,9 @@ export default function PortfolioAddForm({ onCancel }) {
               </div>
               <input
                 type="number"
-                id="purchasePrice"
-                name="purchasePrice"
-                value={formData.purchasePrice}
+                id="purchase_price"
+                name="purchase_price"
+                value={formData.purchase_price}
                 onChange={handleChange}
                 className="input pl-7"
                 step="0.01"
@@ -139,15 +150,15 @@ export default function PortfolioAddForm({ onCancel }) {
           </div>
           
           <div>
-            <label htmlFor="purchaseDate" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+            <label htmlFor="purchase_date" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
               Purchase Date
             </label>
             <div className="relative">
               <input
                 type="date"
-                id="purchaseDate"
-                name="purchaseDate"
-                value={formData.purchaseDate}
+                id="purchase_date"
+                name="purchase_date"
+                value={formData.purchase_date}
                 onChange={handleChange}
                 className="input"
                 required
@@ -164,14 +175,16 @@ export default function PortfolioAddForm({ onCancel }) {
             type="button"
             onClick={onCancel}
             className="btn bg-neutral-200 dark:bg-neutral-700 hover:bg-neutral-300 dark:hover:bg-neutral-600 text-neutral-800 dark:text-neutral-200"
+            disabled={isSubmitting}
           >
             Cancel
           </button>
           <button
             type="submit"
             className="btn btn-primary"
+            disabled={isSubmitting}
           >
-            Add Asset
+            {isSubmitting ? 'Adding...' : 'Add Asset'}
           </button>
         </div>
       </form>

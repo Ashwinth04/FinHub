@@ -1,45 +1,141 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AppLayout from '../../components/layout/AppLayout';
 import PortfolioSummary from '../../components/dashboard/PortfolioSummary';
 import AssetAllocation from '../../components/dashboard/AssetAllocation';
 import PerformanceChart from '../../components/dashboard/PerformanceChart';
 import TopHoldings from '../../components/dashboard/TopHoldings';
+import LoadingSpinner from '../../components/common/LoadingSpinner';
+import CreatePortfolioModal from '../../components/portfolio/CreatePortfolioModal';
+import { usePortfolio } from '../../hooks/usePortfolio';
 
 export default function DashboardPage() {
-  // Mock data for portfolio summary
-  const portfolioSummary = {
-    portfolioValue: 125750.42,
-    gainLoss: 12500.42,
-    gainLossPercent: 11.04,
-    allocation: {
-      Stocks: 55,
-      Bonds: 20,
-      Crypto: 15,
-      REITs: 10,
+  const { currentPortfolio, loading, error, createPortfolio, fetchPortfolioDetails } = usePortfolio();
+  const [showCreateModal, setShowCreateModal] = useState(false);
+
+  // Refresh portfolio data when component mounts
+  useEffect(() => {
+    if (currentPortfolio?.id) {
+      fetchPortfolioDetails(currentPortfolio.id);
     }
+  }, []);
+
+  const handleCreatePortfolio = async (portfolioData) => {
+    await createPortfolio(portfolioData);
   };
 
-  // Mock data for performance chart
+  if (loading) {
+    return <LoadingSpinner />;
+  }
+
+  if (error) {
+    return (
+      <AppLayout>
+        <div className="flex items-center justify-center min-h-[400px]">
+          <div className="text-center">
+            <p className="text-error-500 mb-4">{error}</p>
+            <button 
+              onClick={() => window.location.reload()} 
+              className="btn btn-primary"
+            >
+              Retry
+            </button>
+          </div>
+        </div>
+      </AppLayout>
+    );
+  }
+
+  if (!currentPortfolio) {
+    return (
+      <AppLayout>
+        <div className="flex items-center justify-center min-h-[400px]">
+          <div className="text-center">
+            <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
+              No Portfolio Found
+            </h2>
+            <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+              Create your first portfolio to get started
+            </p>
+            <button 
+              onClick={() => setShowCreateModal(true)}
+              className="btn btn-primary"
+            >
+              Create Portfolio
+            </button>
+          </div>
+        </div>
+        
+        <CreatePortfolioModal
+          isOpen={showCreateModal}
+          onClose={() => setShowCreateModal(false)}
+          onSubmit={handleCreatePortfolio}
+        />
+      </AppLayout>
+    );
+  }
+
+  // Calculate portfolio metrics from real data
+  const portfolioValue = currentPortfolio.assets?.reduce((total, asset) => {
+    return total + (asset.quantity * asset.purchase_price); // Using purchase_price as current for now
+  }, 0) || 0;
+
+  const costBasis = currentPortfolio.assets?.reduce((total, asset) => {
+    return total + (asset.quantity * asset.purchase_price);
+  }, 0) || 0;
+
+  const gainLoss = portfolioValue - costBasis; // Will be 0 for now since current = purchase
+  const gainLossPercent = costBasis > 0 ? ((gainLoss / costBasis) * 100).toFixed(2) : 0;
+
+  // Calculate allocation from real data
+  const allocation = {};
+  currentPortfolio.assets?.forEach(asset => {
+    const assetValue = asset.quantity * asset.purchase_price;
+    const assetType = asset.type.charAt(0).toUpperCase() + asset.type.slice(1);
+    
+    if (allocation[assetType]) {
+      allocation[assetType] += (assetValue / portfolioValue) * 100;
+    } else {
+      allocation[assetType] = (assetValue / portfolioValue) * 100;
+    }
+  });
+
+  // Round allocation percentages
+  Object.keys(allocation).forEach(key => {
+    allocation[key] = parseFloat(allocation[key].toFixed(2));
+  });
+
+  // Generate performance data (mock for now - would need historical data)
   const performanceData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    portfolio: [100000, 102000, 105000, 103000, 108000, 110000, 112000, 118000, 116000, 120000, 123000, 125750.42]
+    portfolio: Array.from({ length: 12 }, (_, i) => {
+      const variation = (Math.random() - 0.5) * 0.1;
+      return costBasis * (1 + (i * 0.02) + variation);
+    })
   };
   
-  // Mock benchmark data
   const benchmark = {
     name: 'S&P 500',
-    data: [100000, 101000, 103000, 102000, 104000, 105000, 108000, 110000, 109000, 112000, 115000, 118000]
+    data: Array.from({ length: 12 }, (_, i) => {
+      const variation = (Math.random() - 0.5) * 0.08;
+      return costBasis * (1 + (i * 0.015) + variation);
+    })
   };
 
-  // Mock data for top holdings
-  const topHoldings = [
-    { id: 1, name: 'Apple Inc.', symbol: 'AAPL', value: 15250.75, allocation: 12.13, return: 24.5 },
-    { id: 2, name: 'Microsoft Corp.', symbol: 'MSFT', value: 12480.30, allocation: 9.93, return: 18.2 },
-    { id: 3, name: 'Amazon.com Inc.', symbol: 'AMZN', value: 9870.20, allocation: 7.85, return: -5.7 },
-    { id: 4, name: 'iShares 20+ Year Treasury', symbol: 'TLT', value: 8750.00, allocation: 6.96, return: -2.3 },
-    { id: 5, name: 'Bitcoin', symbol: 'BTC', value: 7890.15, allocation: 6.27, return: 32.1 },
-    { id: 6, name: 'Vanguard Real Estate ETF', symbol: 'VNQ', value: 5240.80, allocation: 4.17, return: 7.8 },
-  ];
+  // Prepare top holdings from real data
+  const topHoldings = currentPortfolio.assets?.map(asset => {
+    const value = asset.quantity * asset.purchase_price;
+    const costBasis = asset.quantity * asset.purchase_price;
+    const returnValue = 0; // Will be 0 for now since current = purchase
+    
+    return {
+      id: asset.id,
+      name: asset.name,
+      symbol: asset.symbol,
+      value: value,
+      allocation: portfolioValue > 0 ? ((value / portfolioValue) * 100).toFixed(2) : 0,
+      return: returnValue.toFixed(1)
+    };
+  }).sort((a, b) => b.value - a.value).slice(0, 6) || [];
 
   return (
     <AppLayout>
@@ -47,16 +143,16 @@ export default function DashboardPage() {
         <div className="mb-6">
           <h1 className="text-2xl font-bold text-neutral-900 dark:text-white">Dashboard</h1>
           <p className="text-neutral-500 dark:text-neutral-400">
-            Overview of your investment portfolio as of {new Date().toLocaleDateString()}
+            Overview of {currentPortfolio.name} as of {new Date().toLocaleDateString()}
           </p>
         </div>
 
         <div className="mb-8">
           <PortfolioSummary 
-            portfolioValue={portfolioSummary.portfolioValue}
-            gainLoss={portfolioSummary.gainLoss}
-            gainLossPercent={portfolioSummary.gainLossPercent}
-            allocation={portfolioSummary.allocation}
+            portfolioValue={portfolioValue}
+            gainLoss={gainLoss}
+            gainLossPercent={gainLossPercent}
+            allocation={allocation}
           />
         </div>
 
@@ -66,7 +162,7 @@ export default function DashboardPage() {
             benchmark={benchmark}
           />
           <AssetAllocation 
-            allocation={portfolioSummary.allocation} 
+            allocation={allocation} 
           />
         </div>
 

@@ -2,6 +2,7 @@ import express from 'express';
 import { authenticate } from '../middleware/auth.js';
 import Portfolio from '../models/Portfolio.js';
 import Asset from '../models/Asset.js';
+import { dbRun, dbGet, dbAll } from '../database/database.js';
 
 const router = express.Router();
 
@@ -106,25 +107,28 @@ router.delete('/:id', async (req, res) => {
 // Add an asset to a portfolio
 router.post('/:id/assets', async (req, res) => {
   try {
-    const { name, symbol, type, quantity, purchasePrice, purchaseDate } = req.body;
+    const { name, symbol, type, quantity, purchase_price, purchase_date } = req.body;
     
+    // Find the portfolio and verify ownership
     const portfolio = await Portfolio.findById(req.params.id);
-    
     if (!portfolio || portfolio.user_id !== req.user.id) {
       return res.status(404).json({ message: 'Portfolio not found' });
     }
-
-    const asset = await Asset.create(
-      portfolio.id,
-      name,
-      symbol,
-      type,
-      quantity,
-      purchasePrice,
-      purchaseDate
+    
+    // Insert the asset
+    await dbRun(
+      'INSERT INTO assets (portfolio_id, name, symbol, type, quantity, purchase_price, purchase_date) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      [req.params.id, name, symbol, type, quantity, purchase_price, purchase_date]
     );
-
-    res.status(201).json(asset);
+    
+    // Return updated portfolio with assets
+    const assets = await dbAll('SELECT * FROM assets WHERE portfolio_id = ? ORDER BY created_at DESC', [req.params.id]);
+    const portfolioWithAssets = {
+      ...portfolio.toJSON(),
+      assets: assets
+    };
+    
+    res.status(201).json(portfolioWithAssets);
   } catch (err) {
     console.error('Add asset error:', err);
     res.status(500).json({ message: 'Server error' });

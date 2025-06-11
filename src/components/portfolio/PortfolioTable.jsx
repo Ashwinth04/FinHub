@@ -111,29 +111,29 @@ export default function PortfolioTable({ assets }) {
               </th>
               <th
                 className="table-cell text-right cursor-pointer"
-                onClick={() => handleSort('purchasePrice')}
+                onClick={() => handleSort('purchase_price')}
               >
                 <div className="flex items-center justify-end">
                   Purchase Price
-                  {renderSortIcon('purchasePrice')}
+                  {renderSortIcon('purchase_price')}
                 </div>
               </th>
               <th
                 className="table-cell text-right cursor-pointer"
-                onClick={() => handleSort('currentPrice')}
+                onClick={() => handleSort('purchase_price')}
               >
                 <div className="flex items-center justify-end">
                   Current Price
-                  {renderSortIcon('currentPrice')}
+                  {renderSortIcon('purchase_price')}
                 </div>
               </th>
               <th
                 className="table-cell text-right cursor-pointer"
-                onClick={() => handleSort('purchaseDate')}
+                onClick={() => handleSort('purchase_date')}
               >
                 <div className="flex items-center justify-end">
                   Purchase Date
-                  {renderSortIcon('purchaseDate')}
+                  {renderSortIcon('purchase_date')}
                 </div>
               </th>
               <th className="table-cell text-right">Market Value</th>
@@ -143,10 +143,12 @@ export default function PortfolioTable({ assets }) {
           </thead>
           <tbody className="divide-y divide-neutral-200 dark:divide-neutral-700">
             {sortedAssets.map((asset) => {
-              const marketValue = asset.quantity * asset.currentPrice;
-              const costBasis = asset.quantity * asset.purchasePrice;
+              // For now, use purchase price as current price since we don't have real-time data
+              const currentPrice = asset.purchase_price;
+              const marketValue = asset.quantity * currentPrice;
+              const costBasis = asset.quantity * asset.purchase_price;
               const gainLoss = marketValue - costBasis;
-              const gainLossPercent = ((gainLoss / costBasis) * 100).toFixed(2);
+              const gainLossPercent = costBasis > 0 ? ((gainLoss / costBasis) * 100).toFixed(2) : 0;
               const isPositive = gainLoss >= 0;
               
               return (
@@ -163,9 +165,9 @@ export default function PortfolioTable({ assets }) {
                     </span>
                   </td>
                   <td className="table-cell text-right">{asset.quantity}</td>
-                  <td className="table-cell text-right">{formatCurrency(asset.purchasePrice)}</td>
-                  <td className="table-cell text-right">{formatCurrency(asset.currentPrice)}</td>
-                  <td className="table-cell text-right">{formatDate(asset.purchaseDate)}</td>
+                  <td className="table-cell text-right">{formatCurrency(asset.purchase_price)}</td>
+                  <td className="table-cell text-right">{formatCurrency(currentPrice)}</td>
+                  <td className="table-cell text-right">{formatDate(asset.purchase_date)}</td>
                   <td className="table-cell text-right font-medium">{formatCurrency(marketValue)}</td>
                   <td className="table-cell text-right">
                     <div className={`flex items-center justify-end ${isPositive ? 'text-success-500' : 'text-error-500'}`}>
@@ -202,14 +204,11 @@ export default function PortfolioTable({ assets }) {
             <tr>
               <td colSpan="6" className="table-cell text-right font-semibold">Total</td>
               <td className="table-cell text-right font-semibold">
-                {formatCurrency(sortedAssets.reduce((sum, asset) => sum + asset.quantity * asset.currentPrice, 0))}
+                {formatCurrency(sortedAssets.reduce((sum, asset) => sum + asset.quantity * asset.purchase_price, 0))}
               </td>
               <td className="table-cell text-right font-semibold">
                 {(() => {
-                  const totalGainLoss = sortedAssets.reduce(
-                    (sum, asset) => sum + (asset.quantity * (asset.currentPrice - asset.purchasePrice)),
-                    0
-                  );
+                  const totalGainLoss = 0; // Since current price = purchase price for now
                   const isPositive = totalGainLoss >= 0;
                   
                   return (
