@@ -8,11 +8,16 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 export default function AssetAllocation({ allocation }) {
   // Define a consistent color palette for asset classes
   const colorPalette = {
+    stock: 'rgba(54, 162, 235, 0.8)',
     stocks: 'rgba(54, 162, 235, 0.8)',
+    bond: 'rgba(75, 192, 192, 0.8)',
     bonds: 'rgba(75, 192, 192, 0.8)',
     crypto: 'rgba(153, 102, 255, 0.8)',
+    cryptocurrency: 'rgba(153, 102, 255, 0.8)',
+    reit: 'rgba(255, 159, 64, 0.8)',
     reits: 'rgba(255, 159, 64, 0.8)',
     cash: 'rgba(201, 203, 207, 0.8)',
+    commodity: 'rgba(255, 99, 132, 0.8)',
     commodities: 'rgba(255, 99, 132, 0.8)',
   };
 
@@ -22,8 +27,12 @@ export default function AssetAllocation({ allocation }) {
     datasets: [
       {
         data: Object.values(allocation),
-        backgroundColor: Object.keys(allocation).map(key => colorPalette[key.toLowerCase()] || 'rgba(100, 100, 100, 0.8)'),
-        borderColor: Object.keys(allocation).map(key => colorPalette[key.toLowerCase()]?.replace('0.8', '1') || 'rgba(100, 100, 100, 1)'),
+        backgroundColor: Object.keys(allocation).map(key => 
+          colorPalette[key.toLowerCase()] || 'rgba(100, 100, 100, 0.8)'
+        ),
+        borderColor: Object.keys(allocation).map(key => 
+          colorPalette[key.toLowerCase()]?.replace('0.8', '1') || 'rgba(100, 100, 100, 1)'
+        ),
         borderWidth: 1,
       },
     ],

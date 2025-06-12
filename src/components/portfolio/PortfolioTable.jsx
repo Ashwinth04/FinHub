@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { FiArrowUp, FiArrowDown, FiEdit2, FiTrash2, FiChevronUp, FiChevronDown } from 'react-icons/fi';
+import { FiArrowUp, FiArrowDown, FiEdit2, FiTrash2, FiChevronUp, FiChevronDown, FiSave, FiX } from 'react-icons/fi';
 
-export default function PortfolioTable({ assets }) {
+export default function PortfolioTable({ assets, onUpdateAsset, onDeleteAsset }) {
   const [sortField, setSortField] = useState('name');
   const [sortDirection, setSortDirection] = useState('asc');
+  const [editingAsset, setEditingAsset] = useState(null);
+  const [editForm, setEditForm] = useState({});
   
   const sortedAssets = [...assets].sort((a, b) => {
     let aValue = a[sortField];
@@ -26,6 +28,41 @@ export default function PortfolioTable({ assets }) {
       setSortField(field);
       setSortDirection('asc');
     }
+  };
+  
+  const handleEditClick = (asset) => {
+    setEditingAsset(asset.id);
+    setEditForm({
+      name: asset.name,
+      symbol: asset.symbol,
+      type: asset.type,
+      quantity: asset.quantity,
+      purchase_price: asset.purchase_price,
+      purchase_date: asset.purchase_date
+    });
+  };
+  
+  const handleEditCancel = () => {
+    setEditingAsset(null);
+    setEditForm({});
+  };
+  
+  const handleEditSave = async (assetId) => {
+    try {
+      await onUpdateAsset(assetId, {
+        ...editForm,
+        quantity: parseFloat(editForm.quantity),
+        purchase_price: parseFloat(editForm.purchase_price)
+      });
+      setEditingAsset(null);
+      setEditForm({});
+    } catch (err) {
+      console.error('Failed to update asset:', err);
+    }
+  };
+  
+  const handleEditChange = (field, value) => {
+    setEditForm(prev => ({ ...prev, [field]: value }));
   };
   
   const renderSortIcon = (field) => {
@@ -74,6 +111,15 @@ export default function PortfolioTable({ assets }) {
       day: 'numeric'
     }).format(date);
   };
+  
+  const assetTypes = [
+    { value: 'stock', label: 'Stock' },
+    { value: 'bond', label: 'Bond' },
+    { value: 'crypto', label: 'Cryptocurrency' },
+    { value: 'reit', label: 'REIT' },
+    { value: 'cash', label: 'Cash' },
+    { value: 'commodity', label: 'Commodity' }
+  ];
   
   return (
     <div className="card overflow-hidden">
@@ -143,7 +189,7 @@ export default function PortfolioTable({ assets }) {
           </thead>
           <tbody className="divide-y divide-neutral-200 dark:divide-neutral-700">
             {sortedAssets.map((asset) => {
-              // For now, use purchase price as current price since we don't have real-time data
+              const isEditing = editingAsset === asset.id;
               const currentPrice = asset.purchase_price;
               const marketValue = asset.quantity * currentPrice;
               const costBasis = asset.quantity * asset.purchase_price;
@@ -154,20 +200,76 @@ export default function PortfolioTable({ assets }) {
               return (
                 <tr key={asset.id} className="table-row animate-fade-in">
                   <td className="table-cell">
-                    <div>
-                      <div className="font-medium text-neutral-900 dark:text-white">{asset.name}</div>
-                      <div className="text-xs text-neutral-500">{asset.symbol}</div>
-                    </div>
+                    {isEditing ? (
+                      <input
+                        type="text"
+                        value={editForm.name}
+                        onChange={(e) => handleEditChange('name', e.target.value)}
+                        className="input text-sm py-1"
+                      />
+                    ) : (
+                      <div>
+                        <div className="font-medium text-neutral-900 dark:text-white">{asset.name}</div>
+                        <div className="text-xs text-neutral-500">{asset.symbol}</div>
+                      </div>
+                    )}
                   </td>
                   <td className="table-cell">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getAssetTypeColor(asset.type)}`}>
-                      {getAssetTypeLabel(asset.type)}
-                    </span>
+                    {isEditing ? (
+                      <select
+                        value={editForm.type}
+                        onChange={(e) => handleEditChange('type', e.target.value)}
+                        className="input text-sm py-1"
+                      >
+                        {assetTypes.map(type => (
+                          <option key={type.value} value={type.value}>{type.label}</option>
+                        ))}
+                      </select>
+                    ) : (
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getAssetTypeColor(asset.type)}`}>
+                        {getAssetTypeLabel(asset.type)}
+                      </span>
+                    )}
                   </td>
-                  <td className="table-cell text-right">{asset.quantity}</td>
-                  <td className="table-cell text-right">{formatCurrency(asset.purchase_price)}</td>
+                  <td className="table-cell text-right">
+                    {isEditing ? (
+                      <input
+                        type="number"
+                        value={editForm.quantity}
+                        onChange={(e) => handleEditChange('quantity', e.target.value)}
+                        className="input text-sm py-1 w-20"
+                        step="any"
+                      />
+                    ) : (
+                      asset.quantity
+                    )}
+                  </td>
+                  <td className="table-cell text-right">
+                    {isEditing ? (
+                      <input
+                        type="number"
+                        value={editForm.purchase_price}
+                        onChange={(e) => handleEditChange('purchase_price', e.target.value)}
+                        className="input text-sm py-1 w-24"
+                        step="0.01"
+                      />
+                    ) : (
+                      formatCurrency(asset.purchase_price)
+                    )}
+                  </td>
                   <td className="table-cell text-right">{formatCurrency(currentPrice)}</td>
-                  <td className="table-cell text-right">{formatDate(asset.purchase_date)}</td>
+                  <td className="table-cell text-right">
+                    {isEditing ? (
+                      <input
+                        type="date"
+                        value={editForm.purchase_date}
+                        onChange={(e) => handleEditChange('purchase_date', e.target.value)}
+                        className="input text-sm py-1"
+                      />
+                    ) : (
+                      formatDate(asset.purchase_date)
+                    )}
+                  </td>
                   <td className="table-cell text-right font-medium">{formatCurrency(marketValue)}</td>
                   <td className="table-cell text-right">
                     <div className={`flex items-center justify-end ${isPositive ? 'text-success-500' : 'text-error-500'}`}>
@@ -182,18 +284,41 @@ export default function PortfolioTable({ assets }) {
                   </td>
                   <td className="table-cell">
                     <div className="flex items-center justify-center space-x-2">
-                      <button
-                        className="p-1 text-neutral-500 hover:text-primary-500 dark:text-neutral-400 dark:hover:text-primary-400"
-                        title="Edit"
-                      >
-                        <FiEdit2 />
-                      </button>
-                      <button
-                        className="p-1 text-neutral-500 hover:text-error-500 dark:text-neutral-400 dark:hover:text-error-400"
-                        title="Delete"
-                      >
-                        <FiTrash2 />
-                      </button>
+                      {isEditing ? (
+                        <>
+                          <button
+                            onClick={() => handleEditSave(asset.id)}
+                            className="p-1 text-neutral-500 hover:text-success-500 dark:text-neutral-400 dark:hover:text-success-400"
+                            title="Save"
+                          >
+                            <FiSave />
+                          </button>
+                          <button
+                            onClick={handleEditCancel}
+                            className="p-1 text-neutral-500 hover:text-error-500 dark:text-neutral-400 dark:hover:text-error-400"
+                            title="Cancel"
+                          >
+                            <FiX />
+                          </button>
+                        </>
+                      ) : (
+                        <>
+                          <button
+                            onClick={() => handleEditClick(asset)}
+                            className="p-1 text-neutral-500 hover:text-primary-500 dark:text-neutral-400 dark:hover:text-primary-400"
+                            title="Edit"
+                          >
+                            <FiEdit2 />
+                          </button>
+                          <button
+                            onClick={() => onDeleteAsset(asset.id)}
+                            className="p-1 text-neutral-500 hover:text-error-500 dark:text-neutral-400 dark:hover:text-error-400"
+                            title="Delete"
+                          >
+                            <FiTrash2 />
+                          </button>
+                        </>
+                      )}
                     </div>
                   </td>
                 </tr>
