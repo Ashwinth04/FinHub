@@ -1,0 +1,27 @@
+# Core dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic
+numpy
+
+# Build dependencies
+pybind11==2.11.1
+cmake>=3.12
+setuptools>=40.0
+wheel
+
+# Development and testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+requests==2.31.0
+
+# Optional: for enhanced performance monitoring
+psutil==5.9.6
+
+# Optional: for additional mathematical functions
+scipy
+
+# Windows-specific compatibility
+colorama>=0.4.4
+pywin32>=305; sys_platform=="win32"

@@ -1,0 +1,57 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv/
+
+# Build artifacts
+cpp/build/
+*.pyd
+*.dll
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+.nyc_output
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Windows specific
+build_windows.bat
+start_server.bat
+WINDOWS_SETUP.md
+
+# Temporary files
+*.tmp
+*.temp

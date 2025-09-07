@@ -1,0 +1,41 @@
+{
+  "assets": [
+    {
+      "asset_name": "AAPL",
+      "weight": 0.4,
+      "expected_return": 0.12,
+      "volatility": 0.25
+    },
+    {
+      "asset_name": "GOOGL",
+      "weight": 0.3,
+      "expected_return": 0.1,
+      "volatility": 0.3
+    },
+    {
+      "asset_name": "MSFT",
+      "weight": 0.3,
+      "expected_return": 0.11,
+      "volatility": 0.28
+    }
+  ],
+  "correlation_matrix": [
+    [
+      1,
+      0.7,
+      0.8
+    ],
+    [
+      0.7,
+      1,
+      0.6
+    ],
+    [
+      0.8,
+      0.6,
+      1
+    ]
+  ],
+  "num_simulations": 100000,
+  "time_horizon_days": 1
+}

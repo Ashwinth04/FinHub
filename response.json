@@ -1,0 +1,47 @@
+{
+  "token": "AAPL",
+  "company": "Apple Inc.",
+  "overall_sentiment": {
+    "label": "Positive",
+    "score": 1.8,
+    "summary": "AAPL is generally viewed positively across platforms. Most discussions highlight its strengths with some minor concerns noted."
+  },
+  "sentiment_by_source": {
+    "twitter": {
+      "label": "Very Positive",
+      "mentions": 7850
+    },
+    "reddit": {
+      "label": "Positive",
+      "mentions": 4320
+    },
+    "news": {
+      "label": "Positive",
+      "mentions": 2145
+    }
+  },
+  "sentiment_trends": {
+    "daily_change": 0.3,
+    "weekly_change": -0.5,
+    "monthly_change": 1.2
+  },
+  "sentiment_history": [
+    {"date": "2025-08-08", "score": 2.1},
+    {"date": "2025-08-09", "score": 2.3},
+    {"date": "2025-08-10", "score": 1.9}
+  ],
+  "sentiment_price_correlation": {
+    "correlation_coefficient": 0.59,
+    "interpretation": "Moderate positive correlation between sentiment and price.",
+    "series": {
+      "sentiment": [
+        {"date": "2025-08-08", "score": 1.5},
+        {"date": "2025-08-09", "score": 2.0}
+      ],
+      "price": [
+        {"date": "2025-08-08", "price": 176.5},
+        {"date": "2025-08-09", "price": 178.0}
+      ]
+    }
+  }
+}

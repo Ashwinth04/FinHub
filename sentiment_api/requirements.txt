@@ -1,0 +1,9 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+yfinance==0.2.28
+google-genai==0.3.0
+google-generativeai
+pydantic
+python-dotenv==1.0.0
+numpy
+pandas
