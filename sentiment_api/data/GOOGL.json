@@ -1,0 +1,240 @@
+{
+    "token": "GOOGL",
+    "company": "GOOGL Inc.",
+    "overall_sentiment": {
+        "label": "Positive",
+        "score": 3.5,
+        "summary": "Recent sentiment for GOOGL is positive, driven by analyst upgrades, strong financial performance, and expansion into AI. Concerns exist about regulatory scrutiny and market corrections, but overall, the outlook is optimistic [1, 2, 5, 8]."
+    },
+    "sentiment_by_source": {
+        "twitter": {
+            "label": "Positive",
+            "mentions": 150
+        },
+        "reddit": {
+            "label": "Neutral",
+            "mentions": 80
+        },
+        "news": {
+            "label": "Positive",
+            "mentions": 60
+        }
+    },
+    "sentiment_trends": {
+        "daily_change": 0.0,
+        "weekly_change": 0.7,
+        "monthly_change": 0.4
+    },
+    "sentiment_history": [
+        {
+            "date": "2025-08-24",
+            "score": 3.7
+        },
+        {
+            "date": "2025-08-25",
+            "score": 3.9
+        },
+        {
+            "date": "2025-08-26",
+            "score": 4.2
+        },
+        {
+            "date": "2025-08-27",
+            "score": 4.2
+        },
+        {
+            "date": "2025-08-28",
+            "score": 4.2
+        },
+        {
+            "date": "2025-08-29",
+            "score": 4.1
+        },
+        {
+            "date": "2025-08-30",
+            "score": 3.8
+        },
+        {
+            "date": "2025-08-31",
+            "score": 3.5
+        },
+        {
+            "date": "2025-09-01",
+            "score": 3.6
+        },
+        {
+            "date": "2025-09-02",
+            "score": 3.5
+        },
+        {
+            "date": "2025-09-03",
+            "score": 3.3
+        },
+        {
+            "date": "2025-09-04",
+            "score": 3.1
+        },
+        {
+            "date": "2025-09-05",
+            "score": 3.4
+        },
+        {
+            "date": "2025-09-06",
+            "score": 3.4
+        },
+        {
+            "date": "2025-09-07",
+            "score": 3.7
+        },
+        {
+            "date": "2025-09-08",
+            "score": 3.7
+        },
+        {
+            "date": "2025-09-09",
+            "score": 3.5
+        },
+        {
+            "date": "2025-09-10",
+            "score": 3.6
+        },
+        {
+            "date": "2025-09-11",
+            "score": 3.5
+        },
+        {
+            "date": "2025-09-12",
+            "score": 3.6
+        },
+        {
+            "date": "2025-09-13",
+            "score": 3.5
+        },
+        {
+            "date": "2025-09-14",
+            "score": 3.6
+        },
+        {
+            "date": "2025-09-15",
+            "score": 3.5
+        },
+        {
+            "date": "2025-09-16",
+            "score": 3.4
+        },
+        {
+            "date": "2025-09-17",
+            "score": 3.6
+        },
+        {
+            "date": "2025-09-18",
+            "score": 3.6
+        },
+        {
+            "date": "2025-09-19",
+            "score": 3.9
+        },
+        {
+            "date": "2025-09-20",
+            "score": 4.0
+        },
+        {
+            "date": "2025-09-21",
+            "score": 4.1
+        },
+        {
+            "date": "2025-09-22",
+            "score": 4.1
+        }
+    ],
+    "sentiment_price_correlation": {
+        "correlation_coefficient": -0.34,
+        "interpretation": "Negative correlation between sentiment and price.",
+        "series": {
+            "sentiment": [
+                {
+                    "date": "2025-09-13",
+                    "score": 3.5
+                },
+                {
+                    "date": "2025-09-14",
+                    "score": 3.6
+                },
+                {
+                    "date": "2025-09-15",
+                    "score": 3.5
+                },
+                {
+                    "date": "2025-09-16",
+                    "score": 3.4
+                },
+                {
+                    "date": "2025-09-17",
+                    "score": 3.6
+                },
+                {
+                    "date": "2025-09-18",
+                    "score": 3.6
+                },
+                {
+                    "date": "2025-09-19",
+                    "score": 3.9
+                },
+                {
+                    "date": "2025-09-20",
+                    "score": 4.0
+                },
+                {
+                    "date": "2025-09-21",
+                    "score": 4.1
+                },
+                {
+                    "date": "2025-09-22",
+                    "score": 4.1
+                }
+            ],
+            "price": [
+                {
+                    "date": "2025-09-13",
+                    "price": 85.76
+                },
+                {
+                    "date": "2025-09-14",
+                    "price": 86.64
+                },
+                {
+                    "date": "2025-09-15",
+                    "price": 90.61
+                },
+                {
+                    "date": "2025-09-16",
+                    "price": 89.16
+                },
+                {
+                    "date": "2025-09-17",
+                    "price": 86.4
+                },
+                {
+                    "date": "2025-09-18",
+                    "price": 85.87
+                },
+                {
+                    "date": "2025-09-19",
+                    "price": 85.88
+                },
+                {
+                    "date": "2025-09-20",
+                    "price": 84.87
+                },
+                {
+                    "date": "2025-09-21",
+                    "price": 85.66
+                },
+                {
+                    "date": "2025-09-22",
+                    "price": 85.94
+                }
+            ]
+        }
+    }
+}

@@ -1,11 +1,15 @@
 import React from 'react';
-import { FiTwitter, FiMessageCircle, FiBookOpen } from 'react-icons/fi';
+import { FiTwitter, FiMessageCircle, FiBookOpen, FiArrowUp, FiArrowDown } from 'react-icons/fi';
 
 export default function SentimentOverview({ sentimentData, selectedAsset, onAssetChange }) {
-  const { assets, sentiment } = sentimentData;
+  const assets = Object.keys(sentimentData);
   
   // Get sentiment data for the selected asset
-  const assetSentiment = sentiment[selectedAsset];
+  const assetSentiment = sentimentData[selectedAsset];
+  
+  if (!assetSentiment) {
+    return <div className="card">Loading sentiment data...</div>;
+  }
   
   // Helper to determine sentiment color
   const getSentimentColor = (score) => {
@@ -22,14 +26,6 @@ export default function SentimentOverview({ sentimentData, selectedAsset, onAsse
     if (score >= -0.5) return 'bg-yellow-100 dark:bg-yellow-900/20';
     if (score >= -2) return 'bg-orange-100 dark:bg-orange-900/20';
     return 'bg-red-100 dark:bg-red-900/20';
-  };
-  
-  const getSentimentLabel = (score) => {
-    if (score >= 2) return 'Very Positive';
-    if (score >= 0.5) return 'Positive';
-    if (score >= -0.5) return 'Neutral';
-    if (score >= -2) return 'Negative';
-    return 'Very Negative';
   };
   
   const getSourceIcon = (source) => {
@@ -49,71 +45,133 @@ export default function SentimentOverview({ sentimentData, selectedAsset, onAsse
     <div className="card">
       <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-6">Sentiment Overview</h3>
       
+      {/* Asset Selection Buttons */}
       <div className="flex flex-wrap gap-2 mb-6">
         {assets.map(asset => (
           <button
-            key={asset.id}
+            key={asset}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              selectedAsset === asset.symbol
+              selectedAsset === asset
                 ? 'bg-primary-500 text-white'
                 : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-700'
             }`}
-            onClick={() => onAssetChange(asset.symbol)}
+            onClick={() => onAssetChange(asset)}
           >
-            {asset.symbol}
+            {asset}
           </button>
         ))}
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
-        <div className="md:col-span-1">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        {/* Left Side - Company Info and Overall Sentiment */}
+        <div>
           <h4 className="text-base font-medium text-neutral-900 dark:text-white mb-4">
-            {assets.find(a => a.symbol === selectedAsset)?.name || selectedAsset}
+            {assetSentiment.company || selectedAsset}
           </h4>
           
-          <div className={`p-4 rounded-lg ${getSentimentBgColor(assetSentiment.overall.score)}`}>
-            <div className="text-lg font-semibold mb-1 text-neutral-900 dark:text-white">Overall Sentiment</div>
-            <div className={`text-2xl font-bold mb-2 ${getSentimentColor(assetSentiment.overall.score)}`}>
-              {getSentimentLabel(assetSentiment.overall.score)}
+          <div className="mb-6">
+            <h5 className="text-lg font-semibold text-neutral-900 dark:text-white mb-3">Overall Sentiment</h5>
+            <div className={`p-4 rounded-lg ${getSentimentBgColor(assetSentiment.overall_sentiment.score)}`}>
+              <div className={`text-2xl font-bold mb-2 ${getSentimentColor(assetSentiment.overall_sentiment.score)}`}>
+                {assetSentiment.overall_sentiment.label}
+              </div>
+              <div className="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
+                Score: {assetSentiment.overall_sentiment.score.toFixed(1)} / 5.0
+              </div>
+              <div className="text-sm text-neutral-500 dark:text-neutral-400">
+                {assetSentiment.overall_sentiment.summary}
+              </div>
             </div>
-            <div className="text-sm text-neutral-600 dark:text-neutral-400">
-              Score: {assetSentiment.overall.score.toFixed(1)} / 5.0
-            </div>
-            <div className="mt-4 text-xs text-neutral-500 dark:text-neutral-400">
-              {generateSentimentSummary(selectedAsset, assetSentiment.overall.score)}
+          </div>
+          
+          {/* Sentiment Trends */}
+          <div>
+            <h5 className="text-lg font-semibold text-neutral-900 dark:text-white mb-3">Sentiment Trends</h5>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bg-neutral-50 dark:bg-neutral-800 p-3 rounded-lg">
+                <div className="text-neutral-600 dark:text-neutral-400 text-sm mb-2">Daily Change</div>
+                <div className="flex items-center">
+                  <div className={`text-lg font-semibold ${assetSentiment.sentiment_trends.daily_change >= 0 ? 'text-success-500' : 'text-error-500'}`}>
+                    {assetSentiment.sentiment_trends.daily_change >= 0 ? '+' : ''}{assetSentiment.sentiment_trends.daily_change.toFixed(1)}
+                  </div>
+                  <div className="ml-2">
+                    {assetSentiment.sentiment_trends.daily_change >= 0 ? (
+                      <FiArrowUp className="w-4 h-4 text-success-500" />
+                    ) : (
+                      <FiArrowDown className="w-4 h-4 text-error-500" />
+                    )}
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-neutral-50 dark:bg-neutral-800 p-3 rounded-lg">
+                <div className="text-neutral-600 dark:text-neutral-400 text-sm mb-2">Weekly Change</div>
+                <div className="flex items-center">
+                  <div className={`text-lg font-semibold ${assetSentiment.sentiment_trends.weekly_change >= 0 ? 'text-success-500' : 'text-error-500'}`}>
+                    {assetSentiment.sentiment_trends.weekly_change >= 0 ? '+' : ''}{assetSentiment.sentiment_trends.weekly_change.toFixed(1)}
+                  </div>
+                  <div className="ml-2">
+                    {assetSentiment.sentiment_trends.weekly_change >= 0 ? (
+                      <FiArrowUp className="w-4 h-4 text-success-500" />
+                    ) : (
+                      <FiArrowDown className="w-4 h-4 text-error-500" />
+                    )}
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-neutral-50 dark:bg-neutral-800 p-3 rounded-lg">
+                <div className="text-neutral-600 dark:text-neutral-400 text-sm mb-2">Monthly Change</div>
+                <div className="flex items-center">
+                  <div className={`text-lg font-semibold ${assetSentiment.sentiment_trends.monthly_change >= 0 ? 'text-success-500' : 'text-error-500'}`}>
+                    {assetSentiment.sentiment_trends.monthly_change >= 0 ? '+' : ''}{assetSentiment.sentiment_trends.monthly_change.toFixed(1)}
+                  </div>
+                  <div className="ml-2">
+                    {assetSentiment.sentiment_trends.monthly_change >= 0 ? (
+                      <FiArrowUp className="w-4 h-4 text-success-500" />
+                    ) : (
+                      <FiArrowDown className="w-4 h-4 text-error-500" />
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         
-        <div className="md:col-span-3">
-          <h4 className="text-base font-medium text-neutral-900 dark:text-white mb-4">
+        {/* Right Side - Sentiment by Source */}
+        <div>
+          <h5 className="text-lg font-semibold text-neutral-900 dark:text-white mb-4">
             Sentiment by Source
-          </h4>
+          </h5>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {['twitter', 'reddit', 'news'].map(source => (
+          <div className="space-y-4">
+            {Object.entries(assetSentiment.sentiment_by_source).map(([source, data]) => (
               <div 
                 key={source}
                 className="bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg"
               >
-                <div className="flex items-center mb-2">
-                  {getSourceIcon(source)}
-                  <span className="ml-2 text-neutral-900 dark:text-white capitalize">{source}</span>
-                </div>
-                <div className="flex items-center mb-2">
-                  <div className="h-2 w-full bg-neutral-200 dark:bg-neutral-700 rounded-full overflow-hidden">
-                    <div 
-                      className={`h-full ${getSentimentColor(assetSentiment[source].score)}`}
-                      style={{ width: `${((assetSentiment[source].score + 5) / 10) * 100}%` }}
-                    ></div>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center">
+                    {getSourceIcon(source)}
+                    <span className="ml-2 text-neutral-900 dark:text-white capitalize font-medium">{source}</span>
+                  </div>
+                  <div className="text-sm text-neutral-500 dark:text-neutral-400">
+                    {data.mentions.toLocaleString()} mentions
                   </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <div className={`font-medium ${getSentimentColor(assetSentiment[source].score)}`}>
-                    {getSentimentLabel(assetSentiment[source].score)}
+                
+                <div className="flex items-center justify-between">
+                  <div className={`font-semibold ${getSentimentColor(getSentimentScoreFromLabel(data.label))}`}>
+                    {data.label}
                   </div>
-                  <div className="text-xs text-neutral-500 dark:text-neutral-400">
-                    {assetSentiment[source].volume.toLocaleString()} mentions
+                  <div className="flex-1 mx-4">
+                    <div className="h-2 w-full bg-neutral-200 dark:bg-neutral-700 rounded-full overflow-hidden">
+                      <div 
+                        className={`h-full ${getSentimentProgressColor(data.label)}`}
+                        style={{ width: `${getSentimentProgress(data.label)}%` }}
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -121,89 +179,40 @@ export default function SentimentOverview({ sentimentData, selectedAsset, onAsse
           </div>
         </div>
       </div>
-      
-      <div>
-        <h4 className="text-base font-medium text-neutral-900 dark:text-white mb-4">
-          Sentiment Trends
-        </h4>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg">
-            <div className="text-neutral-600 dark:text-neutral-400 text-sm mb-2">Daily Change</div>
-            <div className="flex items-center">
-              <div className={`text-lg font-semibold ${assetSentiment.trend.daily >= 0 ? 'text-success-500' : 'text-error-500'}`}>
-                {assetSentiment.trend.daily >= 0 ? '+' : ''}{assetSentiment.trend.daily.toFixed(1)}
-              </div>
-              <div className="ml-2">
-                {assetSentiment.trend.daily >= 0 ? (
-                  <svg className="w-5 h-5 text-success-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-                  </svg>
-                ) : (
-                  <svg className="w-5 h-5 text-error-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                  </svg>
-                )}
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg">
-            <div className="text-neutral-600 dark:text-neutral-400 text-sm mb-2">Weekly Change</div>
-            <div className="flex items-center">
-              <div className={`text-lg font-semibold ${assetSentiment.trend.weekly >= 0 ? 'text-success-500' : 'text-error-500'}`}>
-                {assetSentiment.trend.weekly >= 0 ? '+' : ''}{assetSentiment.trend.weekly.toFixed(1)}
-              </div>
-              <div className="ml-2">
-                {assetSentiment.trend.weekly >= 0 ? (
-                  <svg className="w-5 h-5 text-success-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-                  </svg>
-                ) : (
-                  <svg className="w-5 h-5 text-error-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                  </svg>
-                )}
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg">
-            <div className="text-neutral-600 dark:text-neutral-400 text-sm mb-2">Monthly Change</div>
-            <div className="flex items-center">
-              <div className={`text-lg font-semibold ${assetSentiment.trend.monthly >= 0 ? 'text-success-500' : 'text-error-500'}`}>
-                {assetSentiment.trend.monthly >= 0 ? '+' : ''}{assetSentiment.trend.monthly.toFixed(1)}
-              </div>
-              <div className="ml-2">
-                {assetSentiment.trend.monthly >= 0 ? (
-                  <svg className="w-5 h-5 text-success-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-                  </svg>
-                ) : (
-                  <svg className="w-5 h-5 text-error-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                  </svg>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
 
-// Helper function to generate a sentiment summary
-function generateSentimentSummary(symbol, score) {
-  if (score >= 2) {
-    return `${symbol} is receiving overwhelmingly positive sentiment across social media and news sources. Users are expressing strong confidence in its future performance.`;
-  } else if (score >= 0.5) {
-    return `${symbol} is generally viewed positively across platforms. Most discussions highlight its strengths with some minor concerns noted.`;
-  } else if (score >= -0.5) {
-    return `Sentiment around ${symbol} is mixed, with both positive and negative opinions being expressed relatively equally.`;
-  } else if (score >= -2) {
-    return `${symbol} is facing criticism across platforms. Users are expressing concerns about its near-term prospects.`;
-  } else {
-    return `${symbol} is receiving strongly negative sentiment across social media and news sources. There appears to be significant concern about its performance.`;
+// Helper functions
+function getSentimentScoreFromLabel(label) {
+  switch (label.toLowerCase()) {
+    case 'very positive': return 4;
+    case 'positive': return 2;
+    case 'neutral': return 0;
+    case 'negative': return -2;
+    case 'very negative': return -4;
+    default: return 0;
+  }
+}
+
+function getSentimentProgress(label) {
+  switch (label.toLowerCase()) {
+    case 'very positive': return 90;
+    case 'positive': return 70;
+    case 'neutral': return 50;
+    case 'negative': return 30;
+    case 'very negative': return 10;
+    default: return 50;
+  }
+}
+
+function getSentimentProgressColor(label) {
+  switch (label.toLowerCase()) {
+    case 'very positive': return 'bg-emerald-500';
+    case 'positive': return 'bg-green-500';
+    case 'neutral': return 'bg-yellow-500';
+    case 'negative': return 'bg-orange-500';
+    case 'very negative': return 'bg-red-500';
+    default: return 'bg-neutral-500';
   }
 }

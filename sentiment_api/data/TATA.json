@@ -1,0 +1,240 @@
+{
+    "token": "TATA",
+    "company": "TATA Inc.",
+    "overall_sentiment": {
+        "label": "Negative",
+        "score": -1.5,
+        "summary": "Based on recent news, Reddit discussions, and market analysis, the sentiment surrounding TATA Motors (TATAMOTORS) stock is slightly negative. The stock has shown mixed performance with some analysts issuing sell signals, while others maintain a hold or buy recommendation. Recent news highlights a decline in quarterly topline performance and concerns about falling profits and sales [2, 4]."
+    },
+    "sentiment_by_source": {
+        "twitter": {
+            "label": "Neutral",
+            "mentions": 10
+        },
+        "reddit": {
+            "label": "Negative",
+            "mentions": 5
+        },
+        "news": {
+            "label": "Negative",
+            "mentions": 15
+        }
+    },
+    "sentiment_trends": {
+        "daily_change": 0.1,
+        "weekly_change": 0.4,
+        "monthly_change": 0.6
+    },
+    "sentiment_history": [
+        {
+            "date": "2025-08-24",
+            "score": -1.4
+        },
+        {
+            "date": "2025-08-25",
+            "score": -1.4
+        },
+        {
+            "date": "2025-08-26",
+            "score": -1.3
+        },
+        {
+            "date": "2025-08-27",
+            "score": -1.4
+        },
+        {
+            "date": "2025-08-28",
+            "score": -1.7
+        },
+        {
+            "date": "2025-08-29",
+            "score": -1.7
+        },
+        {
+            "date": "2025-08-30",
+            "score": -1.5
+        },
+        {
+            "date": "2025-08-31",
+            "score": -1.6
+        },
+        {
+            "date": "2025-09-01",
+            "score": -1.7
+        },
+        {
+            "date": "2025-09-02",
+            "score": -1.7
+        },
+        {
+            "date": "2025-09-03",
+            "score": -1.8
+        },
+        {
+            "date": "2025-09-04",
+            "score": -1.7
+        },
+        {
+            "date": "2025-09-05",
+            "score": -1.6
+        },
+        {
+            "date": "2025-09-06",
+            "score": -1.4
+        },
+        {
+            "date": "2025-09-07",
+            "score": -1.3
+        },
+        {
+            "date": "2025-09-08",
+            "score": -1.1
+        },
+        {
+            "date": "2025-09-09",
+            "score": -1.0
+        },
+        {
+            "date": "2025-09-10",
+            "score": -1.2
+        },
+        {
+            "date": "2025-09-11",
+            "score": -1.0
+        },
+        {
+            "date": "2025-09-12",
+            "score": -1.2
+        },
+        {
+            "date": "2025-09-13",
+            "score": -1.4
+        },
+        {
+            "date": "2025-09-14",
+            "score": -1.6
+        },
+        {
+            "date": "2025-09-15",
+            "score": -1.4
+        },
+        {
+            "date": "2025-09-16",
+            "score": -1.2
+        },
+        {
+            "date": "2025-09-17",
+            "score": -1.0
+        },
+        {
+            "date": "2025-09-18",
+            "score": -1.2
+        },
+        {
+            "date": "2025-09-19",
+            "score": -1.0
+        },
+        {
+            "date": "2025-09-20",
+            "score": -0.7
+        },
+        {
+            "date": "2025-09-21",
+            "score": -0.9
+        },
+        {
+            "date": "2025-09-22",
+            "score": -0.8
+        }
+    ],
+    "sentiment_price_correlation": {
+        "correlation_coefficient": -0.29,
+        "interpretation": "Negative correlation between sentiment and price.",
+        "series": {
+            "sentiment": [
+                {
+                    "date": "2025-09-13",
+                    "score": -1.4
+                },
+                {
+                    "date": "2025-09-14",
+                    "score": -1.6
+                },
+                {
+                    "date": "2025-09-15",
+                    "score": -1.4
+                },
+                {
+                    "date": "2025-09-16",
+                    "score": -1.2
+                },
+                {
+                    "date": "2025-09-17",
+                    "score": -1.0
+                },
+                {
+                    "date": "2025-09-18",
+                    "score": -1.2
+                },
+                {
+                    "date": "2025-09-19",
+                    "score": -1.0
+                },
+                {
+                    "date": "2025-09-20",
+                    "score": -0.7
+                },
+                {
+                    "date": "2025-09-21",
+                    "score": -0.9
+                },
+                {
+                    "date": "2025-09-22",
+                    "score": -0.8
+                }
+            ],
+            "price": [
+                {
+                    "date": "2025-09-13",
+                    "price": 91.7
+                },
+                {
+                    "date": "2025-09-14",
+                    "price": 91.32
+                },
+                {
+                    "date": "2025-09-15",
+                    "price": 90.28
+                },
+                {
+                    "date": "2025-09-16",
+                    "price": 91.11
+                },
+                {
+                    "date": "2025-09-17",
+                    "price": 86.72
+                },
+                {
+                    "date": "2025-09-18",
+                    "price": 89.27
+                },
+                {
+                    "date": "2025-09-19",
+                    "price": 88.87
+                },
+                {
+                    "date": "2025-09-20",
+                    "price": 89.01
+                },
+                {
+                    "date": "2025-09-21",
+                    "price": 90.58
+                },
+                {
+                    "date": "2025-09-22",
+                    "price": 86.89
+                }
+            ]
+        }
+    }
+}

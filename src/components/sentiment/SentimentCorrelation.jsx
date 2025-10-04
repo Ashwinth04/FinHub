@@ -6,10 +6,39 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 export default function SentimentCorrelation({ correlationData }) {
-  const { symbol, dates, sentiment, prices, correlation } = correlationData;
+  if (!correlationData) {
+    return (
+      <div className="card h-full">
+        <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-4">
+          Sentiment-Price Correlation
+        </h3>
+        <div className="flex items-center justify-center h-[250px]">
+          <p className="text-neutral-500 dark:text-neutral-400">No correlation data available</p>
+        </div>
+      </div>
+    );
+  }
+  
+  const { token: symbol, sentiment_price_correlation } = correlationData;
+  
+  if (!sentiment_price_correlation) {
+    return (
+      <div className="card h-full">
+        <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-4">
+          Sentiment-Price Correlation for {symbol}
+        </h3>
+        <div className="flex items-center justify-center h-[250px]">
+          <p className="text-neutral-500 dark:text-neutral-400">No correlation data available for {symbol}</p>
+        </div>
+      </div>
+    );
+  }
+  
+  const { correlation_coefficient, series } = sentiment_price_correlation;
   
   // Format dates for display
-  const formattedDates = dates.map(date => {
+  const formattedDates = series.sentiment.map(item => {
+    const date = item.date;
     const d = new Date(date);
     return `${d.getMonth() + 1}/${d.getDate()}`;
   });
@@ -20,7 +49,7 @@ export default function SentimentCorrelation({ correlationData }) {
     datasets: [
       {
         label: 'Sentiment',
-        data: sentiment,
+        data: series.sentiment.map(item => item.score),
         borderColor: 'rgba(54, 162, 235, 1)',
         backgroundColor: 'rgba(54, 162, 235, 0.5)',
         yAxisID: 'y',
@@ -29,7 +58,7 @@ export default function SentimentCorrelation({ correlationData }) {
       },
       {
         label: 'Price',
-        data: prices,
+        data: series.price.map(item => item.price),
         borderColor: 'rgba(255, 99, 132, 1)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
         yAxisID: 'y1',
@@ -133,12 +162,12 @@ export default function SentimentCorrelation({ correlationData }) {
       <div className="mb-4">
         <div className="flex items-center justify-between">
           <div className="text-sm text-neutral-600 dark:text-neutral-400">Correlation Coefficient</div>
-          <div className={`text-lg font-semibold ${getCorrelationColor(correlation)}`}>
-            {correlation.toFixed(2)}
+          <div className={`text-lg font-semibold ${getCorrelationColor(correlation_coefficient)}`}>
+            {correlation_coefficient.toFixed(2)}
           </div>
         </div>
         <div className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-          <span className="font-medium">{getCorrelationStrength(correlation)}</span> {correlation >= 0 ? 'positive' : 'negative'} correlation between sentiment and price
+          <span className="font-medium">{getCorrelationStrength(correlation_coefficient)}</span> {correlation_coefficient >= 0 ? 'positive' : 'negative'} correlation between sentiment and price
         </div>
       </div>
       
@@ -147,29 +176,8 @@ export default function SentimentCorrelation({ correlationData }) {
       </div>
       
       <div className="mt-4 text-xs text-neutral-500 dark:text-neutral-400">
-        {generateCorrelationInsight(symbol, correlation)}
+        {sentiment_price_correlation.interpretation}
       </div>
     </div>
   );
-}
-
-// Helper function to generate correlation insights
-function generateCorrelationInsight(symbol, correlation) {
-  if (correlation >= 0.7) {
-    return `Strong positive correlation indicates that positive sentiment is closely linked to price increases for ${symbol}. Social sentiment appears to be a strong leading indicator.`;
-  } else if (correlation >= 0.5) {
-    return `Moderate positive correlation suggests that positive sentiment often coincides with price increases for ${symbol}, though the relationship isn't perfect.`;
-  } else if (correlation >= 0.3) {
-    return `Weak positive correlation indicates some relationship between sentiment and price for ${symbol}, but many other factors likely influence price movements.`;
-  } else if (correlation >= 0) {
-    return `Very weak positive correlation suggests that sentiment has minimal impact on ${symbol} price movements in the observed timeframe.`;
-  } else if (correlation >= -0.3) {
-    return `Very weak negative correlation suggests that sentiment and price for ${symbol} move somewhat independently of each other.`;
-  } else if (correlation >= -0.5) {
-    return `Weak negative correlation indicates that ${symbol} sometimes moves contrary to sentiment, which could suggest contrarian trading opportunities.`;
-  } else if (correlation >= -0.7) {
-    return `Moderate negative correlation suggests that ${symbol} often moves opposite to sentiment trends, which could be useful for contrarian strategies.`;
-  } else {
-    return `Strong negative correlation indicates that ${symbol} consistently moves opposite to sentiment, suggesting it may be a strong contrarian indicator.`;
-  }
 }

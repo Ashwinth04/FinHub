@@ -7,3 +7,5 @@ pydantic
 python-dotenv==1.0.0
 numpy
 pandas
+scipy
+redis>=4.5.0

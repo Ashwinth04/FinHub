@@ -120,6 +120,80 @@ router.put('/:portfolioId/assets/:assetId', async (req, res) => {
   }
 });
 
+// Apply optimized allocations by updating asset quantities
+router.put('/:portfolioId/weights', async (req, res) => {
+  try {
+    const { portfolioId } = req.params;
+    const weights = req.body;
+
+    console.log("Received weights for optimization:", weights);
+    console.log("Portfolio ID:", portfolioId);
+
+    // Find the portfolio and verify ownership
+    const portfolio = await Portfolio.findById(portfolioId);
+    if (!portfolio || portfolio.user_id !== req.user.id) {
+      return res.status(404).json({ message: 'Portfolio not found' });
+    }
+
+    console.log("Portfolio found:", portfolio);
+
+    // Get current assets
+    const assets = await dbAll('SELECT * FROM assets WHERE portfolio_id = ?', [portfolioId]);
+
+    console.log("Current assets:", assets);
+
+    if (assets.length === 0) {
+      return res.status(400).json({ message: 'No assets in portfolio to optimize' });
+    }
+
+    // Calculate total portfolio value
+    const totalValue = assets.reduce((sum, asset) => {
+      return sum + (asset.quantity * asset.purchase_price);
+    }, 0);
+
+    console.log("Total portfolio value:", totalValue);
+
+    // Update each asset quantity according to optimized allocation
+    for (const [assetId, assetData] of Object.entries(weights)) {
+      const asset = assets.find(a => a.id == assetId);
+      if (!asset) continue;
+
+      const targetValue = totalValue * (assetData.optimizedAllocation / 100);
+      const newQuantity = targetValue / asset.purchase_price;
+
+      console.log(`Updating asset ${asset.symbol} (ID: ${assetId}) to new quantity:`, newQuantity);
+
+      await dbRun(
+        `UPDATE assets 
+         SET quantity = ?, updated_at = CURRENT_TIMESTAMP 
+         WHERE id = ? AND portfolio_id = ?`,
+        [newQuantity, assetId, portfolioId]
+      );
+    }
+
+    // Return updated portfolio with assets
+    const updatedAssets = await dbAll(
+      'SELECT * FROM assets WHERE portfolio_id = ? ORDER BY created_at DESC',
+      [portfolioId]
+    );
+
+    console.log("Updated assets:", updatedAssets);
+
+    const portfolioWithAssets = {
+      ...portfolio.toJSON(),
+      assets: updatedAssets
+    };
+
+    console.log("Returning updated portfolio with assets:", portfolioWithAssets);
+
+    res.json(portfolioWithAssets);
+  } catch (err) {
+    console.error('Apply optimization error:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+
 // Delete an asset
 router.delete('/:portfolioId/assets/:assetId', async (req, res) => {
   try {

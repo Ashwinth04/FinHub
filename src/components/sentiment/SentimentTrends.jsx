@@ -6,6 +6,14 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 export default function SentimentTrends({ assetSymbol, sentimentData }) {
+
+  console.log("SentimentData");
+  console.log(sentimentData);
+
+  if (!sentimentData) {
+    return <div className="card h-full">Loading sentiment trends...</div>;
+  }
+  
   // Define sentiment thresholds for color coding
   const getSentimentColor = (score) => {
     if (score >= 2) return 'rgba(16, 185, 129, 0.8)';  // emerald
@@ -17,40 +25,45 @@ export default function SentimentTrends({ assetSymbol, sentimentData }) {
   
   // Generate more detailed trends for chart display
   const generateTrendData = () => {
-    // Start with the known data points
-    const baseScores = {
-      'Day 30': sentimentData.overall.score - sentimentData.trend.monthly,
-      'Day 7': sentimentData.overall.score - sentimentData.trend.weekly,
-      'Day 1': sentimentData.overall.score - sentimentData.trend.daily,
-      'Today': sentimentData.overall.score
-    };
+    // Use sentiment history from API if available
+    if (sentimentData.sentiment_history && sentimentData.sentiment_history.length > 0) {
+      const history = sentimentData.sentiment_history.slice(-30); // Last 30 days
+      
+      return {
+        labels: history.map(item => {
+          const date = new Date(item.date);
+          const today = new Date();
+          const diffTime = Math.abs(today - date);
+          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+          
+          if (diffDays === 0) return 'Today';
+          if (diffDays === 1) return 'Yesterday';
+          return `${diffDays} days ago`;
+        }),
+        scores: history.map(item => item.score),
+        colors: history.map(item => getSentimentColor(item.score))
+      };
+    }
+    
+    // Fallback: generate trend data from current score and trends
+    const currentScore = sentimentData.overall_sentiment.score;
+    const trends = sentimentData.sentiment_trends;
     
     // Generate data for the chart
     const labels = [];
     const scores = [];
     const colors = [];
     
-    // Fill in intermediate points with interpolation
-    let previousDay = 30;
-    let previousScore = baseScores['Day 30'];
-    
     for (let day = 30; day >= 0; day--) {
-      let score;
+      let score = currentScore;
       
-      if (baseScores[`Day ${day}`] !== undefined) {
-        score = baseScores[`Day ${day}`];
-      } else {
-        // Interpolate between known points
-        if (day < 30 && day > 7) {
-          const progress = (30 - day) / (30 - 7);
-          score = baseScores['Day 30'] + progress * (baseScores['Day 7'] - baseScores['Day 30']);
-        } else if (day < 7 && day > 1) {
-          const progress = (7 - day) / (7 - 1);
-          score = baseScores['Day 7'] + progress * (baseScores['Day 1'] - baseScores['Day 7']);
-        } else if (day < 1) {
-          const progress = (1 - day) / 1;
-          score = baseScores['Day 1'] + progress * (baseScores['Today'] - baseScores['Day 1']);
-        }
+      // Apply trends based on time period
+      if (day >= 30) {
+        score = currentScore - trends.monthly_change;
+      } else if (day >= 7) {
+        score = currentScore - trends.weekly_change;
+      } else if (day >= 1) {
+        score = currentScore - trends.daily_change;
       }
       
       // Add some randomness to create more natural-looking data
@@ -62,9 +75,6 @@ export default function SentimentTrends({ assetSymbol, sentimentData }) {
       labels.push(day === 0 ? 'Today' : day === 1 ? 'Yesterday' : `${day} days ago`);
       scores.push(score);
       colors.push(getSentimentColor(score));
-      
-      previousDay = day;
-      previousScore = score;
     }
     
     return { labels: labels.reverse(), scores: scores.reverse(), colors: colors.reverse() };

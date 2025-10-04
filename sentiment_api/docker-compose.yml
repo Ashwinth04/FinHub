@@ -4,9 +4,10 @@ services:
   portfolio-api:
     build: .
     ports:
-      - "8000:8000"
+      - "8001:8000"
     environment:
       - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - REDIS_URL=redis://redis:6379
     env_file:
       - .env
     volumes:
@@ -18,3 +19,12 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7
+    container_name: redis-server
+    ports:
+      - "6379:6379"

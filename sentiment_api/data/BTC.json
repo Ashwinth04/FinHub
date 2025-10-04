@@ -1,0 +1,240 @@
+{
+    "token": "BTC",
+    "company": "BTC Inc.",
+    "overall_sentiment": {
+        "label": "Positive",
+        "score": 1.5,
+        "summary": "Bitcoin's market sentiment is cautiously optimistic, with positive signals offset by potential risks. While the price has shown resilience and broken above key resistance levels, there are indications of weakening demand and potential for increased volatility. The Fear & Greed Index reflects a neutral to positive sentiment, but not at levels of extreme greed typically seen at market peaks. Recent Federal Reserve decisions and institutional activity are also influencing market sentiment [2, 3, 9]."
+    },
+    "sentiment_by_source": {
+        "twitter": {
+            "label": "Neutral",
+            "mentions": 75
+        },
+        "reddit": {
+            "label": "Positive",
+            "mentions": 60
+        },
+        "news": {
+            "label": "Positive",
+            "mentions": 80
+        }
+    },
+    "sentiment_trends": {
+        "daily_change": 0.0,
+        "weekly_change": 0.4,
+        "monthly_change": 0.0
+    },
+    "sentiment_history": [
+        {
+            "date": "2025-08-24",
+            "score": 1.3
+        },
+        {
+            "date": "2025-08-25",
+            "score": 1.3
+        },
+        {
+            "date": "2025-08-26",
+            "score": 1.2
+        },
+        {
+            "date": "2025-08-27",
+            "score": 1.0
+        },
+        {
+            "date": "2025-08-28",
+            "score": 1.2
+        },
+        {
+            "date": "2025-08-29",
+            "score": 0.9
+        },
+        {
+            "date": "2025-08-30",
+            "score": 0.9
+        },
+        {
+            "date": "2025-08-31",
+            "score": 0.6
+        },
+        {
+            "date": "2025-09-01",
+            "score": 0.9
+        },
+        {
+            "date": "2025-09-02",
+            "score": 0.8
+        },
+        {
+            "date": "2025-09-03",
+            "score": 0.6
+        },
+        {
+            "date": "2025-09-04",
+            "score": 0.3
+        },
+        {
+            "date": "2025-09-05",
+            "score": 0.5
+        },
+        {
+            "date": "2025-09-06",
+            "score": 0.8
+        },
+        {
+            "date": "2025-09-07",
+            "score": 1.0
+        },
+        {
+            "date": "2025-09-08",
+            "score": 1.1
+        },
+        {
+            "date": "2025-09-09",
+            "score": 1.1
+        },
+        {
+            "date": "2025-09-10",
+            "score": 1.1
+        },
+        {
+            "date": "2025-09-11",
+            "score": 1.0
+        },
+        {
+            "date": "2025-09-12",
+            "score": 0.7
+        },
+        {
+            "date": "2025-09-13",
+            "score": 0.5
+        },
+        {
+            "date": "2025-09-14",
+            "score": 0.7
+        },
+        {
+            "date": "2025-09-15",
+            "score": 0.8
+        },
+        {
+            "date": "2025-09-16",
+            "score": 0.9
+        },
+        {
+            "date": "2025-09-17",
+            "score": 1.0
+        },
+        {
+            "date": "2025-09-18",
+            "score": 1.3
+        },
+        {
+            "date": "2025-09-19",
+            "score": 1.2
+        },
+        {
+            "date": "2025-09-20",
+            "score": 1.2
+        },
+        {
+            "date": "2025-09-21",
+            "score": 1.3
+        },
+        {
+            "date": "2025-09-22",
+            "score": 1.3
+        }
+    ],
+    "sentiment_price_correlation": {
+        "correlation_coefficient": 0.02,
+        "interpretation": "No significant correlation between sentiment and price.",
+        "series": {
+            "sentiment": [
+                {
+                    "date": "2025-09-13",
+                    "score": 0.5
+                },
+                {
+                    "date": "2025-09-14",
+                    "score": 0.7
+                },
+                {
+                    "date": "2025-09-15",
+                    "score": 0.8
+                },
+                {
+                    "date": "2025-09-16",
+                    "score": 0.9
+                },
+                {
+                    "date": "2025-09-17",
+                    "score": 1.0
+                },
+                {
+                    "date": "2025-09-18",
+                    "score": 1.3
+                },
+                {
+                    "date": "2025-09-19",
+                    "score": 1.2
+                },
+                {
+                    "date": "2025-09-20",
+                    "score": 1.2
+                },
+                {
+                    "date": "2025-09-21",
+                    "score": 1.3
+                },
+                {
+                    "date": "2025-09-22",
+                    "score": 1.3
+                }
+            ],
+            "price": [
+                {
+                    "date": "2025-09-13",
+                    "price": 120.0
+                },
+                {
+                    "date": "2025-09-14",
+                    "price": 121.33
+                },
+                {
+                    "date": "2025-09-15",
+                    "price": 121.82
+                },
+                {
+                    "date": "2025-09-16",
+                    "price": 116.91
+                },
+                {
+                    "date": "2025-09-17",
+                    "price": 116.68
+                },
+                {
+                    "date": "2025-09-18",
+                    "price": 123.06
+                },
+                {
+                    "date": "2025-09-19",
+                    "price": 122.51
+                },
+                {
+                    "date": "2025-09-20",
+                    "price": 118.24
+                },
+                {
+                    "date": "2025-09-21",
+                    "price": 117.52
+                },
+                {
+                    "date": "2025-09-22",
+                    "price": 118.44
+                }
+            ]
+        }
+    }
+}

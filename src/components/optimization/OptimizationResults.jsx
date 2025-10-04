@@ -1,11 +1,12 @@
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { portfolioAPI } from '../../utils/api';
 
 // Register Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export default function OptimizationResults({ results }) {
+export default function OptimizationResults({ results, id }) {
   const { weights, metrics, strategy } = results;
   
   // Prepare data for before/after chart
@@ -75,6 +76,34 @@ export default function OptimizationResults({ results }) {
       default: return strategyId;
     }
   };
+
+  const applyOptimization = async (weights) => {
+    try {
+
+      console.log("Applying optimization with weights:", weights);
+      console.log("Portfolio ID:", id);
+      console.log("type: ",typeof id, typeof weights);
+
+      const response = await portfolioAPI.updateWeights(id, weights);
+
+      console.log("Response from server 1:", response);
+
+      if (response.status !== 200) {
+        console.log("NAANDHAN")
+        throw new Error(`Failed to apply optimization: ${response.statusText}`);
+      }
+
+      console.log("Response from server 2:", response);
+      const updatedPortfolio = response.data;
+      console.log("Optimization applied successfully:", updatedPortfolio);
+
+      alert("Optimization applied to portfolio!");
+    } catch (error) {
+      console.error("Error applying optimization:", error);
+      alert("Failed to apply optimization. Please try again.");
+    }
+  };
+
   
   return (
     <div className="animate-fade-in">
@@ -166,7 +195,7 @@ export default function OptimizationResults({ results }) {
       </div>
       
       <div className="flex justify-end">
-        <button className="btn btn-primary">Apply Optimization</button>
+        <button onClick = {() => {applyOptimization(results.weights)}} className="btn btn-primary">Apply Optimization</button>
       </div>
     </div>
   );

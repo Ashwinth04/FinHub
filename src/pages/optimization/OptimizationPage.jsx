@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiSettings, FiTrendingUp, FiTrendingDown, FiActivity } from 'react-icons/fi';
 import AppLayout from '../../components/layout/AppLayout';
 import OptimizationForm from '../../components/optimization/OptimizationForm';
@@ -14,6 +14,19 @@ export default function OptimizationPage() {
   const [showCreateModal, setShowCreateModal] = useState(false);
   const { currentPortfolio, loading, createPortfolio } = usePortfolio();
   
+  const saveJsonToFile = (data, filename = "portfolio.json") => {
+    const jsonStr = JSON.stringify(data, null, 2); // pretty print
+    const blob = new Blob([jsonStr], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    link.click();
+
+    URL.revokeObjectURL(url);
+  };
+
   // Settings for optimization
   const optimizationStrategies = [
     { 
@@ -47,7 +60,7 @@ export default function OptimizationPage() {
     
     try {
       const response = await optimizationAPI.optimize({
-        portfolioId: currentPortfolio.id,
+        portfolio: currentPortfolio,
         objective: strategy,
         riskTolerance: riskTolerance
       });
@@ -150,7 +163,7 @@ export default function OptimizationPage() {
                 </div>
               </div>
             ) : optimizationResults ? (
-              <OptimizationResults results={optimizationResults} />
+              <OptimizationResults results={optimizationResults} id={currentPortfolio.id} />
             ) : (
               <div className="card h-full flex items-center justify-center">
                 <div className="text-center max-w-md">
